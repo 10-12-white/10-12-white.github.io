@@ -77,11 +77,7 @@
         I am particularly interested in are the edits that involve SVP Oracles, which involve SVP algorithms that can only 
         be applied to lattices with a small dimension when there are restricted resources.
     </p>
-
-    <div class="footnote">
-        <strong>Note:</strong> Why is SVP-Oracle usage interesting in BKZ? Alas, I ran out of pages. Check the GitHub or do some googling!
-    </div>
-
+		
     <p>
         LLL uses Gram-Schmidt Orthogonalisation as well as the Lovasz condition to reduce the basis vectors within a lattice 
         to give the smallest first, ensuring they are as orthonormal and orthogonal as possible. BKZ follows the same approach 
@@ -97,7 +93,7 @@
 
     <p>
         Three papers in particular were studied to provide a discussion on how BKZ differs from LLL with different block sizes. 
-        According to <a href="#dp" class="citation">[dp]</a>, there have been some recent improvements with BKZ in the way that 
+        According to <a href="#5" class="citation">[5]</a>, there have been some recent improvements with BKZ in the way that 
         block sizes are chosen.
     </p>
 
@@ -106,23 +102,23 @@
     <p>
         <em>Ok, great. Blocks help. But how many vectors should make up a block?</em> 
         The process of picking the "best" number of vectors to perform the first "mini-LLL" process on within BKZ, 
-        governed by some bound \( B \), is called <strong>Discrete-Pruning Enumeration (DP-ENUM)</strong>, which was 
-        formalized by <a href="#dp1" class="citation">[dp1]</a>. They showed that the technique of choosing lattice points to 
+        governed by some bound \( B \), is called <strong>Discrete-Pruning Enumeration (5-ENUM)</strong>, which was 
+        formalized by <a href="#4" class="citation">[4]</a>. They showed that the technique of choosing lattice points to 
         “sample” using the classical enumeration technique before running BKZ was a valid improvement in solving for 
         the shortest basis vector. The success probability of this "discrete pruning" was shown to be equivalent to the 
-        volume of the sphere in which these subsets of vectors in the lattice existed <a href="#dp1" class="citation">[dp1]</a>.
+        volume of the sphere in which these subsets of vectors in the lattice existed <a href="#4" class="citation">[4]</a>.
     </p>
 
     <p>
-        Though that paper showed <a href="#dp1" class="citation">[dp1]</a> that lattice enumeration and discrete pruning variants 
+        Though that paper showed <a href="#4" class="citation">[4]</a> that lattice enumeration and discrete pruning variants 
         could be quadratically sped up on a quantum computer, there is still an uncertain statistic on the size of the 
         "blocks" required before significant accuracy is gained over LLL, and it remains unclear when LLL becomes significantly faster. 
-        Authors of <a href="#dp2" class="citation">[dp2]</a> also indicated that one analysis is not enough to gain a good insight 
+        Authors of <a href="#3" class="citation">[3]</a> also indicated that one analysis is not enough to gain a good insight 
         into their accuracy, and further experimentation was needed.
     </p>
 
     <p>
-        Recent results from <a href="#dp3" class="citation">[dp3]</a> showed that the time it took BKZ, based on the size of the 
+        Recent results from <a href="#2" class="citation">[2]</a> showed that the time it took BKZ, based on the size of the 
         modulus in Learning-With-Error (LWE) type problems, makes it clear that as the modulus increases, the growth in 
         time increases exponentially.
     </p>
@@ -130,33 +126,33 @@
     <div class="bib-container">
         <h2>Bibliography</h2>
 
-        <div class="bib-entry" id="adi">
-            <span class="bib-label">[adi]</span> Don Coppersmith, Adi Shamir, "Lattice Attacks on NTRU", 1997, <strong>Heidelberg</strong>, Germany. 
+        <div class="bib-entry" id="1">
+            <span class="bib-label">[1]</span> Don Coppersmith, Adi Shamir, "Lattice Attacks on NTRU", 1997, <strong>Heidelberg</strong>, Germany. 
             Available at: <a class="url" href="https://link.springer.com/chapter/10.1007/3-540-69053-0_5">https://link.springer.com/chapter/10.1007/3-540-69053-0_5</a>
         </div>
 
-        <div class="bib-entry" id="dp3">
-            <span class="bib-label">[dp3]</span> A parameter study for LLL and BKZ with application to shortest vector problems. 
+        <div class="bib-entry" id="2">
+            <span class="bib-label">[2]</span> A parameter study for LLL and BKZ with application to shortest vector problems. 
             Available at: <a class="url" href="https://arxiv.org/pdf/2502.05160">https://arxiv.org/pdf/2502.05160</a>
         </div>
 
-        <div class="bib-entry" id="dp2">
-            <span class="bib-label">[dp2]</span> The ISC International Journal of Information Security, ISecure Journal, "Design of An accurate BKZ Simulation", 2025. 
+        <div class="bib-entry" id="3">
+            <span class="bib-label">[3]</span> The ISC International Journal of Information Security, ISecure Journal, "Design of An accurate BKZ Simulation", 2025. 
             Available at: <a class="url" href="https://www.isecure-journal.com/article_212732_ed6dd864937f72e930c85099f448f6b1.pdf">Source Link</a>
         </div>
 
-        <div class="bib-entry" id="dp1">
-            <span class="bib-label">[dp1]</span> Yoshinori Aono, Phong Q. Nguyen, and Yixin Shen, "Quantum Lattice Enumeration and Tweaking Discrete Pruning". 
+        <div class="bib-entry" id="4">
+            <span class="bib-label">[4]</span> Yoshinori Aono, Phong Q. Nguyen, and Yixin Shen, "Quantum Lattice Enumeration and Tweaking Discrete Pruning". 
             Available at: <a class="url" href="https://inria.hal.science/hal-01870620/document">https://inria.hal.science/hal-01870620/document</a>
         </div>
 
-        <div class="bib-entry" id="dp">
-            <span class="bib-label">[dp]</span> MDPI, "Lattice Enumeration with Discrete Pruning: Improvements, Cost Estimation and Optimal Parameters", Luan Luan et al, 2025. 
-            Available at: <a class="url" href="https://www.mdpi.com/2227-7390/11/3/766">https://www.mdpi.com/2227-7390/11/3/766</a>
+        <div class="bib-entry" id="5">
+            <span class="bib-label">[5]</span> M5I, "Lattice Enumeration with Discrete Pruning: Improvements, Cost Estimation and Optimal Parameters", Luan Luan et al, 2025. 
+            Available at: <a class="url" href="https://www.m5i.com/2227-7390/11/3/766">https://www.m5i.com/2227-7390/11/3/766</a>
         </div>
 
-        <div class="bib-entry" id="jean">
-            <span class="bib-label">[jean]</span> Jean-Philippe Aumasson, "Serious Cryptography", 2nd Edition, "A Practical Introduction to Modern Encryption", August 2024, ISBN-13: 9781718503847
+        <div class="bib-entry" id="6">
+            <span class="bib-label">[6]</span> Jean-Philippe Aumasson, "Serious Cryptography", 2nd Edition, "A Practical Introduction to Modern Encryption", August 2024, ISBN-13: 9781718503847
         </div>
     </div>
 
