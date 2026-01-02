@@ -57,7 +57,8 @@
         </h2>
 
 		<p>Analysis of research on lattice-based cryptography schemes, including the security and implementation of Learning With Errors (LWE) and its relationship to NP-hard problems Shortest Vector Problem (SVP) and Closest Vector Problem (CVP).  Focused on the mathematics behind the concepts, as well as next steps in my learning journey.    <a href="https://blogs.deakin.edu.au/maths/yearbook/" target="_blank">My work was done for SIT281, Cryptograpy, and is getting published in the Deakin Mathematics Yearbook of 2025, and is available here.</a></p>
-        
+        <br><br>
+		
 		<h2 class="text-3xl font-semibold mb-8 text-deep-accent">
             Unabridged Chapter Extensions
         </h2>
@@ -66,40 +67,40 @@
 			Important Algorithms in Lattice Reductions
 		</h3>
 		
-		<p>A section I would have loved to include in the book is a little section on LLL and BKZ, for introduction purposes:</p>
+		<p>A section I would have loved to include in the book is a little section on LLL and BKZ, for introduction purposes:</p><br>
 
 <p>
         In my GitHub, I give examples of how the LLL algorithm can be used to find the shortest basis vector within a lattice, 
         thereby allowing us to better solve CVP and SVP <a href="#work" class="citation">[work]</a>, with simple examples in 
         dimensions 2 and 3. Whilst this is useful to understand the concepts, lattice bases for encryption are at least 
         dimension \( n > 500 \). For this, we need more accurate solutions.
-    </p>
+    </p><br>
 
     <p>
         LLL algorithm is extremely fast and often used as pre-processing; the BKZ algorithm is also accurate, but takes much, 
         much longer <a href="#ias" class="citation">[ias]</a>. There have been several edits to BKZ over the years, and something 
         I am particularly interested in are the edits that involve SVP Oracles, which involve SVP algorithms that can only 
         be applied to lattices with a small dimension when there are restricted resources.
-    </p>
+    </p><br>
 		
     <p>
         LLL uses Gram-Schmidt Orthogonalisation as well as the Lovasz condition to reduce the basis vectors within a lattice 
         to give the smallest first, ensuring they are as orthonormal and orthogonal as possible. BKZ follows the same approach 
         but is able to give more accurate results because it applies LLL as a pre-process before "chunking" the lattice into 
         sections called <strong>blocks</strong> to further reduce with more accuracy.
-    </p>
+    </p><br>
 
     <p>
         The block size is simply the number of vectors that we are tuning in the overall matrix that represents the lattice 
         when we try and solve for the Shortest Vector Problem. In fact, BKZ 1.0 is just LLL but with a block size of 2 (swapping 
         one row with another at a time until the complexity and continuity has been reached, repeating across the entire matrix).
-    </p>
+    </p><br>
 
     <p>
         Three papers in particular were studied to provide a discussion on how BKZ differs from LLL with different block sizes. 
         According to <a href="#5" class="citation">[5]</a>, there have been some recent improvements with BKZ in the way that 
         block sizes are chosen.
-    </p>
+    </p><br>
 
     <h3 class="text-2xl font-semibold mb-8 text-deep-accent" >Current Improvements & Open Questions</h3>
 
@@ -111,7 +112,7 @@
         “sample” using the classical enumeration technique before running BKZ was a valid improvement in solving for 
         the shortest basis vector. The success probability of this "discrete pruning" was shown to be equivalent to the 
         volume of the sphere in which these subsets of vectors in the lattice existed <a href="#4" class="citation">[4]</a>.
-    </p>
+    </p><br>
 
     <p>
         Though that paper showed <a href="#4" class="citation">[4]</a> that lattice enumeration and discrete pruning variants 
@@ -119,21 +120,21 @@
         "blocks" required before significant accuracy is gained over LLL, and it remains unclear when LLL becomes significantly faster. 
         Authors of <a href="#3" class="citation">[3]</a> also indicated that one analysis is not enough to gain a good insight 
         into their accuracy, and further experimentation was needed.
-    </p>
+    </p><br>
 
     <p>
         Recent results from <a href="#2" class="citation">[2]</a> showed that the time it took BKZ, based on the size of the 
         modulus in Learning-With-Error (LWE) type problems, makes it clear that as the modulus increases, the growth in 
         time increases exponentially.
-    </p>
+    </p><br>
 
-	<p>In particular, the results show that</p>
+	<p>In particular, the results show that</p><br>
 
-	<h3 class="text-2xl font-semibold mb-8 text-deep-accent" >Ties to future work</h3>
+	<h3 class="text-2xl font-semibold mb-8 text-deep-accent" >Ties to future work</h3><br>
 
-	<p>One area I am interested in is lattice reduction reductions.  At the moment, we have talked mostly about basis reductions, which are different to lattice reductions.  Lattice reductions means, change the underlying lattice struture, which is very useful for further reduction techniques that necessarily do not have to reply on basis techniqeus.  Basis techniques include those such as BKZ and LLL, and, it is possible that other options that do not rely on frameworks on the basis, might be equally well performing but rely on less information to compute.</p>
+	<p>One area I am interested in is lattice reduction reductions.  At the moment, we have talked mostly about basis reductions, which are different to lattice reductions.  Lattice reductions means, change the underlying lattice struture, which is very useful for further reduction techniques that necessarily do not have to reply on basis techniqeus.  Basis techniques include those such as BKZ and LLL, and, it is possible that other options that do not rely on frameworks on the basis, might be equally well performing but rely on less information to compute.</p><br>
 	
-<p>An interesting paper was done by Thomas Espitau, which I am currently reading.  Lets see how that goes ... :)</p>
+<p>An interesting paper was done by Thomas Espitau, which I am currently reading.  Lets see how that goes ... :)</p><br>
 		
     <div class="bib-container">
         <h2>Bibliography</h2>
