@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Archive | Cyber Intelligence Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1E392A',
+                        'dark-brown': '#3A2A1A',
+                        'cream': '#FAF0DC',
+                        'moss-green': '#52703e',
+                        'deep-accent': '#C5AE87',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark-green text-cream font-sans min-h-screen">
+
+    <header class="bg-dark-brown p-6 border-b border-deep-accent/20">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
+                <i data-lucide="home" class="w-5 h-5 mr-2"></i> Return to Hub
+            </a>
+            <h1 class="text-xl font-bold text-cream uppercase tracking-widest">Full Research Archive</h1>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-8 py-16">
+        
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold mb-4">Complete Intelligence Logs</h2>
+            <p class="text-deep-accent opacity-80">A chronological record of all threat analysis and technical research.</p>
+        </div>
+
+        <div class="space-y-2">
+            <div class="group flex items-baseline p-4 hover:bg-moss-green/20 rounded-lg transition border-b border-white/5">
+                <span class="text-sm font-mono text-deep-accent w-32 shrink-0">Jan 05, 2026</span>
+                <a href="gentleman-report.html" class="text-lg font-semibold group-hover:text-deep-accent transition">
+                    The Gentleman Ransomware: Vector Analysis & Remediation
+                </a>
+            </div>
+
+            <div class="group flex items-baseline p-4 hover:bg-moss-green/20 rounded-lg transition border-b border-white/5">
+                <span class="text-sm font-mono text-deep-accent w-32 shrink-0">Dec 15, 2025</span>
+                <a href="#" class="text-lg font-semibold group-hover:text-deep-accent transition">
+                    XChaCha20 Implementation in Modern Malware
+                </a>
+            </div>
+
+            <div class="group flex items-baseline p-4 hover:bg-moss-green/20 rounded-lg transition border-b border-white/5">
+                <span class="text-sm font-mono text-deep-accent w-32 shrink-0">Nov 28, 2025</span>
+                <a href="#" class="text-lg font-semibold group-hover:text-deep-accent transition">
+                    Double-Extortion: Statistical Trends in APAC
+                </a>
+            </div>
+
+            </div>
+
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
