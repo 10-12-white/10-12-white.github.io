@@ -127,30 +127,3 @@
     </script>
 </body>
 </html>
-
-from fpylll.algorithms.bkz2 import BKZReduction as BKZ2
-from fpylll import BKZ, LLL
-
-class GentlemanBKZ(BKZ2):
-    def __init__(self, A):
-        super().__init__(A)
-        
-    def density_aware_tour(self, params):
-        # 1. LLL Recon: Update GSO to see the current 'landscape'
-        self.lll_obj() 
-        self.M.update_gso()
-        
-        for kappa in range(self.M.d - 1):
-            # 2. Check Density at this block
-            # If r[i,i] values are 'flat', it's dense -> use the Dual
-            is_dense = self._check_local_density(kappa, params.block_size)
-            
-            if is_dense:
-                # Trigger the DUAL version of the SVP oracle
-                params.flags |= BKZ.SD_VARIANT 
-            else:
-                # Use standard PRIMAL
-                params.flags &= ~BKZ.SD_VARIANT
-                
-            # 3. Call the original C++ SVP reduction
-            self.svp_reduction(kappa, params.block_size, params)
