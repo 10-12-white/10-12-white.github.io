@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JACIB Just Another Cyber Intelligence Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1E392A',
+                        'dark-brown': '#3A2A1A',
+                        'cream': '#FAF0DC',
+                        'moss-green': '#52703e',
+                        'deep-accent': '#C5AE87',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark-green text-cream font-sans min-h-screen">
+
+    <header class="bg-dark-brown p-6 shadow-2xl border-b border-deep-accent/20">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-extrabold text-deep-accent tracking-tight">Cyber Intelligence Hub</h1>
+                <p class="text-cream/70 italic text-sm">Threat Research & Community Engagement</p>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-semibold">
+                <a href="archive.html" class="hover:text-deep-accent transition">Archive</a>
+                <a href="https://10-12-white.github.io/" class="hover:text-deep-accent transition">About</a>
+                <a href="https://10-12-white.github.io/" class="bg-deep-accent/10 border border-deep-accent px-4 py-1 rounded text-deep-accent hover:bg-deep-accent hover:text-dark-green transition">Main Site</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-8">
+        
+        <section class="mb-16">
+            <div class="bg-moss-green/20 border border-deep-accent/30 rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-xl">
+                <div class="md:w-1/2">
+                    <img src="Fig3.png" alt="Threat Landscape" class="h-full w-full object-cover opacity-80">
+                </div>
+                <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                    <span class="text-deep-accent font-mono text-xs uppercase tracking-widest mb-2">Featured Report</span>
+                    <h2 class="text-3xl font-bold mb-4">The Gentleman Ransomware Group</h2>
+                    <p class="text-cream/80 mb-6 leading-relaxed line-clamp-3">
+                        A deep dive into the 2025 emergence of "The Gentleman," a sophisticated threat actor targeting 17+ countries via FortiGate vulnerabilities and double-extortion tactics.
+                    </p>
+                    <a href="./001.html" class="inline-block w-fit py-2 px-8 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition duration-300">Read Full Analysis</a>
+                </div>
+            </div>
+        </section>
+
+        <h3 class="text-2xl font-bold mb-8 flex items-center">
+            <i data-lucide="terminal" class="mr-3 text-deep-accent"></i> Latest Research Logs
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <article class="bg-dark-brown/40 border-l-4 border-deep-accent p-6 rounded-r-lg hover:translate-y-[-4px] transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <i data-lucide="calendar" class="w-4 h-4 text-deep-accent mr-2"></i>
+                    <span class="text-xs font-mono text-deep-accent/80">Jan 05, 2026</span>
+                </div>
+                <h4 class="text-xl font-bold mb-3 hover:text-deep-accent"><a href="#">Exploiting Perimeter: A FortiGate Case Study</a></h4>
+                <p class="text-sm text-cream/70 mb-4">Analyzing how unpatched firewalls became the primary entry point for major 2025 breaches.</p>
+                <div class="flex items-center text-xs font-bold text-deep-accent">
+                    <i data-lucide="arrow-right" class="w-4 h-4 mr-1"></i> VIEW LOG
+                </div>
+            </article>
+
+            <article class="bg-dark-brown/40 border-l-4 border-deep-accent p-6 rounded-r-lg hover:translate-y-[-4px] transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <i data-lucide="calendar" class="w-4 h-4 text-deep-accent mr-2"></i>
+                    <span class="text-xs font-mono text-deep-accent/80">Dec 15, 2025</span>
+                </div>
+                <h4 class="text-xl font-bold mb-3 hover:text-deep-accent"><a href="#">XChaCha20 vs. Enterprise Security</a></h4>
+                <p class="text-sm text-cream/70 mb-4">Why modern ransomware groups are pivoting to Go-based encryption for faster speeds.</p>
+                <div class="flex items-center text-xs font-bold text-deep-accent">
+                    <i data-lucide="arrow-right" class="w-4 h-4 mr-1"></i> VIEW LOG
+                </div>
+            </article>
+
+            <article class="bg-dark-brown/40 border-l-4 border-deep-accent p-6 rounded-r-lg hover:translate-y-[-4px] transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <i data-lucide="calendar" class="w-4 h-4 text-deep-accent mr-2"></i>
+                    <span class="text-xs font-mono text-deep-accent/80">Nov 28, 2025</span>
+                </div>
+                <h4 class="text-xl font-bold mb-3 hover:text-deep-accent"><a href="#">The Double-Extortion Model Evolution</a></h4>
+                <p class="text-sm text-cream/70 mb-4">Tracking the trend of data exfiltration over simple system encryption in 2025.</p>
+                <div class="flex items-center text-xs font-bold text-deep-accent">
+                    <i data-lucide="arrow-right" class="w-4 h-4 mr-1"></i> VIEW LOG
+                </div>
+            </article>
+
+        </div>
+
+		<div class="mt-12 text-left">
+			<a href="./archive.html" class="inline-flex items-center py-2 px-6 border border-deep-accent text-deep-accent font-bold rounded hover:bg-deep-accent 	hover:text-dark-green transition">
+			<i data-lucide="layers" class="w-4 h-4 mr-2"></i>View Archive
+			</a>
+		</div><br><br>
+
+    </main>
+
+    <footer class="bg-dark-brown text-center py-10 border-t border-deep-accent/30 mt-20">
+        <p class="text-sm text-cream opacity-70 mb-4">&copy; 2026 twhite Cyber Reports</p>
+        <div class="flex justify-center space-x-4">
+            <i data-lucide="shield-check" class="text-deep-accent w-5 h-5"></i>
+            <i data-lucide="activity" class="text-deep-accent w-5 h-5"></i>
+            <i data-lucide="lock" class="text-deep-accent w-5 h-5"></i>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+from fpylll.algorithms.bkz2 import BKZReduction as BKZ2
+from fpylll import BKZ, LLL
+
+class GentlemanBKZ(BKZ2):
+    def __init__(self, A):
+        super().__init__(A)
+        
+    def density_aware_tour(self, params):
+        # 1. LLL Recon: Update GSO to see the current 'landscape'
+        self.lll_obj() 
+        self.M.update_gso()
+        
+        for kappa in range(self.M.d - 1):
+            # 2. Check Density at this block
+            # If r[i,i] values are 'flat', it's dense -> use the Dual
+            is_dense = self._check_local_density(kappa, params.block_size)
+            
+            if is_dense:
+                # Trigger the DUAL version of the SVP oracle
+                params.flags |= BKZ.SD_VARIANT 
+            else:
+                # Use standard PRIMAL
+                params.flags &= ~BKZ.SD_VARIANT
+                
+            # 3. Call the original C++ SVP reduction
+            self.svp_reduction(kappa, params.block_size, params)
