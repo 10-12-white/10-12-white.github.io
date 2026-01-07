@@ -41,38 +41,34 @@
                 <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
                 <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 05, 2026</span>
             </div>
-            <h1 class="text-6xl font-extrabold mb-6 leading-tight">The Gentleman Ransomware Group</h1>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">The Gentleman Ransomware Group</h1>
         </header>
 
         <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <p>The Gentleman is a highly sophisticated ransomware group that emerged in mid-2025 and quickly established itself as a major threat actor. Surfacing in August of 2025, they are known for using compromised credentials and targeting Internet-exposed services to gain initial access to victims' networks. The ransomware gang also deploys README-GENTLEMEN.txt ransom notes with contact information and encrypts documents using the .7mtzhh file extension.</p>
-                </div>
-                <div>
-                   <img src="https://10-12-white.github.io/cybersec/img/Fig3.png" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">
-                </div>
-            </div>
+            <p>The Gentleman is a highly sophisticated ransomware group that emerged in mid-2025 and quickly established itself as a major threat actor. Surfacing in August of 2025, they are known for using compromised credentials and targeting Internet-exposed services to gain initial access to victims' networks. The ransomware gang also deploys README-GENTLEMEN.txt ransom notes with contact information and encrypts documents using the .7mtzhh file extension.</p>
 
-            <h2 class="text-3xl font-bold text-deep-accent border-b border-deep-accent/20 pb-2">Introduction & Tactical Overview</h2>
-            <p>Their operations span at least 17 countries, targeting sectors such as energy, manufacturing, and healthcare. The group employs a double-extortion model, using strong encryption algorithms like XChaCha20 and Curve25519. Despite the diversity of victims, their attack methodology remains consistent: gain initial access, perform reconnaissance, disable defences, exfiltrate sensitive data, and encrypt critical systems.</p>
+            <h2 class="text-2xl font-bold text-deep-accent">Tactical Overview</h2>
+            <p>Their operations span at least 17 countries, targeting sectors such as energy, manufacturing, and healthcare. The group employs a double-extortion model, using strong encryption algorithms like XChaCha20 and Curve25519.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-dark-brown/30 p-6 rounded-lg border border-moss-green/30">
-                    <h3 class="text-xl font-semibold mb-4 text-deep-accent">Victimology and Patterns</h3>
-                    <p>The manufacturing industry has been the hardest hit, followed closely by construction, healthcare, and insurance. Key target countries include Thailand and the United States, with a total of 17 countries affected.</p>
-                </div>
-                <div class="bg-dark-brown/30 p-6 rounded-lg border border-moss-green/30">
-                    <h3 class="text-xl font-semibold mb-4 text-deep-accent">Attack Patterns</h3>
-                    <p>Persistence and lateral movement are achieved through AnyDesk, PsExec, WinSCP, and PowerShell remoting, combined with legitimate signed drivers such as ThrottleBlood.sys to bypass kernel-level protections.</p>
-                </div>
-            </div>
+            <h2 class="text-4xl font-extrabold mb-6 text-cream">Introduction</h2>
+            <p class="text-lg mb-6 leading-relaxed">The Gentleman is a highly sophisticated ransomware group that emerged in mid-2025 and quickly established itself as a major threat actor. Their operations span at least 17 countries, targeting sectors such as energy, manufacturing, healthcare, insurance, technology, and telecommunications. Despite the diversity of victims, their attack methodology remains consistent: gain initial access, perform reconnaissance, disable defences, exfiltrate sensitive data, and encrypt critical systems. They have shown an interest to target a wide range of enterprise and large corporations including critical infrastructure.</p>
 
-            <h3 class="text-2xl font-semibold text-deep-accent">Exploitation of FortiGate Vulnerabilities</h3>
-            <p>One of their most notable tactics is exploiting FortiGate firewall and VPN vulnerabilities. These flaws allow attackers to bypass authentication or execute remote code, granting direct access to internal networks. Once inside, they conduct reconnaissance using tools like Advanced IP Scanner and escalate privileges to deploy ransomware across the environment.</p>
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Victimology and Patterns</h3>
+            <p class="text-lg mb-6 leading-relaxed">The Gentlemen ransomware group has been targeting organisations across multiple sectors, with a particular focus on the Asia-Pacific region. The manufacturing industry has been the hardest hit, followed closely by construction, healthcare, and insurance. The group’s attacks on essential services such as healthcare highlights its disregard for critical infrastructure and its potential public safety implications. Key target countries include Thailand and the United States, with a total of 17 countries affected.</p>
+        
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns</h3>
+            <p class="text-lg mb-6 leading-relaxed">The group employs a double-extortion model, encrypting files while stealing sensitive data to pressure victims into paying ransom. Their malware is written in Go and uses strong encryption algorithms like XChaCha20 and Curve25519, making decryption without keys nearly impossible. They disable antivirus tools, delete logs and shadow copies, and manipulate Group Policy Objects for domain-wide compromise. Persistence and lateral movement are achieved through AnyDesk, PsExec, WinSCP, and PowerShell remoting, combined with legitimate signed drivers such as ThrottleBlood.sys to bypass kernel-level protections.</p    
+            
+            <img src="https://10-12-white.github.io/cybersec/img/Fig3.png" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">
+            
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Exploitation of FortiGate Vulnerabilities</h3>
+            <p class="text-lg mb-6 leading-relaxed">One of their most notable tactics is exploiting FortiGate firewall and VPN vulnerabilities. These flaws allow attackers to bypass authentication or execute remote code, granting direct access to internal networks. Once inside, they conduct reconnaissance using tools like Advanced IP Scanner and escalate privileges to deploy ransomware across the environment. This method is particularly dangerous because FortiGate devices sit at the network perimeter, making them a high-value target for initial compromise. The pattern suggests The Gentlemen actively scans for unpatched FortiGate appliances, so timely patching and monitoring are critical defences.</p>
 
-            <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic my-12">
-                As of late 2025, the group has listed over 60 victims. This repeatable approach demonstrates a mature and well-organised operation.
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">IOCs</h3>    
+            <p class="text-lg mb-6 leading-relaxed">The Gentlemen’s leak site on the Tor network is professionally designed, featuring their logo, motto, victim pages, QR codes, and a public TOX ID for negotiations. As of late 2025, the group has listed over 60 victims, with earlier reports showing 32 victims by September and 48 by November. While victims span multiple industries, the attack chain is strikingly consistent: exploit perimeter vulnerabilities (often FortiGate), disable defences, exfiltrate data, and encrypt systems. This repeatable approach demonstrates a mature and well-organised operation.</p>
+
+            <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
+                Summary block goes here.
             </blockquote>
         </article>
 
