@@ -49,7 +49,7 @@
             <h2 class="text-4xl font-extrabold mb-6 text-cream">Introduction</h2>
             <p class="text-lg mb-6 leading-relaxed">The Gentleman is a highly sophisticated ransomware group that emerged in mid-2025 and quickly established itself as a major threat actor. Their operations span at least 17 countries, targeting sectors such as energy, manufacturing, healthcare, insurance, technology, and telecommunications. Despite the diversity of victims, their attack methodology remains consistent: gain initial access, perform reconnaissance, disable defences, exfiltrate sensitive data, and encrypt critical systems. They have shown an interest to target a wide range of enterprise and large corporations including critical infrastructure.   The ransomware gang also deploys README-GENTLEMEN.txt ransom notes with contact information and encrypts documents using the .7mtzhh file extension. </p>
 
-            <img src="https://10-12-white.github.io/cybersec/img/Fig3.png" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">x
+            <img src="https://10-12-white.github.io/cybersec/img/Fig3.png" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">
             
             <h2 class="text-2xl font-bold text-deep-accent">Tactical Overview</h2>
             <p>Their operations span at least 17 countries, targeting sectors such as energy, manufacturing, and healthcare. The group employs a double-extortion model, using strong encryption algorithms like XChaCha20 and Curve25519.</p>
@@ -68,7 +68,7 @@
 
 <p class="text-lg mb-6 leading-relaxed">IOCs are listed below:<p>
 
-        <h3>1. Initial Access & Persistence</h3>
+        <p><strong>1. Initial Access & Persistence</strong></p>
     <ul>
         <li><span class="mitre-id">Exploitation (T1190):</span> Targets public-facing applications, specifically compromised FortiGate servers and admin accounts identified via Nmap.</li>
         <li><span class="mitre-id">Credential Use (T1078.002):</span> Utilization of compromised Domain Accounts.</li>
@@ -76,7 +76,7 @@
         <li><span class="mitre-id">Registry Persistence (T1112):</span> Modifies registry keys to ensure tools remain active across reboots.</li>
     </ul>
 
-    <h3>2. Discovery & Reconnaissance</h3>
+    <p><strong>2. Discovery & Reconnaissance</strong></p>
     <ul>
         <li><span class="mitre-id">Network Mapping (T1046, T1018):</span> Extensive use of <strong>Nmap</strong> and <strong>Advanced IP Scanner</strong> to map the internal environment.</li>
         <li><span class="mitre-id">Account & Trust Enumeration (T1087.002, T1069.002, T1482):</span> 
@@ -88,7 +88,7 @@
         </li>
     </ul>
 
-    <h3>3. Defense Evasion & Execution</h3>
+    <p><strong>3. Defense Evasion & Execution</strong></p>
     <ul>
         <li><span class="mitre-id">Impair Defenses (T1562.001, T1562.004):</span> Uses specialized "Anti-AV" tools and modifies firewall settings specifically to allow RDP access.</li>
         <li><span class="mitre-id">BYOVD Attack (T1014):</span> Deploys vulnerable drivers (Rootkit technique) to terminate security processes.</li>
@@ -96,7 +96,7 @@
         <li><span class="mitre-id">Scripting (T1059.001, T1059.003):</span> Heavy reliance on <code>cmd.exe</code> and PowerShell for deploying the final ransomware payload.</li>
     </ul>
 
-    <h3>4. Lateral Movement & Escalation</h3>
+    <p><strong>4. Lateral Movement & Escalation</strong></p>
     <ul>
         <li><span class="mitre-id">GPO Manipulation (T1484.001):</span> Modifies Group Policy Objects to achieve domain-wide impact and privilege escalation.</li>
         <li><span class="mitre-id">Lateral Tools:</span>
@@ -108,7 +108,7 @@
         </li>
     </ul>
 
-    <h3>5. Collection, Exfiltration & Impact</h3>
+    <p><strong>5. Collection, Exfiltration & Impact</strong></p>
     <ul>
         <li><span class="mitre-id">Staging (T1074.001):</span> Data is gathered locally in <code>C:\ProgramData\data</code>.</li>
         <li><span class="mitre-id">Network Shares (T1039):</span> Uses WebDAV connections to harvest data from internal network shares.</li>
@@ -116,7 +116,6 @@
         <li><span class="mitre-id">Final Impact (T1486, T1489):</span> Deployment of ransomware via the <strong>NETLOGON share</strong> and termination of remaining security services.</li>
     </ul>
 
-            
             <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
                 The Gentleman is a highly sophisticated ransomware group that emerged in mid-2025 and quickly established itself as a major threat actor. Surfacing in August of 2025, they are known for using compromised credentials and targeting Internet-exposed services to gain initial access to victims' networks.
             </blockquote>
