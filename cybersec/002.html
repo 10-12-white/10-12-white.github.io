@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analysis | The Gentleman Ransomware</title>
+    <title>Most popular languages for malware development</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -41,81 +41,145 @@
                 <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
                 <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 05, 2026</span>
             </div>
-            <h1 class="text-5xl font-extrabold mb-6 leading-tight">The Gentleman Ransomware Group</h1>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">Malware Development Languages</h1>
         </header>
 
         <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
             <p></p>
             <h2 class="text-4xl font-extrabold mb-6 text-cream">Introduction</h2>
-            <p class="text-lg mb-6 leading-relaxed">The Gentleman is a highly sophisticated ransomware group that emerged in mid-2025 and quickly established itself as a major threat actor. Their operations span at least 17 countries, targeting sectors such as energy, manufacturing, healthcare, insurance, technology, and telecommunications. Despite the diversity of victims, their attack methodology remains consistent: gain initial access, perform reconnaissance, disable defences, exfiltrate sensitive data, and encrypt critical systems. They have shown an interest to target a wide range of enterprise and large corporations including critical infrastructure.   The ransomware gang also deploys README-GENTLEMEN.txt ransom notes with contact information and encrypts documents using the .7mtzhh file extension. </p>
 
-            <img src="https://10-12-white.github.io/cybersec/img/Fig3.png" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">
+            <h2 class="text-4xl font-extrabold mb-6 text-cream>Malware Development Languages</h2>
+
+<ul>
+  <li>
+    <strong>C / C++</strong>
+    <ul>
+      <li><strong>Overview:</strong> Industry standard for low-level, high-impact malware.</li>
+      <li><strong>Common Use Cases:</strong>
+        <ul>
+          <li>Rootkits and bootkits</li>
+          <li>Advanced trojans and backdoors</li>
+          <li>Exploit payloads and loaders</li>
+        </ul>
+      </li>
+      <li><strong>Why Attackers Use It:</strong>
+        <ul>
+          <li>Direct access to OS and hardware</li>
+          <li>High performance and minimal dependencies</li>
+          <li>Kernel-mode execution capability</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Python</strong>
+    <ul>
+      <li><strong>Overview:</strong> Popular for rapid development and automation.</li>
+      <li><strong>Common Use Cases:</strong>
+        <ul>
+          <li>Data exfiltration tools</li>
+          <li>Cryptominers</li>
+          <li>Ransomware components</li>
+        </ul>
+      </li>
+      <li><strong>Why Attackers Use It:</strong>
+        <ul>
+          <li>Fast development cycle</li>
+          <li>Large ecosystem of libraries</li>
+          <li>Cross-platform support</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Rust</strong>
+    <ul>
+      <li><strong>Overview:</strong> Emerging language for modern, evasive malware.</li>
+      <li><strong>Common Use Cases:</strong>
+        <ul>
+          <li>Ransomware</li>
+          <li>Loaders and droppers</li>
+          <li>Cross-platform backdoors</li>
+        </ul>
+      </li>
+      <li><strong>Why Attackers Use It:</strong>
+        <ul>
+          <li>Harder to reverse-engineer</li>
+          <li>Memory-safe by design</li>
+          <li>Efficient compiled binaries</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Go (Golang)</strong>
+    <ul>
+      <li><strong>Overview:</strong> Increasingly used for scalable, cross-platform malware.</li>
+      <li><strong>Common Use Cases:</strong>
+        <ul>
+          <li>Ransomware</li>
+          <li>Botnets</li>
+          <li>C2 infrastructure</li>
+        </ul>
+      </li>
+      <li><strong>Why Attackers Use It:</strong>
+        <ul>
+          <li>Static compilation</li>
+          <li>Built-in concurrency</li>
+          <li>Easy cross-platform deployment</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>PowerShell / Bash</strong>
+    <ul>
+      <li><strong>Overview:</strong> Commonly used for fileless and post-exploitation activity.</li>
+      <li><strong>Common Use Cases:</strong>
+        <ul>
+          <li>Living-off-the-land attacks</li>
+          <li>Credential harvesting</li>
+          <li>Lateral movement</li>
+        </ul>
+      </li>
+      <li><strong>Why Attackers Use It:</strong>
+        <ul>
+          <li>Preinstalled on systems</li>
+          <li>Minimal disk artifacts</li>
+          <li>Easy to obfuscate</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>.NET (C#)</strong>
+    <ul>
+      <li><strong>Overview:</strong> Widely used for Windows-targeted malware.</li>
+      <li><strong>Common Use Cases:</strong>
+        <ul>
+          <li>Remote access trojans (RATs)</li>
+          <li>Credential stealers</li>
+          <li>Loaders and droppers</li>
+        </ul>
+      </li>
+      <li><strong>Why Attackers Use It:</strong>
+        <ul>
+          <li>Strong Windows API integration</li>
+          <li>Rapid development</li>
+          <li>Effective obfuscation options</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
             
-            <h2 class="text-2xl font-bold text-deep-accent">Tactical Overview</h2>
-            <p>Their operations span at least 17 countries, targeting sectors such as energy, manufacturing, and healthcare. The group employs a double-extortion model, using strong encryption algorithms like XChaCha20 and Curve25519.</p>
-
-            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Victimology and Patterns</h3>
-            <p class="text-lg mb-6 leading-relaxed">The Gentlemen ransomware group has been targeting organisations across multiple sectors, with a particular focus on the Asia-Pacific region. The manufacturing industry has been the hardest hit, followed closely by construction, healthcare, and insurance. The group’s attacks on essential services such as healthcare highlights its disregard for critical infrastructure and its potential public safety implications. Key target countries include Thailand and the United States, with a total of 17 countries affected.</p>
-        
-            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns</h3>
-            <p class="text-lg mb-6 leading-relaxed">The group employs a double-extortion model, encrypting files while stealing sensitive data to pressure victims into paying ransom. Their malware is written in Go and uses strong encryption algorithms like XChaCha20 and Curve25519, making decryption without keys nearly impossible. They disable antivirus tools, delete logs and shadow copies, and manipulate Group Policy Objects for domain-wide compromise. Persistence and lateral movement are achieved through AnyDesk, PsExec, WinSCP, and PowerShell remoting, combined with legitimate signed drivers such as ThrottleBlood.sys to bypass kernel-level protections.</p    
-            
-            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Exploitation of FortiGate Vulnerabilities</h3>
-            <p class="text-lg mb-6 leading-relaxed">One of their most notable tactics is exploiting FortiGate firewall and VPN vulnerabilities. These flaws allow attackers to bypass authentication or execute remote code, granting direct access to internal networks. Once inside, they conduct reconnaissance using tools like Advanced IP Scanner and escalate privileges to deploy ransomware across the environment. This method is particularly dangerous because FortiGate devices sit at the network perimeter, making them a high-value target for initial compromise. The pattern suggests The Gentlemen actively scans for unpatched FortiGate appliances, so timely patching and monitoring are critical defences.</p>
-
-            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">IOCs</h3>    
-            <p class="text-lg mb-6 leading-relaxed">The Gentlemen’s leak site on the Tor network is professionally designed, featuring their logo, motto, victim pages, QR codes, and a public TOX ID for negotiations. As of late 2025, the group has listed over 60 victims, with earlier reports showing 32 victims by September and 48 by November. While victims span multiple industries, the attack chain is strikingly consistent: exploit perimeter vulnerabilities (often FortiGate), disable defences, exfiltrate data, and encrypt systems. This repeatable approach demonstrates a mature and well-organised operation.</p>
-
-<p class="text-lg mb-6 leading-relaxed">IOCs are listed below:<p>
-
-        <p><strong>1. Initial Access & Persistence</strong></p>
-    <ul>
-        <li><span class="mitre-id">Exploitation (T1190):</span> Targets public-facing applications, specifically compromised FortiGate servers and admin accounts identified via Nmap.</li>
-        <li><span class="mitre-id">Credential Use (T1078.002):</span> Utilization of compromised Domain Accounts.</li>
-        <li><span class="mitre-id">Remote Access (T1219):</span> Installation of <strong>AnyDesk</strong> for persistent remote access and Command & Control (C2).</li>
-        <li><span class="mitre-id">Registry Persistence (T1112):</span> Modifies registry keys to ensure tools remain active across reboots.</li>
-    </ul>
-
-    <p><strong>2. Discovery & Reconnaissance</strong></p>
-    <ul>
-        <li><span class="mitre-id">Network Mapping (T1046, T1018):</span> Extensive use of <strong>Nmap</strong> and <strong>Advanced IP Scanner</strong> to map the internal environment.</li>
-        <li><span class="mitre-id">Account & Trust Enumeration (T1087.002, T1069.002, T1482):</span> 
-            <ul>
-                <li>Batch scripts used to query domain accounts.</li>
-                <li>Enumeration of domain groups.</li>
-                <li>PowerShell used to identify the Primary Domain Controller (PDC) and domain trusts.</li>
-            </ul>
-        </li>
-    </ul>
-
-    <p><strong>3. Defense Evasion & Execution</strong></p>
-    <ul>
-        <li><span class="mitre-id">Impair Defenses (T1562.001, T1562.004):</span> Uses specialized "Anti-AV" tools and modifies firewall settings specifically to allow RDP access.</li>
-        <li><span class="mitre-id">BYOVD Attack (T1014):</span> Deploys vulnerable drivers (Rootkit technique) to terminate security processes.</li>
-        <li><span class="mitre-id">Obfuscation (T1027):</span> Executes Base64 encoded PowerShell commands to hide malicious intent.</li>
-        <li><span class="mitre-id">Scripting (T1059.001, T1059.003):</span> Heavy reliance on <code>cmd.exe</code> and PowerShell for deploying the final ransomware payload.</li>
-    </ul>
-
-    <p><strong>4. Lateral Movement & Escalation</strong></p>
-    <ul>
-        <li><span class="mitre-id">GPO Manipulation (T1484.001):</span> Modifies Group Policy Objects to achieve domain-wide impact and privilege escalation.</li>
-        <li><span class="mitre-id">Lateral Tools:</span>
-            <ul>
-                <li><strong>PSExec (T1021.002)</strong> for SMB/Admin share movement.</li>
-                <li><strong>RDP (T1021.001)</strong> (enabled via registry) for GUI-based movement.</li>
-                <li><strong>PuTTY (T1021.004)</strong> for SSH-based movement.</li>
-            </ul>
-        </li>
-    </ul>
-
-    <p><strong>5. Collection, Exfiltration & Impact</strong></p>
-    <ul>
-        <li><span class="mitre-id">Staging (T1074.001):</span> Data is gathered locally in <code>C:\ProgramData\data</code>.</li>
-        <li><span class="mitre-id">Network Shares (T1039):</span> Uses WebDAV connections to harvest data from internal network shares.</li>
-        <li><span class="mitre-id">Exfiltration (T1048.001):</span> Uses <strong>WinSCP</strong> to move data out via encrypted non-C2 protocols.</li>
-        <li><span class="mitre-id">Final Impact (T1486, T1489):</span> Deployment of ransomware via the <strong>NETLOGON share</strong> and termination of remaining security services.</li>
-    </ul>
-
             <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
                 The Gentleman is a highly sophisticated ransomware group that emerged in mid-2025 and quickly established itself as a major threat actor. Surfacing in August of 2025, they are known for using compromised credentials and targeting Internet-exposed services to gain initial access to victims' networks.
             </blockquote>
