@@ -45,158 +45,445 @@
         </header>
 
         <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
-            <p></p>
-            <h2 class="text-4xl font-extrabold mb-6 text-cream">Introduction</h2>
+            <p class="text-lg mb-6 leading-relaxed"></p>
+            <h2 class="text-3xl font-extrabold mb-6 text-cream">Introduction</h2>
 
-            <p>A select number of languages are preferences over hundreds to write code in.  This article discusses the pros and cons behind each, as well as some of the reasons why the language has been chosen.  They are listed in order of popularity:</p>          
+            <p class="text-lg mb-6 leading-relaxed">A select number of languages are preferences over hundreds to write code in.  This article discusses the pros and cons behind each, as well as some of the reasons why the language has been chosen.  They are listed in order of popularity:</p>          
+  
 
-            <ul>
-  <li>
-    <strong>C / C++</strong>
-    <ul>
-      <li><strong>Overview:</strong> Industry standard for low-level, high-impact malware.</li>
-      <li><strong>Common Use Cases:</strong>
-        <ul>
-          <li>Rootkits and bootkits</li>
-          <li>Advanced trojans and backdoors</li>
-          <li>Exploit payloads and loaders</li>
-        </ul>
-      </li>
-      <li><strong>Why Attackers Use It:</strong>
-        <ul>
-          <li>Direct access to OS and hardware</li>
-          <li>High performance and minimal dependencies</li>
-          <li>Kernel-mode execution capability</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
 
-<p>Though languages like "Go" have taken off, numerous studies and observations indicate that the majority of sophisticated malicious programs with extensive functionality are primarily developed in C and C++. These languages are favored for creating serious threats because they provide low-level access to system resources, allow direct memory manipulation, and enable the construction of complex structures that hinder analysis and detection.</p>
+<section class="mb-20">
+    <div class="flex items-center mb-6">
+        <div class="p-2 bg-deep-accent/10 rounded mr-4">
+            <i data-lucide="terminal" class="w-6 h-6 text-deep-accent"></i>
+        </div>
+        <h3 class="text-3xl font-extrabold text-cream uppercase tracking-tight">C / C++</h3>
+    </div>
 
-<p>Another factor contributing to their popularity in the cybercriminal ecosystem is their portability - C and C++ have minimal runtime dependencies, making it easier to compile and adapt malicious code across different platforms. Cybersecurity experts also point out that C, in particular, is prone to undefined behavior, which often results in security flaws and exploitable vulnerabilities in software infrastructure.</p>
-     
-  <li>
-    <strong>Python</strong>
-    <ul>
-      <li><strong>Overview:</strong> Popular for rapid development and automation.</li>
-      <li><strong>Common Use Cases:</strong>
-        <ul>
-          <li>Data exfiltration tools</li>
-          <li>Cryptominers</li>
-          <li>Ransomware components</li>
-        </ul>
-      </li>
-      <li><strong>Why Attackers Use It:</strong>
-        <ul>
-          <li>Fast development cycle</li>
-          <li>Large ecosystem of libraries</li>
-          <li>Cross-platform support</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+    <div class="bg-dark-brown/40 border border-deep-accent/10 rounded-lg p-8 ml-4 md:ml-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-moss-green/5 -rotate-45 translate-x-16 -translate-y-16"></div>
 
-<p>Python is extensively used in malware development where speed, flexibility, and automation are prioritized over stealth. Its simple syntax and vast ecosystem of libraries enable rapid creation of functional malware, making it particularly attractive to cybercriminal groups and less mature threat actors. Python-based malware is commonly observed in data exfiltration tools, cryptominers, ransomware components, and botnet management scripts.</p>
+        <div class="mb-8 border-b border-deep-accent/5 pb-6">
+            <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">Analysis Report // Low-Level Systems Execution</p>
+            <p class="text-lg leading-relaxed opacity-90">
+                <strong>Overview:</strong> The industry standard for high-performance, complex malware and systems-level exploitation.
+            </p>
+        </div>
 
-                <p>Although Python malware often requires an interpreter or bundled runtime, attackers frequently package Python code into standalone executables using tools such as PyInstaller. This allows Python malware to be deployed more easily across environments while maintaining cross-platform compatibility. From a defensive perspective, Python-based malware tends to be noisier and more detectable through behavioral analysis, but its prevalence remains high due to its low development barrier.</p>
-                
-  <li>
-    <strong>Rust</strong>
-    <ul>
-      <li><strong>Overview:</strong> Emerging language for modern, evasive malware.</li>
-      <li><strong>Common Use Cases:</strong>
-        <ul>
-          <li>Ransomware</li>
-          <li>Loaders and droppers</li>
-          <li>Cross-platform backdoors</li>
-        </ul>
-      </li>
-      <li><strong>Why Attackers Use It:</strong>
-        <ul>
-          <li>Harder to reverse-engineer</li>
-          <li>Memory-safe by design</li>
-          <li>Efficient compiled binaries</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>Go (Golang)</strong>
-    <ul>
-      <li><strong>Overview:</strong> Increasingly used for scalable, cross-platform malware.</li>
-      <li><strong>Common Use Cases:</strong>
-        <ul>
-          <li>Ransomware</li>
-          <li>Botnets</li>
-          <li>C2 infrastructure</li>
-        </ul>
-      </li>
-      <li><strong>Why Attackers Use It:</strong>
-        <ul>
-          <li>Static compilation</li>
-          <li>Built-in concurrency</li>
-          <li>Easy cross-platform deployment</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>PowerShell / Bash</strong>
-    <ul>
-      <li><strong>Overview:</strong> Commonly used for fileless and post-exploitation activity.</li>
-      <li><strong>Common Use Cases:</strong>
-        <ul>
-          <li>Living-off-the-land attacks</li>
-          <li>Credential harvesting</li>
-          <li>Lateral movement</li>
-        </ul>
-      </li>
-      <li><strong>Why Attackers Use It:</strong>
-        <ul>
-          <li>Preinstalled on systems</li>
-          <li>Minimal disk artifacts</li>
-          <li>Easy to obfuscate</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>.NET (C#)</strong>
-    <ul>
-      <li><strong>Overview:</strong> Widely used for Windows-targeted malware.</li>
-      <li><strong>Common Use Cases:</strong>
-        <ul>
-          <li>Remote access trojans (RATs)</li>
-          <li>Credential stealers</li>
-          <li>Loaders and droppers</li>
-        </ul>
-      </li>
-      <li><strong>Why Attackers Use It:</strong>
-        <ul>
-          <li>Strong Windows API integration</li>
-          <li>Rapid development</li>
-          <li>Effective obfuscation options</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             
-            <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
+            <div class="space-y-4">
+                <div class="flex items-center text-moss-green mb-1">
+                    <i data-lucide="target" class="w-4 h-4 mr-2"></i>
+                    <span class="text-xs font-mono uppercase tracking-wider">Common Use Cases</span>
+                </div>
+                <ul class="space-y-3 pl-2">
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                        Kernel-mode Rootkits
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                        Advanced Persistent Threats (APTs)
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                        Banking Trojans & Botnet Clients
+                    </li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-center text-moss-green mb-1">
+                    <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                    <span class="text-xs font-mono uppercase tracking-wider">Why Attackers Use It</span>
+                </div>
+                <ul class="space-y-3 pl-2">
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        Direct memory and hardware access
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        No runtime/interpreter dependencies
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        Granular control over binary size
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<p class="text-lg mb-6 leading-relaxed">Though languages like "Go" have taken off, numerous studies and observations indicate that the majority of sophisticated malicious programs with extensive functionality are primarily developed in C and C++. These languages are favored for creating serious threats because they provide low-level access to system resources, allow direct memory manipulation, and enable the construction of complex structures that hinder analysis and detection.</p>
+
+<p class="text-lg mb-6 leading-relaxed">Another factor contributing to their popularity in the cybercriminal ecosystem is their portability - C and C++ have minimal runtime dependencies, making it easier to compile and adapt malicious code across different platforms. Cybersecurity experts also point out that C, in particular, is prone to undefined behavior, which often results in security flaws and exploitable vulnerabilities in software infrastructure.</p>
+     
+
+<section class="mb-20">
+       <div class="flex items-center mb-6">
+           <div class="p-2 bg-deep-accent/10 rounded mr-4">
+               <i data-lucide="terminal" class="w-6 h-6 text-deep-accent"></i>
+           </div>
+           <h3 class="text-3xl font-extrabold text-cream uppercase tracking-tight">Python</h3>
+       </div>
+
+       <div class="bg-dark-brown/40 border border-deep-accent/10 rounded-lg p-8 ml-4 md:ml-12 shadow-2xl relative overflow-hidden">
+           <div class="absolute top-0 right-0 w-32 h-32 bg-moss-green/5 -rotate-45 translate-x-16 -translate-y-16"></div>
+
+           <div class="mb-8 border-b border-deep-accent/5 pb-6">
+               <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">Analysis Report // Scripting Ecosystem</p>
+               <p class="text-lg leading-relaxed opacity-90">
+                   <strong>Overview:</strong> Popular for rapid development and automation.
+               </p>
+           </div>
+
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+               <div class="space-y-4">
+                   <div class="flex items-center text-moss-green mb-1">
+                       <i data-lucide="target" class="w-4 h-4 mr-2"></i>
+                       <span class="text-xs font-mono uppercase tracking-wider">Common Use Cases</span>
+                   </div>
+                   <ul class="space-y-3 pl-2">
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           Data exfiltration tools
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           Cryptominers
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           Ransomware components
+                       </li>
+                   </ul>
+               </div>
+
+               <div class="space-y-4">
+                   <div class="flex items-center text-moss-green mb-1">
+                       <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                       <span class="text-xs font-mono uppercase tracking-wider">Why Attackers Use It</span>
+                   </div>
+                   <ul class="space-y-3 pl-2">
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Fast development cycle
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Large ecosystem of libraries
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Cross-platform support
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+</section>
+
+<p class="text-lg mb-6 leading-relaxed">Python is extensively used in malware development where speed, flexibility, and automation are prioritized over stealth. Its simple syntax and vast ecosystem of libraries enable rapid creation of functional malware, making it particularly attractive to cybercriminal groups and less mature threat actors. Python-based malware is commonly observed in data exfiltration tools, cryptominers, ransomware components, and botnet management scripts.</p>
+
+                <p class="text-lg mb-6 leading-relaxed">Although Python malware often requires an interpreter or bundled runtime, attackers frequently package Python code into standalone executables using tools such as PyInstaller. This allows Python malware to be deployed more easily across environments while maintaining cross-platform compatibility. From a defensive perspective, Python-based malware tends to be noisier and more detectable through behavioral analysis, but its prevalence remains high due to its low development barrier.</p>
+
+
+        
+<section class="mb-20">
+       <div class="flex items-center mb-6">
+           <div class="p-2 bg-deep-accent/10 rounded mr-4">
+               <i data-lucide="shield-check" class="w-6 h-6 text-deep-accent"></i>
+           </div>
+           <h3 class="text-3xl font-extrabold text-cream uppercase tracking-tight">Rust</h3>
+       </div>
+
+       <div class="bg-dark-brown/40 border border-deep-accent/10 rounded-lg p-8 ml-4 md:ml-12 shadow-2xl relative overflow-hidden">
+           <div class="absolute top-0 right-0 w-32 h-32 bg-moss-green/5 -rotate-45 translate-x-16 -translate-y-16"></div>
+
+           <div class="mb-8 border-b border-deep-accent/5 pb-6">
+               <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">Analysis Report // Evasive Languages</p>
+               <p class="text-lg leading-relaxed opacity-90">
+                   <strong>Overview:</strong> Emerging language for modern, evasive malware.
+               </p>
+           </div>
+
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+               <div class="space-y-4">
+                   <div class="flex items-center text-moss-green mb-1">
+                       <i data-lucide="target" class="w-4 h-4 mr-2"></i>
+                       <span class="text-xs font-mono uppercase tracking-wider">Common Use Cases</span>
+                   </div>
+                   <ul class="space-y-3 pl-2">
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           Ransomware
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           Loaders and droppers
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           Cross-platform backdoors
+                       </li>
+                   </ul>
+               </div>
+
+               <div class="space-y-4">
+                   <div class="flex items-center text-moss-green mb-1">
+                       <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                       <span class="text-xs font-mono uppercase tracking-wider">Why Attackers Use It</span>
+                   </div>
+                   <ul class="space-y-3 pl-2">
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Harder to reverse-engineer
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Memory-safe by design
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Efficient compiled binaries
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+</section>
+     
+     <p class="text-lg mb-6 leading-relaxed">Rust has seen rapid adoption in modern malware development, particularly among ransomware operators and advanced threat actors. Its design emphasizes memory safety and performance, reducing the likelihood of crashes or instability during execution. Rust binaries are statically compiled and often lack easily recognizable patterns, making them more difficult to reverse-engineer than malware written in traditional languages.</p>
+
+<p class="text-lg mb-6 leading-relaxed">Attackers leverage Rust to produce highly efficient and resilient malware capable of operating across multiple platforms. The relative immaturity of reverse-engineering tooling for Rust further increases analysis complexity for defenders. As a result, Rust is increasingly associated with high-impact campaigns, including ransomware families and custom backdoors, and is viewed as an emerging trend in sophisticated threat development.</p>
+
+<section class="mb-20">
+       <div class="flex items-center mb-6">
+           <div class="p-2 bg-deep-accent/10 rounded mr-4">
+               <i data-lucide="cpu" class="w-6 h-6 text-deep-accent"></i>
+           </div>
+           <h3 class="text-3xl font-extrabold text-cream uppercase tracking-tight">Golang</h3>
+       </div>
+
+       <div class="bg-dark-brown/40 border border-deep-accent/10 rounded-lg p-8 ml-4 md:ml-12 shadow-2xl relative overflow-hidden">
+           <div class="absolute top-0 right-0 w-32 h-32 bg-moss-green/5 -rotate-45 translate-x-16 -translate-y-16"></div>
+
+           <div class="mb-8 border-b border-deep-accent/5 pb-6">
+               <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">Analysis Report // Scalable Infrastructure</p>
+               <p class="text-lg leading-relaxed opacity-90">
+                   <strong>Overview:</strong> Increasingly used for scalable, cross-platform malware.
+               </p>
+           </div>
+
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+               <div class="space-y-4">
+                   <div class="flex items-center text-moss-green mb-1">
+                       <i data-lucide="target" class="w-4 h-4 mr-2"></i>
+                       <span class="text-xs font-mono uppercase tracking-wider">Common Use Cases</span>
+                   </div>
+                   <ul class="space-y-3 pl-2">
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           Ransomware
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           Botnets
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                           C2 infrastructure
+                       </li>
+                   </ul>
+               </div>
+
+               <div class="space-y-4">
+                   <div class="flex items-center text-moss-green mb-1">
+                       <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                       <span class="text-xs font-mono uppercase tracking-wider">Why Attackers Use It</span>
+                   </div>
+                   <ul class="space-y-3 pl-2">
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Static compilation
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Built-in concurrency
+                       </li>
+                       <li class="flex items-center text-sm">
+                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                           Easy cross-platform deployment
+                       </li>
+                   </ul>
+               </div>
+           </div>
+       </div>
+</section>
+
+<p class="text-lg mb-6 leading-relaxed">Go, also known as Golang, is increasingly used to develop cross-platform malware due to its static compilation model and robust networking capabilities. Malware written in Go can be easily compiled for Windows, Linux, and macOS from a single codebase, making it highly attractive for large-scale or opportunistic attacks. Go is frequently used in ransomware, botnets, and command-and-control infrastructure.</p>
+
+<p class="text-lg mb-6 leading-relaxed">The language’s built-in concurrency features allow malware authors to efficiently manage multiple tasks such as encryption, network communication, and lateral movement. Go binaries are typically large and contain nontraditional execution patterns, which complicates static analysis. As cloud and container environments become more common targets, Go-based malware is expected to continue increasing in prevalence.</p>
+
+
+<section class="mb-20">
+    <div class="flex items-center mb-6">
+        <div class="p-2 bg-deep-accent/10 rounded mr-4">
+            <i data-lucide="command" class="w-6 h-6 text-deep-accent"></i>
+        </div>
+        <h3 class="text-3xl font-extrabold text-cream uppercase tracking-tight">PowerShell / Bash</h3>
+    </div>
+
+    <div class="bg-dark-brown/40 border border-deep-accent/10 rounded-lg p-8 ml-4 md:ml-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-moss-green/5 -rotate-45 translate-x-16 -translate-y-16"></div>
+
+        <div class="mb-8 border-b border-deep-accent/5 pb-6">
+            <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">Analysis Report // Native Shells</p>
+            <p class="text-lg leading-relaxed opacity-90">
+                <strong>Overview:</strong> Commonly used for fileless and post-exploitation activity.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="space-y-4">
+                <div class="flex items-center text-moss-green mb-1">
+                    <i data-lucide="target" class="w-4 h-4 mr-2"></i>
+                    <span class="text-xs font-mono uppercase tracking-wider">Common Use Cases</span>
+                </div>
+                <ul class="space-y-3 pl-2">
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                        Living-off-the-land attacks
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                        Credential harvesting
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]"></span>
+                        Lateral movement
+                    </li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-center text-moss-green mb-1">
+                    <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                    <span class="text-xs font-mono uppercase tracking-wider">Why Attackers Use It</span>
+                </div>
+                <ul class="space-y-3 pl-2">
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        Preinstalled on systems
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        Minimal disk artifacts
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        Easy to obfuscate
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<p class="text-lg mb-6 leading-relaxed">PowerShell and Bash are commonly used in fileless malware and post-exploitation activities, particularly during the later stages of an attack lifecycle. These scripting languages are often abused in “living-off-the-land” techniques, where attackers leverage legitimate system tools to avoid detection. PowerShell is especially prevalent in Windows environments, while Bash is widely used on Linux systems.</p>
+
+<p class="text-lg mb-6 leading-relaxed">Threat actors favor these languages because they are typically preinstalled, require no additional binaries, and can be heavily obfuscated. Scripts written in PowerShell or Bash are frequently used for reconnaissance, credential harvesting, persistence, and lateral movement. While scripting-based malware may lack the sophistication of compiled payloads, it remains highly effective due to its stealth and ease of deployment.</p>
+
+
+<section class="mb-12">
+    <div class="flex items-center mb-6">
+        <div class="p-2 bg-deep-accent/10 rounded mr-4">
+            <i data-lucide="binary" class="w-6 h-6 text-deep-accent"></i>
+        </div>
+        <h3 class="text-3xl font-extrabold text-cream">.NET (C#)</h3>
+    </div>
+
+    <div class="bg-dark-brown/40 border border-deep-accent/10 rounded-lg p-8 ml-4 md:ml-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-moss-green/5 -rotate-45 translate-x-16 -translate-y-16"></div>
+
+        <div class="mb-8 border-b border-deep-accent/5 pb-6">
+            <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-2">Technical Summary</p>
+            <p class="text-lg leading-relaxed opacity-90">
+                <strong>Overview:</strong> Widely used for Windows-targeted malware.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <div class="space-y-4">
+                <div class="flex items-center text-moss-green mb-1">
+                    <i data-lucide="target" class="w-4 h-4 mr-2"></i>
+                    <span class="text-xs font-mono uppercase tracking-wider">Common Use Cases</span>
+                </div>
+                <ul class="space-y-3 pl-2">
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3"></span>
+                        Remote access trojans (RATs)
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3"></span>
+                        Credential stealers
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3"></span>
+                        Loaders and droppers
+                    </li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex items-center text-moss-green mb-1">
+                    <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+                    <span class="text-xs font-mono uppercase tracking-wider">Why Attackers Use It</span>
+                </div>
+                <ul class="space-y-3 pl-2">
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        Strong Windows API integration
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        Rapid development
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3"></i>
+                        Effective obfuscation options
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <p class="text-lg mb-6 leading-relaxed">C# and the broader .NET framework are commonly used for developing malware that targets Windows environments. The language offers a balance between development speed and access to Windows APIs, making it popular for malware such as remote access trojans (RATs), credential stealers, and loaders. Many commodity malware families rely on C# due to its ease of development and strong tooling support.</p>
+
+<p class="text-lg mb-6 leading-relaxed">Although .NET binaries can often be decompiled, attackers frequently employ obfuscation techniques to hinder analysis. C# malware also integrates well with PowerShell and other Windows-native technologies, enabling seamless execution and persistence. As a result, .NET-based malware remains a staple in phishing campaigns, malware-as-a-service offerings, and financially motivated threat activity.</p>
+    
+            <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">Although there are many different types of languages that can be used and different ones to use in different situations.  Complicated exfiltration through large tech-stacks may involve complicated methods of obfuscation, and therefore more than one language - or others will be require simple C&C servers.
             </blockquote>
 
-                
         </article>
 
-        <section class="mt-20 pt-8 border-t border-deep-accent/30">
+        <section class="mt-20 pt-7 border-t border-deep-accent/30">
             <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
             <div class="space-y-4 font-mono text-sm opacity-80">
-                <p>Cybereason, "The Gentleman Ransomware Group" 2025, [Online]. Available: https://www.cybereason.com/blog/the-gentlemen-ransomware</p>
-                <p>Trend Micro, 2025: "Unmasking the Gentleman", [Online]. Available: https://www.trendmicro.com/en_us/research/25/i/unmasking-the-gentlemen-ransomware.html</p>
+                <p class="text-sm mb-6 leading-relaxed">Cybereason, "The Gentleman Ransomware Group" 2025, [Online]. Available: https://www.cybereason.com/blog/the-gentlemen-ransomware</p>
+                <p class="text-sm mb-6 leading-relaxed">Trend Micro, 2025: "Unmasking the Gentleman", [Online]. Available: https://www.trendmicro.com/en_us/research/25/i/unmasking-the-gentlemen-ransomware.html</p>
+                <p class="text-sm mb-6 leading-relaxed">Bacancy Technology, "C++ for CyberSecurity: A Complete Guide to Secure Apps," 2024, [Online]. Available: https://www.bacancytechnology.com/blog/cpp-for-cybersecurity
+</p>
+                <p class="text-sm mb-6 leading-relaxed">Bishop Fox, "Rust for Malware Development," 2025, [Online]. Available: https://bishopfox.com/blog/rust-for-malware-development </p>
+                <p class="text-sm mb-6 leading-relaxed">Softjourn, "The Most In-Demand Programming Languages for 2026," 2026, [Online]. Available: https://softjourn.com/insights/in-demand-programming-languages-tips-for-selecting</p>
+                <p class="text-sm mb-6 leading-relaxed">Mandiant, "Go-ing the Distance: The Rise of Go in Malware Development," 2025, [Online]. Available: https://www.mandiant.com/resources/blog/go-malware-development</p>
             </div>
         </section>
 
