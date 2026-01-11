@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes from Stephen Boyd</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1E392A',
+                        'dark-brown': '#3A2A1A',
+                        'cream': '#FAF0DC',
+                        'moss-green': '#52703e',
+                        'deep-accent': '#C5AE87',
+                    }
+                }
+            }
+        }
+    </script>
+    
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+   <script>
+     window.MathJax = {
+       tex: {
+         inlineMath: [['$', '$'], ['\\(', '\\)']]
+       }
+     };
+   </script>
+
+   <style>
+           .definition-box { background-color: #52703e; border-left: 5px solid #C5AE87; padding: 15px; margin-bottom: 25px; border-radius: 4px; }
+           .math { font-family: "Times New Roman", Times, serif; font-style: italic; background: #1E392A; padding: 2px 5px; border-radius: 3px; }
+           code { color: #FAF0DC; font-weight: bold; }
+           .note { font-size: 0.9em; color: #FAF0DC; font-style: italic; margin-top: 10px; }
+   </style>
+</head>
+
+
+<body class="bg-dark-green text-cream font-sans min-h-screen">
+
+    <header class="bg-dark-brown p-4 border-b border-deep-accent/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-8">
+            <a href="index.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
+                <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
+            </a>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 002</span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-8 pt-16">
+        
+        <header class="mb-12">
+            <div class="flex items-center text-deep-accent mb-4">
+                <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 05, 2026</span>
+            </div>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">Videos 1 - 4</h1>
+        </header>
+
+        <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
+            <p class="text-lg mb-6 leading-relaxed"></p>
+            <h2 class="text-3xl font-extrabold mb-6 text-cream">Introduction</h2>
+
+    <h1>Convex Optimization Notes: Fundamental Sets</h1>
+
+    <section>
+        <h2>1. Convex Set</h2>
+        <div class="definition-box">
+            <p><strong>Intuition:</strong> The "Line of Sight" rule. If you are at any point in the set, you can see any other point in the set without your path leaving the boundary.</p>
+            <p><strong>Formal Definition:</strong> A set $C$ is convex if for every $x, y \in C$ and $\theta$ such that $0 \leq \theta \leq 1$, we have:</p>
+            <center>$\theta x + (1 - \theta)y \in C$</center>
+            <p class="note">This creates a <strong>line segment</strong> between two points.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Affine Set</h2>
+        <div class="definition-box">
+            <p><strong>Intuition:</strong> A set that contains the entire infinite line passing through any two of its points (not just the segment).</p>
+            <p><strong>Formal Definition:</strong> A set $C$ is affine if for every $x, y \in C$ and $\theta \in \mathbb{R}$:</p>
+            <center>$\theta x + (1 - \theta)y \in C$</center>
+            <p class="note">Note: Every affine set is also a convex set, but not every convex set is affine.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Hyperplane</h2>
+        <div class="definition-box">
+            <p><strong>Intuition:</strong> A flat surface that divides the space into two halves. In 3D it's a plane; in 2D it's a line.</p>
+            <p><strong>Formal Definition:</strong> A set of the form:</p>
+            <center>$\{x \mid a^T x = b\}$</center>
+            <p>Where $a$ is a non-zero vector (the normal vector) and $b$ is a constant.</p>
+            <p class="note"><strong>Supporting Hyperplane:</strong> A special case where the hyperplane touches the "boundary" of a convex set without cutting through its interior.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Affine Hull</h2>
+        <div class="definition-box">
+            <p><strong>Intuition:</strong> The smallest flat "space" (line, plane, etc.) that can contain a given set of points.</p>
+            <p><strong>Formal Definition:</strong> The set of all <strong>affine combinations</strong> of points in $S$:</p>
+            <center>$\mathbf{aff } S = \{ \theta_1 x_1 + \dots + \theta_k x_k \mid x_i \in S, \sum \theta_i = 1 \}$</center>
+        </div>
+    </section>
+
+<!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
+<!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
+<!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
+        </article>
+
+        <section class="mt-20 pt-7 border-t border-deep-accent/30">
+            <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
+            <div class="space-y-4 font-mono text-sm opacity-80">
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <div class="mt-16 text-center">
+            <a href="blog.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Main Maths Page</a>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center opacity-40 text-xs">
+        &copy; 2026 twhite
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
