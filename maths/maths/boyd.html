@@ -48,7 +48,7 @@
             <a href="index.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
                 <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
             </a>
-            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 002</span>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">First Note File</span>
         </div>
     </header>
 
@@ -57,9 +57,9 @@
         <header class="mb-12">
             <div class="flex items-center text-deep-accent mb-4">
                 <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
-                <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 05, 2026</span>
+                <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 11, 2026</span>
             </div>
-            <h1 class="text-5xl font-extrabold mb-6 leading-tight">Videos 1 - 4</h1>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">Summary Notes</h1>
         </header>
 
         <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
@@ -69,7 +69,7 @@
     <h1>Convex Optimization Notes: Fundamental Sets</h1>
 
     <section>
-        <h2>1. Convex Set</h2>
+        <h2>Convex Set</h2>
         <div class="definition-box">
             <p><strong>Intuition:</strong> The "Line of Sight" rule. If you are at any point in the set, you can see any other point in the set without your path leaving the boundary.</p>
             <p><strong>Formal Definition:</strong> A set $C$ is convex if for every $x, y \in C$ and $\theta$ such that $0 \leq \theta \leq 1$, we have:</p>
@@ -79,9 +79,9 @@
     </section>
 
     <section>
-        <h2>2. Affine Set</h2>
+        <h2>Affine Set</h2>
         <div class="definition-box">
-            <p><strong>Intuition:</strong> A set that contains the entire infinite line passing through any two of its points (not just the segment).</p>
+            <p><strong>Intuition:</strong> A set that contains the entire infinite line passing through any two of its points (not just the segment).  An affine set can be thought of as the largest extension of a linear relationship.</p>
             <p><strong>Formal Definition:</strong> A set $C$ is affine if for every $x, y \in C$ and $\theta \in \mathbb{R}$:</p>
             <center>$\theta x + (1 - \theta)y \in C$</center>
             <p class="note">Note: Every affine set is also a convex set, but not every convex set is affine.</p>
@@ -89,9 +89,9 @@
     </section>
 
     <section>
-        <h2>3. Hyperplane</h2>
+        <h2>Hyperplane</h2>
         <div class="definition-box">
-            <p><strong>Intuition:</strong> A flat surface that divides the space into two halves. In 3D it's a plane; in 2D it's a line.</p>
+            <p><strong>Intuition:</strong> A flat surface that divides the space into two halves. In 3D it's a plane; in 2D it's a line.  It is used to describe the shape of a space.</p>
             <p><strong>Formal Definition:</strong> A set of the form:</p>
             <center>$\{x \mid a^T x = b\}$</center>
             <p>Where $a$ is a non-zero vector (the normal vector) and $b$ is a constant.</p>
@@ -100,7 +100,7 @@
     </section>
 
     <section>
-        <h2>4. Affine Hull</h2>
+        <h2>Affine Hull</h2>
         <div class="definition-box">
             <p><strong>Intuition:</strong> The smallest flat "space" (line, plane, etc.) that can contain a given set of points.</p>
             <p><strong>Formal Definition:</strong> The set of all <strong>affine combinations</strong> of points in $S$:</p>
