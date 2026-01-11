@@ -134,7 +134,6 @@
         <p>Formal Definition: $x \in int(S)$ if there exists an $\epsilon > 0$ such that a ball of radius $\epsilon$ around x is entirely contained in $S$.  You aren't "touching the fence"; you have a buffer zone.</p>
         </div>
 
-
         <div class="definition-box" style="border-left-color: #9b59b6;">
             <p><strong>Closure ($\mathbf{cl } S$):</strong> The union of the set and its boundary.</p>
             <p>A set is <strong>closed</strong> if it contains all its limit points. In optimization, we usually deal with closed sets to ensure that we can actually "reach" the optimal point on the boundary.</p>
@@ -147,6 +146,21 @@
             <p>A set is <strong>unbounded</strong> if it extends to infinity in some direction. For example, a <em>ray</em> or a <em>halfspace</em> is an unbounded convex set.</p>
             <p class="note"><strong>Key Concept:</strong> If a convex optimization problem has an unbounded feasible set, the optimal value might be $-\infty$.</p>
         </div>
+
+        <div class="definition-box" style="border-left-color: #a29bfe;">
+            <p><strong>The PSD Cone ($\mathbb{S}^n_+$):</strong> The set of symmetric $n \times n$ matrices that are positive semidefinite.</p>
+            <p>A matrix $X$ is in the PSD cone if:</p>
+            <center>$z^T X z \ge 0 \quad \forall z \in \mathbb{R}^n$</center>
+            <p>Equivalently, all eigenvalues of $X$ are non-negative ($\lambda_i \ge 0$).</p>
+            <p class="note"><strong>Significance:</strong> This cone is the foundation of <strong>Semidefinite Programming (SDP)</strong>, one of the most powerful tools in modern optimization.</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #636e72;">
+            <p><strong>Positive Definite ($\mathbb{S}^n_{++}$):</strong> The "Interior" of the PSD cone.</p>
+            <p>Matrices where $z^T X z > 0$ for all $z \neq 0$. All eigenvalues are strictly positive.</p>
+        </div>
+    </section>
+            
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
