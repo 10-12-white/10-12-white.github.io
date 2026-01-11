@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes from Stephen Boyd</title>
+    <title>Notes from Stephen Boyd's Convex Optimisation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -108,6 +108,25 @@
         </div>
     </section>
 
+<div class="definition-box">
+        <h2>Convex Hull</h2>
+        <p>The <strong>convex hull</strong> of a set $S$, denoted $\text{conv } S$, is the set of all convex combinations of points in $S$.</p>
+        <p>$$\text{conv } S = \{ \sum \theta_i x_i \mid x_i \in S, \theta_i \ge 0, \sum \theta_i = 1 \}$$</p>
+    </div>
+
+    <div class="definition-box">
+        <h2>Halfspaces</h2>
+        <p>From earlier, we know that a <strong>hyperplane</strong> is the set $\{x \mid a^T x = b\}$.</p>
+        <p>A <strong>halfspace</strong> is the set $\{x \mid a^T x \le b\}$.</p>
+        <p class="note">Hyperplanes are the boundaries; halfspaces are the regions on one side of those boundaries.</p>
+    </div>
+
+<div class="definition-box">
+        <h2>Sets and Compliments</h2>
+        <p>From earlier, we know that a <strong>set</strong> is a collection of points, which we can call $C$..</p>
+        <p>The <strong>compliment</strong> is the set points not contained in $C$.  \{x \mid a^T x \le b\}$.</p>
+    </div>
+            
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
@@ -126,7 +145,7 @@
         </section>
 
         <div class="mt-16 text-center">
-            <a href="blog.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Main Maths Page</a>
+            <a href="../index.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Main Maths Page</a>
         </div>
     </main>
 
