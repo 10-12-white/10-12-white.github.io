@@ -88,6 +88,27 @@
         </div>
     </section>
 
+        <div class="definition-box" style="border-left-color: #9b59b6;">
+            <p><strong>Closure ($\mathbf{cl } S$):</strong> The union of the set and its boundary.</p>
+            <p>A set is <strong>closed</strong> if it contains all its limit points. In optimization, we usually deal with closed sets to ensure that we can actually "reach" the optimal point on the boundary.</p>
+            <center>$\mathbf{cl } S = \{x \mid \forall \epsilon > 0, \{y \mid \|y-x\| \leq \epsilon\} \cap S \neq \emptyset\}$</center>
+        </div>
+
+            <div class="definition-box" style="border-left: 5px dashed #e67e22;">
+            <p><strong>Bounded vs. Unbounded Sets:</strong></p>
+            <p>A set is <strong>bounded</strong> if it can be contained within a ball of finite radius $R$.</p>
+            <p>A set is <strong>unbounded</strong> if it extends to infinity in some direction. For example, a <em>ray</em> or a <em>halfspace</em> is an unbounded convex set.</p>
+            <p class="note"><strong>Key Concept:</strong> If a convex optimization problem has an unbounded feasible set, the optimal value might be $-\infty$.</p>
+        </div>
+
+
+<div class="definition-box">
+        <h2>Interior Sets</h2>
+        <p><strong>The interior of a set</strong> is the "inner region" of a set.  Put more clearly, a point is in the interior if you can move a tiny bit in any direction and still stay inside the set.  You consider that this point can be enclosed in a "ball" that will fit perfectly inside this set.</p>
+        <p>Formal Definition: $x \in int(S)$ if there exists an $\epsilon > 0$ such that a ball of radius $\epsilon$ around x is entirely contained in $S$.  You aren't "touching the fence"; you have a buffer zone.</p>
+        </div>
+
+
     <section>
         <h2>Hyperplane</h2>
         <div class="definition-box">
@@ -98,7 +119,7 @@
             <p class="note"><strong>Supporting Hyperplane:</strong> A special case where the hyperplane touches the "boundary" of a convex set without cutting through its interior.</p>
         </div>
     </section>
-
+            
     <section>
         <h2>Affine Hull</h2>
         <div class="definition-box">
@@ -121,32 +142,12 @@
         <p class="note">Hyperplanes are the boundaries; halfspaces are the regions on one side of those boundaries.</p>
     </div>
 
-<div class="definition-box">
+        <div class="definition-box">
         <h2>Sets and Compliments</h2>
         <p>From earlier, we know that a <strong>set</strong> is a collection of points, which we can call $C$..</p>
         <p>The <strong>compliment</strong> is the set points not contained in $C$.  \{x \mid a^T x \le b\}$.</p>
-    </div>
-
-        <div class="definition-box">
-        <h2>Interior Sets</h2>
-        <p><strong>The interior of a set</strong> is the "inner region" of a set. Put more clearly, a point is in the interior if you can move a tiny bit in any direction and still stay inside the set.  You consider that this point can be enclosed in a "ball" that will fit perfectly inside this set.</p>
-
-        <p>Formal Definition: $x \in int(S)$ if there exists an $\epsilon > 0$ such that a ball of radius $\epsilon$ around x is entirely contained in $S$.  You aren't "touching the fence"; you have a buffer zone.</p>
         </div>
-
-        <div class="definition-box" style="border-left-color: #9b59b6;">
-            <p><strong>Closure ($\mathbf{cl } S$):</strong> The union of the set and its boundary.</p>
-            <p>A set is <strong>closed</strong> if it contains all its limit points. In optimization, we usually deal with closed sets to ensure that we can actually "reach" the optimal point on the boundary.</p>
-            <center>$\mathbf{cl } S = \{x \mid \forall \epsilon > 0, \{y \mid \|y-x\| \leq \epsilon\} \cap S \neq \emptyset\}$</center>
-        </div>
-
-        <div class="definition-box" style="border-left: 5px dashed #e67e22;">
-            <p><strong>Bounded vs. Unbounded Sets:</strong></p>
-            <p>A set is <strong>bounded</strong> if it can be contained within a ball of finite radius $R$.</p>
-            <p>A set is <strong>unbounded</strong> if it extends to infinity in some direction. For example, a <em>ray</em> or a <em>halfspace</em> is an unbounded convex set.</p>
-            <p class="note"><strong>Key Concept:</strong> If a convex optimization problem has an unbounded feasible set, the optimal value might be $-\infty$.</p>
-        </div>
-
+            
         <div class="definition-box" style="border-left-color: #a29bfe;">
             <p><strong>The PSD Cone ($\mathbb{S}^n_+$):</strong> The set of symmetric $n \times n$ matrices that are positive semidefinite.</p>
             <p>A matrix $X$ is in the PSD cone if:</p>
@@ -179,7 +180,7 @@
         </section>
 
         <div class="mt-16 text-center">
-            <a href="../index.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Main Maths Page</a>
+            <a href="10-12-white.github.io/index.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Main Maths Page</a>
         </div>
     </main>
 
