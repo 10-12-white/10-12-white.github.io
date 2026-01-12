@@ -204,6 +204,25 @@
             <center>$f(x) = \frac{Ax + b}{c^T x + d}$</center>
         </div>
     </section>
+
+<section id="theorems">
+        <h2>Fundamental Separation Theorems</h2>
+        
+        <div class="definition-box" style="border-left-color: #f39c12;">
+            <span class="tag" style="background:#fff7ed; color:#c2410e;">Theory</span>
+            <h3>Separating Hyperplane Theorem</h3>
+            <p>If $C$ and $D$ are disjoint convex sets, there exists $a \neq 0$ and $b$ such that:</p>
+            <center>$a^T x \leq b \text{ for } x \in C \quad \text{and} \quad a^T x \geq b \text{ for } x \in D$</center>
+
+        </div>
+
+        <div class="definition-box" style="border-left-color: #e67e22;">
+            <h3>Supporting Hyperplane Theorem</h3>
+            <p>For every boundary point $x_0$ of a convex set $C$, there exists a <strong>supporting hyperplane</strong> $\{x \mid a^T x = a^T x_0\}$ such that $a^T x \leq a^T x_0$ for all $x \in C$.</p>
+            <p class="note">Every convex set has a "flat" tangent at every boundary point.</p>
+        </div>
+    </section>
+            
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
