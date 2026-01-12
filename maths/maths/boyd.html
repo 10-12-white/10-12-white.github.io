@@ -162,8 +162,8 @@
         </div>
     </section>
 
-<section>
-        <h2>8. Generalized Inequalities</h2>
+<section id="inequals">
+        <h2>Generalized Inequalities</h2>
         
         <div class="definition-box" style="border-left-color: #d63031;">
             <p><strong>The Concept:</strong> We use a proper cone $K$ to define a partial ordering between vectors or matrices.</p>
@@ -183,7 +183,27 @@
             </ul>
             <p class="note"><strong>Warning:</strong> Unlike real numbers, generalized inequalities are <em>partial</em>. Two vectors might be "incomparable" if their difference doesn't fall inside the cone $K$.</p>
         </div>
-    </section>            
+    </section>
+
+    <section id="operations">
+        <h2>Operations that Preserve Convexity</h2>
+        
+        <div class="definition-box" style="border-left-color: #0984e3;">
+            <span class="tag" style="background:#e1f5fe; color:#01579b;">Toolbox</span>
+            <p><strong>1. Intersection:</strong> If $S_1, S_2, \dots$ are convex, then $\bigcap S_i$ is convex. 
+            <br><small>This holds even for an infinite number of sets!</small></p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0984e3;">
+            <p><strong>2. Affine Mapping:</strong> If $S$ is convex, then $f(S) = \{Ax+b \mid x \in S\}$ is convex.
+            <br>Conversely, the pre-image $f^{-1}(S)$ is also convex.</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0984e3;">
+            <p><strong>3. Perspective & Linear-Fractional:</strong> These mappings preserve the "convex shape" even when stretching or projecting the set into different dimensions.</p>
+            <center>$f(x) = \frac{Ax + b}{c^T x + d}$</center>
+        </div>
+    </section>
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
