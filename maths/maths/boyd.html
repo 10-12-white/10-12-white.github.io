@@ -231,6 +231,36 @@
             <p><strong>Logic:</strong> It is the intersection of two halfspaces. Since halfspaces are convex and intersection preserves convexity, the slab is convex.</p>
         </div>
 
+       <div class="definition-box" style="border-left-color: #0f9d58;">
+            <span class="tag" style="background:#0f9d58; color:#2d3436;">Example 1</span>
+            <h3>The Standard 2D Halfspace</h3>
+            <p>Consider the set in $\mathbb{R}^2$ defined by: $x_1 + x_2 \le 1$</p>
+            <ul>
+                <li><strong>Normal Vector ($a$):</strong> $[1, 1]^T$</li>
+                <li><strong>Boundary:</strong> The line $x_2 = -x_1 + 1$</li>
+                <li><strong>Region:</strong> Everything below and to the left of that line, extending to infinity.</li>
+            </ul>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>The Vertical Slab</h3>
+            <p>Consider the set in $\mathbb{R}^2$ where: $-2 \le x_1 \le 5$</p>
+            <ul>
+                <li><strong>Logic:</strong> Here, $a = [1, 0]^T$. The value of $x_2$ can be anything.</li>
+                <li><strong>Geometry:</strong> This creates an infinite vertical "strip" between the lines $x_1 = -2$ and $x_1 = 5$.</li>
+            </ul>
+            <p class="note">In higher dimensions, this looks like the space between two parallel "walls."</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <span class="tag" style="background:#dfe6e9; color:#2d3436;">Example 3</span>
+            <h3>Budget Constraint (Economic Halfspace)</h3>
+            <p>If you have $n$ items with prices $p_i$, and a total budget $B$, the set of affordable items is a halfspace:</p>
+            <center>$p^T x \le B, \quad x \succeq 0$</center>
+            <p class="note">Note: $x \succeq 0$ adds $n$ more halfspaces (one for each axis), making the final set a <strong>simplex</strong>.</p>
+        </div>
+    </section>     
+
         <div class="definition-box" style="border-left-color: #0f9d58;">
             <h3>Euclidean Ball & Ellipsoid</h3>
             <p><strong>Ball:</strong> $B(x_c, r) = \{x \mid \|x - x_c\|_2 \leq r\}$</p>
