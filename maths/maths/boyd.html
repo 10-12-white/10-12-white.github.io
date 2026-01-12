@@ -94,7 +94,7 @@
             <center>$\mathbf{cl } S = \{x \mid \forall \epsilon > 0, \{y \mid \|y-x\| \leq \epsilon\} \cap S \neq \emptyset\}$</center>
         </div>
 
-            <div class="definition-box" style="border-left: 5px dashed #0f9d58;">
+            <div class="definition-box" style="border-left: #0f9d58;">
             <p><strong>Bounded vs. Unbounded Sets:</strong></p>
             <p>A set is <strong>bounded</strong> if it can be contained within a ball of finite radius $R$.</p>
             <p>A set is <strong>unbounded</strong> if it extends to infinity in some direction. For example, a <em>ray</em> or a <em>halfspace</em> is an unbounded convex set.</p>
@@ -225,28 +225,27 @@
 
 <h2>Examples</h2>
             
-<div class="definition-box" style="border-left-color: #16a085;">
+<div class="definition-box" style="border-left-color: #0f9d58;">
             
         <h3>The Slab</h3>
             <p>A set of the form $\{x \mid \alpha \leq a^T x \leq \beta\}$.</p>
             <p><strong>Logic:</strong> It is the intersection of two halfspaces. Since halfspaces are convex and intersection preserves convexity, the slab is convex.</p>
         </div>
 
-        <div class="definition-box" style="border-left-color: #16a085;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <h3>Euclidean Ball & Ellipsoid</h3>
             <p><strong>Ball:</strong> $B(x_c, r) = \{x \mid \|x - x_c\|_2 \leq r\}$</p>
             <p><strong>Ellipsoid:</strong> $\{x \mid (x-x_c)^T P^{-1} (x-x_c) \leq 1\}$ where $P \in \mathbb{S}^n_{++}$.</p>
             <p class="note">An ellipsoid is just a stretched version of a ball (an affine transformation).</p>
         </div>
 
-        <div class="definition-box" style="border-left-color: #16a085;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <h3>The Norm Cone (Second-Order Cone)</h3>
             <p>The set $C = \{(x, t) \mid \|x\|_2 \leq t\}$.</p>
             <p>In 3D, if $x$ is 2D, this looks like an inverted ice cream cone starting at the origin and expanding upwards as $t$ increases.</p>
         </div>
 
-        <div id="separation-example" class="definition-box" style="border-left-color: #8e44ad;">
-            <span class="tag" style="background:#f3e5f5; color:#4a148c;">Separation Example</span>
+        <div id="separation-example" class="definition-box" style="border-left-color: #0f9d58;">
             <h3>Example</h3>
             <p>Consider two sets in 1D:</p>
             <ul>
