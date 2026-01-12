@@ -88,13 +88,13 @@
         </div>
     </section>
 
-        <div class="definition-box" style="border-left-color: #9b59b6;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <p><strong>Closure ($\mathbf{cl } S$):</strong> The union of the set and its boundary.</p>
             <p>A set is <strong>closed</strong> if it contains all its limit points. In optimization, we usually deal with closed sets to ensure that we can actually "reach" the optimal point on the boundary.</p>
             <center>$\mathbf{cl } S = \{x \mid \forall \epsilon > 0, \{y \mid \|y-x\| \leq \epsilon\} \cap S \neq \emptyset\}$</center>
         </div>
 
-            <div class="definition-box" style="border-left: 5px dashed #e67e22;">
+            <div class="definition-box" style="border-left: 5px dashed #0f9d58;">
             <p><strong>Bounded vs. Unbounded Sets:</strong></p>
             <p>A set is <strong>bounded</strong> if it can be contained within a ball of finite radius $R$.</p>
             <p>A set is <strong>unbounded</strong> if it extends to infinity in some direction. For example, a <em>ray</em> or a <em>halfspace</em> is an unbounded convex set.</p>
@@ -148,7 +148,7 @@
         <p>The <strong>compliment</strong> is the set points not contained in $C$.  \{x \mid a^T x \le b\}$.</p>
         </div>
             
-        <div class="definition-box" style="border-left-color: #a29bfe;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <p><strong>The PSD Cone ($\mathbb{S}^n_+$):</strong> The set of symmetric $n \times n$ matrices that are positive semidefinite.</p>
             <p>A matrix $X$ is in the PSD cone if:</p>
             <center>$z^T X z \ge 0 \quad \forall z \in \mathbb{R}^n$</center>
@@ -156,7 +156,7 @@
             <p class="note"><strong>Significance:</strong> This cone is the foundation of <strong>Semidefinite Programming (SDP)</strong>, one of the most powerful tools in modern optimization.</p>
         </div>
 
-        <div class="definition-box" style="border-left-color: #636e72;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <p><strong>Positive Definite ($\mathbb{S}^n_{++}$):</strong> The "Interior" of the PSD cone.</p>
             <p>Matrices where $z^T X z > 0$ for all $z \neq 0$. All eigenvalues are strictly positive.</p>
         </div>
@@ -165,7 +165,7 @@
 <section id="inequals">
         <h2>Generalized Inequalities</h2>
         
-        <div class="definition-box" style="border-left-color: #d63031;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <p><strong>The Concept:</strong> We use a proper cone $K$ to define a partial ordering between vectors or matrices.</p>
             
             <p><strong>Generalized Inequality ($\preceq_K$):</strong></p>
@@ -175,7 +175,7 @@
             <center>$x \prec_K y \iff y - x \in \mathbf{int } K$</center>
         </div>
 
-        <div class="definition-box" style="border-left-color: #00b894;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <p><strong>Common Examples:</strong></p>
             <ul>
                 <li><strong>Vector Inequality:</strong> $x \preceq_{\mathbb{R}^n_+} y$ means $x_i \leq y_i$ for all $i$.</li>
@@ -188,18 +188,18 @@
     <section id="operations">
         <h2>Operations that Preserve Convexity</h2>
         
-        <div class="definition-box" style="border-left-color: #0984e3;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <span class="tag" style="background:#e1f5fe; color:#01579b;">Toolbox</span>
             <p><strong>1. Intersection:</strong> If $S_1, S_2, \dots$ are convex, then $\bigcap S_i$ is convex. 
             <br><small>This holds even for an infinite number of sets!</small></p>
         </div>
 
-        <div class="definition-box" style="border-left-color: #0984e3;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <p><strong>2. Affine Mapping:</strong> If $S$ is convex, then $f(S) = \{Ax+b \mid x \in S\}$ is convex.
             <br>Conversely, the pre-image $f^{-1}(S)$ is also convex.</p>
         </div>
 
-        <div class="definition-box" style="border-left-color: #0984e3;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <p><strong>3. Perspective & Linear-Fractional:</strong> These mappings preserve the "convex shape" even when stretching or projecting the set into different dimensions.</p>
             <center>$f(x) = \frac{Ax + b}{c^T x + d}$</center>
         </div>
@@ -208,7 +208,7 @@
 <section id="theorems">
         <h2>Fundamental Separation Theorems</h2>
         
-        <div class="definition-box" style="border-left-color: #f39c12;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <span class="tag" style="background:#fff7ed; color:#c2410e;">Theory</span>
             <h3>Separating Hyperplane Theorem</h3>
             <p>If $C$ and $D$ are disjoint convex sets, there exists $a \neq 0$ and $b$ such that:</p>
@@ -216,12 +216,46 @@
 
         </div>
 
-        <div class="definition-box" style="border-left-color: #e67e22;">
+        <div class="definition-box" style="border-left-color: #0f9d58;">
             <h3>Supporting Hyperplane Theorem</h3>
             <p>For every boundary point $x_0$ of a convex set $C$, there exists a <strong>supporting hyperplane</strong> $\{x \mid a^T x = a^T x_0\}$ such that $a^T x \leq a^T x_0$ for all $x \in C$.</p>
             <p class="note">Every convex set has a "flat" tangent at every boundary point.</p>
         </div>
     </section>
+
+<h2>Examples</h2>
+            
+<div class="definition-box" style="border-left-color: #16a085;">
+            
+        <h3>The Slab</h3>
+            <p>A set of the form $\{x \mid \alpha \leq a^T x \leq \beta\}$.</p>
+            <p><strong>Logic:</strong> It is the intersection of two halfspaces. Since halfspaces are convex and intersection preserves convexity, the slab is convex.</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #16a085;">
+            <h3>Euclidean Ball & Ellipsoid</h3>
+            <p><strong>Ball:</strong> $B(x_c, r) = \{x \mid \|x - x_c\|_2 \leq r\}$</p>
+            <p><strong>Ellipsoid:</strong> $\{x \mid (x-x_c)^T P^{-1} (x-x_c) \leq 1\}$ where $P \in \mathbb{S}^n_{++}$.</p>
+            <p class="note">An ellipsoid is just a stretched version of a ball (an affine transformation).</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #16a085;">
+            <h3>The Norm Cone (Second-Order Cone)</h3>
+            <p>The set $C = \{(x, t) \mid \|x\|_2 \leq t\}$.</p>
+            <p>In 3D, if $x$ is 2D, this looks like an inverted ice cream cone starting at the origin and expanding upwards as $t$ increases.</p>
+        </div>
+
+        <div id="separation-example" class="definition-box" style="border-left-color: #8e44ad;">
+            <span class="tag" style="background:#f3e5f5; color:#4a148c;">Separation Example</span>
+            <h3>Example</h3>
+            <p>Consider two sets in 1D:</p>
+            <ul>
+                <li>$C = \{x \mid x \leq 0\}$ (Closed)</li>
+                <li>$D = \{x \mid x > 2\}$ (Open, but separated by distance)</li>
+            </ul>
+            <p>A strictly separating hyperplane (a point in 1D) could be $x = 1$. Since $x < 1$ for all $C$ and $x > 1$ for all $D$, they are strictly separated.</p>
+        </div>
+    </section>            
             
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
