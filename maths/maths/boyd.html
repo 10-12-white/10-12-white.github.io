@@ -161,7 +161,29 @@
             <p>Matrices where $z^T X z > 0$ for all $z \neq 0$. All eigenvalues are strictly positive.</p>
         </div>
     </section>
+
+<section>
+        <h2>8. Generalized Inequalities</h2>
+        
+        <div class="definition-box" style="border-left-color: #d63031;">
+            <p><strong>The Concept:</strong> We use a proper cone $K$ to define a partial ordering between vectors or matrices.</p>
             
+            <p><strong>Generalized Inequality ($\preceq_K$):</strong></p>
+            <center>$x \preceq_K y \iff y - x \in K$</center>
+            
+            <p><strong>Strict Generalized Inequality ($\prec_K$):</strong></p>
+            <center>$x \prec_K y \iff y - x \in \mathbf{int } K$</center>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #00b894;">
+            <p><strong>Common Examples:</strong></p>
+            <ul>
+                <li><strong>Vector Inequality:</strong> $x \preceq_{\mathbb{R}^n_+} y$ means $x_i \leq y_i$ for all $i$.</li>
+                <li><strong>Matrix Inequality (PSD):</strong> $X \preceq_{\mathbb{S}^n_+} Y$ means the matrix $Y - X$ is positive semidefinite.</li>
+            </ul>
+            <p class="note"><strong>Warning:</strong> Unlike real numbers, generalized inequalities are <em>partial</em>. Two vectors might be "incomparable" if their difference doesn't fall inside the cone $K$.</p>
+        </div>
+    </section>            
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
