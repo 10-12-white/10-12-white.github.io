@@ -160,7 +160,7 @@
             <p>Matrices where $z^T X z > 0$ for all $z \neq 0$. All eigenvalues are strictly positive.</p>
         </div>
     </section>
-
+            
 <section id="inequals">
         <h3>Generalized Inequalities</h3>
         
@@ -212,13 +212,20 @@
             <h3>Separating Hyperplane Theorem</h3>
             <p>If $C$ and $D$ are disjoint convex sets, there exists $a \neq 0$ and $b$ such that:</p>
             <center>$a^T x \leq b \text{ for } x \in C \quad \text{and} \quad a^T x \geq b \text{ for } x \in D$</center>
-
         </div>
 
         <div class="definition-box" style="border-left-color: #0f9d58;">
             <h3>Supporting Hyperplane Theorem</h3>
             <p>For every boundary point $x_0$ of a convex set $C$, there exists a <strong>supporting hyperplane</strong> $\{x \mid a^T x = a^T x_0\}$ such that $a^T x \leq a^T x_0$ for all $x \in C$.</p>
             <p class="note">Every convex set has a "flat" tangent at every boundary point.</p>
+        </div>
+    </section>
+
+    <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>Infimum and Minimum</h3>
+            <p>The minimum is the smallest number within a set, while the infimum (or greatest lower bound, GLB) is the largest number that is less than or equal to all numbers in the set; the infimum may or may not be in the set, but if a minimum exists, it is always the infimum, making the infimum a generalization of the minimum for sets that lack a smallest element, like open interval</p>
+        
+            <p class="note">Minimum has an issue because we cannot always find a minimum.  For example, if you consider the set (0,1) there will ALWAYS be a smaller number - for instance, 0.001, and, say 0.0001, etc.  THe benefit of the infimum, is it is greatest (largest) number that is less than or equal to every number in the set.  This is good because then you can always have an infimum.</p>
         </div>
     </section>
 
