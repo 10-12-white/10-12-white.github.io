@@ -55,8 +55,20 @@
 
 
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Victimology and Patterns</h3>
-            <p class="text-lg mb-6 leading-relaxed"></p>
-        
+            <p class="text-lg mb-6 leading-relaxed">GoFroce tends to target Linux-based systems that have poor hygeien or password hardening.  They tend to target systems that have been poorly set up or do not have strong authetation methods.  For example, their recent victims continue in this trend:</p>
+
+            <ul>
+            <li><span class="mitre-id">Initial Discovery (2023): </span> First identified targeting weak FTP and phpMyAdmin credentials on XAMPP-like stacks. </li>
+        <li><span class="mitre-id">Evolution (2024):</span>Expanded capabilities to include multiple architectures (x86, x64, ARM), allowing it to infect everything from high-end servers to IoT devices.</li>
+        <li><span class="mitre-id">Current Phase (2025-2026):</span>Shifted focus toward "AI-ready" environments, targeting users who deploy servers using LLM-provided boilerplate code without changing default security settings.</li>
+            </ul>
+            
+            
+
+ 
+
+ 
+            
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns</h3>
             <p class="text-lg mb-6 leading-relaxed"></p>
             
@@ -78,13 +90,7 @@
         <li><span class="mitre-id">T1059.004 (Command and Scripting Interpreter: Unix Shell):</span>Utilizes PHP web shells for initial access and execution.</li>
         <li><span class="mitre-id">T1071.001 (Application Layer Protocol: Web Protocols):</span> Uses IRC (Internet Relay Chat) for Command and Control (C2) communication to stay under the radar of traditional HTTP/S monitoring.</li>
         <li><span class="mitre-id">T1027 (Obfuscated Files or Information):</span> Employs the "Garble" tool for Go-specific obfuscation and renames malicious processes to look like system services (e.g., init).</li>
-        <li><span class="mitre-id"></span> </li>
-        <li><span class="mitre-id"></span></li>
-        <li><span class="mitre-id"></span></li>
-        <li><span class="mitre-id"></span> </li>
-        <li><span class="mitre-id"></span> </li>
-        <li><span class="mitre-id"></span> </li>
-
+        
 </ul>
 
     <p><strong>2. Discovery & Reconnaissance</strong></p>
