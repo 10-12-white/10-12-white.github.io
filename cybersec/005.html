@@ -53,8 +53,8 @@
             <h2 class="text-2xl font-bold text-deep-accent">Tactical Overview</h2>
             <p class="text-lg mb-6 leading-relaxed"></p>
 
-
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Victimology and Patterns</h3>
+            
             <p class="text-lg mb-6 leading-relaxed">GoFroce tends to target Linux-based systems that have poor hygeien or password hardening.  They tend to target systems that have been poorly set up or do not have strong authetation methods.  For example, their recent victims continue in this trend:</p>
 
             <ul>
@@ -64,17 +64,22 @@
             </ul>
             
             
-
- 
-
- 
-            
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns</h3>
             <p class="text-lg mb-6 leading-relaxed"></p>
             
-            <h3 class="text-2xl font-semibold mb-8 text-deep-accent"></h3>
-            <p class="text-lg mb-6 leading-relaxed"></p>
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">General Recommendations</h3>
+            <p class="text-lg mb-6 leading-relaxed">The following is advice coming from several threat intelligence reporting companies, such as Trend Micro, Unit 42 and Recorded Future.  Overall, they recommend that: </p>
 
+            <ul>
+                <li>  <span class="mitre-id">Sanitize AI Workflows: Implement a policy requiring all AI-generated deployment scripts to undergo a security review, specifically focusing on the removal of default credentials.</li>
+                <li>  <span class="mitre-id">Implement "Identity-First" Access: Transition away from exposing management ports (FTP/MySQL) to the open web. Use Zero Trust Network Access (ZTNA) or VPNs for administrative tasks.
+</li>
+                <li>  <span class="mitre-id">Egress Filtering: Monitor and block IRC traffic (typically ports 6660-6669) from web servers, as this is a primary indicator of a GoBruteforcer infection.
+</li>
+                <li>  <span class="mitre-id">Deployment of Honeypots: Set up "low-interaction" traps with default credentials to identify and block the specific IP ranges currently being used by the GoBruteforcer botnet.</li>
+                <li>  <span class="mitre-id"></li>
+            </ul>
+                
             <p class="text-lg mb-6 leading-relaxed"></p>
 
 
