@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis | GoBruteForcers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1E392A',
+                        'dark-brown': '#3A2A1A',
+                        'cream': '#FAF0DC',
+                        'moss-green': '#52703e',
+                        'deep-accent': '#C5AE87',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark-green text-cream font-sans min-h-screen">
+
+    <header class="bg-dark-brown p-4 border-b border-deep-accent/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-8">
+            <a href="index.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
+                <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
+            </a>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 001</span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-8 pt-16">
+        
+        <header class="mb-12">
+            <div class="flex items-center text-deep-accent mb-4">
+                <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 13, 2026</span>
+            </div>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">GoBruteForcers</h1>
+        </header>
+
+        <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
+            <h2 class="text-4xl font-extrabold mb-6 text-cream">Introduction</h2>
+            <p class="text-lg mb-6 leading-relaxed">GoBruteforcer is a modular, Golang-based malware platform designed to compromise Linux-based web servers. It operates primarily as a botnet that spreads via high-volume brute-force attacks against internet-facing services like FTP, MySQL, and phpMyAdmin. Recent variants have integrated "AI-aware" targeting strategies, specifically exploiting the insecure default configurations often found in AI-generated deployment scripts.</p>
+
+            <img src="https://10-12-white.github.io/cybersec/img/Fig3.png" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">
+            
+            <h2 class="text-2xl font-bold text-deep-accent">Tactical Overview</h2>
+            <p class="text-lg mb-6 leading-relaxed"></p>
+
+
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Victimology and Patterns</h3>
+            <p class="text-lg mb-6 leading-relaxed"></p>
+        
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns</h3>
+            <p class="text-lg mb-6 leading-relaxed"></p>
+            
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent"></h3>
+            <p class="text-lg mb-6 leading-relaxed"></p>
+
+            <p class="text-lg mb-6 leading-relaxed"></p>
+
+
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">IOCs</h3>    
+            <p class="text-lg mb-6 leading-relaxed"></p>
+            <p class="text-lg mb-6 leading-relaxed"></p>
+
+<p class="text-lg mb-6 leading-relaxed">IOCs are listed below:<p>
+
+        <p><strong></strong></p>
+    <ul>
+    TTPs (Tactics, Techniques, and Procedures)
+
+    T1110 (Brute Force): Uses a massive built-in list of credentials, now updated to include common AI-generated defaults.
+
+    T1059.004 (Command and Scripting Interpreter: Unix Shell): Utilizes PHP web shells for initial access and execution.
+
+    T1071.001 (Application Layer Protocol: Web Protocols): Uses IRC (Internet Relay Chat) for Command and Control (C2) communication to stay under the radar of traditional HTTP/S monitoring.
+
+    T1027 (Obfuscated Files or Information): Employs the "Garble" tool for Go-specific obfuscation and renames malicious processes to look like system services (e.g., init).
+    
+        <li><span class="mitre-id"></span></li>
+        <li><span class="mitre-id"></span></li>
+        <li><span class="mitre-id"></span> </li>
+        <li><span class="mitre-id"></span> </li>
+        <li><span class="mitre-id"></span> </li>
+        <li><span class="mitre-id"></span></li>
+        <li><span class="mitre-id"></span></li>
+        <li><span class="mitre-id"></span> </li>
+        <li><span class="mitre-id"></span> </li>
+        <li><span class="mitre-id"></span> </li>
+
+</ul>
+
+    <p><strong>2. Discovery & Reconnaissance</strong></p>
+
+    <p><strong>3. Defense Evasion & Execution</strong></p>
+    <p><strong>4. Lateral Movement & Escalation</strong></p>
+
+    <p><strong>5. Collection, Exfiltration & Impact</strong></p>
+
+            <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
+                As of January 2026, a new variant has been observed with enhanced Cryptocurrency Sweeping modules. This version no longer just waits for a miner to run; it actively scans databases for TRON and Binance Smart Chain private keys or seed phrases to drain wallets instantly. It has also improved its concurrency, allowing a single infected node to brute-force up to 95 targets simultaneously.
+            </blockquote>
+        </article>
+
+        <section class="mt-20 pt-8 border-t border-deep-accent/30">
+            <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
+            <div class="space-y-4 font-mono text-sm opacity-80">
+                <p>Cybereason, "The Gentleman Ransomware Group" 2025, [Online]. Available: https://www.cybereason.com/blog/the-gentlemen-ransomware</p>
+                <p>Trend Micro, 2025: "Unmasking the Gentleman", [Online]. Available: https://www.trendmicro.com/en_us/research/25/i/unmasking-the-gentlemen-ransomware.html</p>
+            </div>
+        </section>
+
+        <div class="mt-16 text-center">
+            <a href="blog.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Intelligence Hub</a>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center opacity-40 text-xs">
+        &copy; 2026 Professional Cyber Compendium | Secure Transmission
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
