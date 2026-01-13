@@ -63,12 +63,18 @@
         <li><span class="mitre-id">Current Phase (2025-2026):</span>Shifted focus toward "AI-ready" environments, targeting users who deploy servers using LLM-provided boilerplate code without changing default security settings.</li>
             </ul>
             
-            
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns</h3>
             <p class="text-lg mb-6 leading-relaxed"></p>
             
+            <ul>
+                <li><span class="mitre-id">March 2023 (Unit 42): </span> First documented as a Go-based scanner targeting x86 and ARM.</li>
+                <li><span class="mitre-id">September 2025 (Black Lotus Labs/Lumen):</span> Research confirmed that GoBruteforcer and SystemBC share significant infrastructure. Lumen discovered that roughly 80% of compromised nodes were VPS systems, often acting as proxy relays for more sensitive nation-state or high-level criminal traffic.</li>
+                <li><span class="mitre-id">January 2026 (Check Point report):</span> Identification of the latest "AI-Aware" variant, which has scaled to over 50,000 active vulnerable targets</li>
+            </ul>
+            
+ 
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">General Recommendations</h3>
-            <p class="text-lg mb-6 leading-relaxed">The following is advice coming from several threat intelligence reporting companies, such as Trend Micro, Unit 42 and Recorded Future.  Overall, they recommend that: </p>
+            <p class="text-lg mb-6 leading-relaxed">The following is advice coming from several threat intelligence reporting companies, such as Check Point, Trend Micro, Unit 42 and Recorded Future.  Overall, they recommend that: </p>
 
             <ul>
                 <li>  <span class="mitre-id">Sanitize AI Workflows: Implement a policy requiring all AI-generated deployment scripts to undergo a security review, specifically focusing on the removal of default credentials.</li>
@@ -82,7 +88,6 @@
                 
             <p class="text-lg mb-6 leading-relaxed"></p>
 
-
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">IOCs</h3>    
             <p class="text-lg mb-6 leading-relaxed"></p>
             <p class="text-lg mb-6 leading-relaxed"></p>
@@ -95,15 +100,13 @@
         <li><span class="mitre-id">T1059.004 (Command and Scripting Interpreter: Unix Shell):</span>Utilizes PHP web shells for initial access and execution.</li>
         <li><span class="mitre-id">T1071.001 (Application Layer Protocol: Web Protocols):</span> Uses IRC (Internet Relay Chat) for Command and Control (C2) communication to stay under the radar of traditional HTTP/S monitoring.</li>
         <li><span class="mitre-id">T1027 (Obfuscated Files or Information):</span> Employs the "Garble" tool for Go-specific obfuscation and renames malicious processes to look like system services (e.g., init).</li>
-        
 </ul>
 
-    <p><strong>2. Discovery & Reconnaissance</strong></p>
-
+    <!--<p><strong>2. Discovery & Reconnaissance</strong></p>
     <p><strong>3. Defense Evasion & Execution</strong></p>
     <p><strong>4. Lateral Movement & Escalation</strong></p>
 
-    <p><strong>5. Collection, Exfiltration & Impact</strong></p>
+    <p><strong>5. Collection, Exfiltration & Impact</strong></p>---->
 
             <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
                 As of January 2026, a new variant has been observed with enhanced Cryptocurrency Sweeping modules. This version no longer just waits for a miner to run; it actively scans databases for TRON and Binance Smart Chain private keys or seed phrases to drain wallets instantly. It has also improved its concurrency, allowing a single infected node to brute-force up to 95 targets simultaneously.
