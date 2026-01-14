@@ -37,3 +37,4 @@ In other words, you would check a period, say, [a,b]
 If f(a) = f(b), then this first part of the theorem has been satisfied
 If f'(c)  exists, then we knowm, as some stage, it will be equal to 0, because of Rolles Theorem.
 
+This is useful to use, because we can use it for powerdful rules, see below
