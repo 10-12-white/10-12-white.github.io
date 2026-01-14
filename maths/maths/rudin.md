@@ -11,3 +11,5 @@ To do this, proof by contraditions is best approach.  We know that r is rational
 If so, then x + r = (m/n) + (a/b) = (am + bn)\(bn)
 
 Once we are able to say this, it is clear this this is a rational number.
+
+But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x + r to be a fraction, and therefore is not rational.  Proof by contradiction.
