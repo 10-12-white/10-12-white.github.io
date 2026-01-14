@@ -38,3 +38,7 @@ If f(a) = f(b), then this first part of the theorem has been satisfied
 If f'(c)  exists, then we knowm, as some stage, it will be equal to 0, because of Rolles Theorem.
 
 This is useful to use, because we can use it for powerdful rules, see below
+
+For example, two beautiful proofs for some interesting problems are below:
+
+Assume that you have a sequence.  This sequence $$\sum_{i=1}^{n} a_i$$ is generated from some $$a_i$$s in such a way that
