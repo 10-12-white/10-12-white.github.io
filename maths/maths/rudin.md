@@ -21,3 +21,10 @@ x = (m/n) for some m and n not equal to each other, both even, or 0, and then we
 x * r = (m/n) * (a/b) = (am/bn) 
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
+
+## New problem
+
+### Consider a series of a sum, where the values converge to 0
+
+## Prove that these values are 0
+## Prove 
