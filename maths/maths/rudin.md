@@ -27,4 +27,9 @@ This is clearly a rational number.  But, we know that x is NOT rational, so ther
 ### Consider a series of a sum, where the values converge to 0
 
 ## Prove that these values are 0
-## Prove 
+
+## Rolles Theorem 
+
+"This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
+
+In other words, you would check a period, say, [a,b]
