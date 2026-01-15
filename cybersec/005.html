@@ -58,14 +58,14 @@
             
             <h2 class="text-2xl font-bold text-deep-accent">Recent History</h2>
             
-            <p class="text-lg mb-6 leading-relaxed"> We compared the credential list used in GoBruteforcer campaigns against a database of approximately 10 million leaked passwords and found an overlap of roughly 2.44%. This gives us a baseline for a rough upper limit on the number of hosts that might accept one of the passwords that GoBruteforcer has at its disposal: approximately 54.6 thousand MySQL instances and 13.7 thousand PostgreSQL instances (note that this estimate does not account for correct usernames, host-based access restrictions, or other policy controls). Even with a low success rate, the large number of exposed services makes this type of attack an economically-attractive option. Our assumptions are supported by Google’s 2024 Cloud Threat Horizons report, which found that weak or missing credentials accounted for 47.2% of initial access vectors in compromised cloud surfaces. In practice, attackers do not need expensive techniques or zero-day exploits to gain access. They can simply try common usernames and passwords such as admin, 123456 or password1 until they obtain access (the bruteforce model). The evidence shows that this approach still succeeds far too often.</p>
+            <p class="text-lg mb-6 leading-relaxed">Check Point compared the credential list used in GoBruteforcer campaigns against a database of approximately 10 million leaked passwords and found an overlap of roughly 2.44%. This gives us a baseline for a rough upper limit on the number of hosts that might accept one of the passwords that GoBruteforcer has at its disposal: approximately 54.6 thousand MySQL instances and 13.7 thousand PostgreSQL instances (note that this estimate does not account for correct usernames, host-based access restrictions, or other policy controls). Even with a low success rate, the large number of exposed services makes this type of attack an economically-attractive option. Our assumptions are supported by Google’s 2024 Cloud Threat Horizons report, which found that weak or missing credentials accounted for 47.2% of initial access vectors in compromised cloud surfaces. In practice, attackers do not need expensive techniques or zero-day exploits to gain access. They can simply try common usernames and passwords such as admin, 123456 or password1 until they obtain access (the bruteforce model). The evidence shows that this approach still succeeds far too often.</p>
 
-            <p class="text-lg mb-6 leading-relaxed">In the activity observed by Check Point, an internet-exposed FTP service on servers running XAMPP is used as an initial access vector to upload a PHP web shell, which is then used to download and execute an updated version of the IRC bot using a shell script based on the system architecture. Once a host is successfully infected, it can serve three different uses -
-</p>
-            <ul><li></li></ul>
-            * Run the brute-force component to attempt password logins for FTP, MySQL, Postgres, and phpMyAdmin across the internet
-            * Host and serve payloads to other compromised systems, or
-            * Host IRC-style control endpoints or act as a backup command-and-control (C2) for resilience
+            <p class="text-lg mb-6 leading-relaxed">In the activity observed by Check Point, an internet-exposed FTP service on servers running XAMPP is used as an initial access vector to upload a PHP web shell, which is then used to download and execute an updated version of the IRC bot using a shell script based on the system architecture. Once a host is successfully infected, it can serve three different uses:</p>
+            <ul>
+                <li><span class="mitre-id">Run the brute-force</span> component to attempt password logins for FTP, MySQL, Postgres, and phpMyAdmin across the internet</li>
+                <li><span class="mitre-id">Host and serve</span>  payloads to other compromised systems, </li>
+                <li><span class="mitre-id">Host IRC-style control</span> endpoints or act as a backup command-and-control (C2) for resilience</li>
+            </ul>
             
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Victimology and Patterns</h3>
             
@@ -77,9 +77,15 @@
         <li><span class="mitre-id">Current Phase (2025-2026):</span>Shifted focus toward "AI-ready" environments, targeting users who deploy servers using LLM-provided boilerplate code without changing default security settings.</li>
             </ul>
             
-            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns</h3>
-            <p class="text-lg mb-6 leading-relaxed"></p>
-            
+            <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns and history</h3>
+            <p class="text-lg mb-6 leading-relaxed">At the same time, the small set of credentials used by the FTP bruteforcer strongly indicates that XAMPP installations are among GoBruteforcer’s intended targets. When attackers obtain access to XAMPP FTP using a standard account (commonly daemon or nobody) and a weak default password, the typical next step is to upload a web shell into the webroot.</p>
+
+            <p class="text-lg mb-6 leading-relaxed">To upload a web shell, attackers may also use other vectors, for example, misconfigured MySQL servers or phpMyAdmin panels. Published case studies and write-ups demonstrate practical techniques for achieving code execution or uploading shells through phpMyAdmin when the application or host is misconfigured.</p>
+
+            <p class="text-lg mb-6 leading-relaxed">The attackers still use the same PHP web shell that we observed two years earlier (SHA256: de7994277a81cf48f575f7245ec782c82452bb928a55c7fae11c2702cc308b8b). In addition, the samples we observed use the same hashed password for user authentication.</p>
+
+            <p class="text-lg mb-6 leading-relaxed">We also suspect the presence of other distribution chains, as we found hosts belonging to the botnet that did not have a web shell installed.</p>
+
             <ul>
                 <li><span class="mitre-id">March 2023 (Unit 42): </span> First documented as a Go-based scanner targeting x86 and ARM.</li>
                 <li><span class="mitre-id">September 2025 (Black Lotus Labs/Lumen):</span> Research confirmed that GoBruteforcer and SystemBC share significant infrastructure. Lumen discovered that roughly 80% of compromised nodes were VPS systems, often acting as proxy relays for more sensitive nation-state or high-level criminal traffic.</li>
@@ -87,6 +93,7 @@
             </ul>
  
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">General Recommendations</h3>
+            
             <p class="text-lg mb-6 leading-relaxed">The following is advice coming from several threat intelligence reporting companies, such as Check Point, Trend Micro, Unit 42 and Recorded Future.  Overall, they recommend that: </p>
 
             <ul>
@@ -129,8 +136,8 @@
         <section class="mt-20 pt-8 border-t border-deep-accent/30">
             <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
             <div class="space-y-4 font-mono text-sm opacity-80">
-                <p>Cybereason, "The Gentleman Ransomware Group" 2025, [Online]. Available: https://www.cybereason.com/blog/the-gentlemen-ransomware</p>
-                <p>Trend Micro, 2025: "Unmasking the Gentleman", [Online]. Available: https://www.trendmicro.com/en_us/research/25/i/unmasking-the-gentlemen-ransomware.html</p>
+                <p>Check Point Research, 2026, [Online]. Available: https://research.checkpoint.com/2026/inside-gobruteforcer-ai-generated-server-defaults-weak-passwords-and-crypto-focused-campaigns/</p>
+                <p>ESecurity Planet, 2026 [Online]. Available: https://www.esecurityplanet.com/threats/50000-servers-exposed-as-gobruteforcer-scales-brute-force-attacks/</p>
             </div>
         </section>
 
