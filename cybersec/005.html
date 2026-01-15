@@ -48,6 +48,12 @@
             <h2 class="text-4xl font-extrabold mb-6 text-cream">Introduction</h2>
             <p class="text-lg mb-6 leading-relaxed">GoBruteforcer is a modular, Golang-based malware platform designed to compromise Linux-based web servers. It operates primarily as a botnet that spreads via high-volume brute-force attacks against internet-facing services like FTP, MySQL, and phpMyAdmin. Recent variants have integrated "AI-aware" targeting strategies, specifically exploiting the insecure default configurations often found in AI-generated deployment scripts.</p>
 
+  <p class="text-lg mb-6 leading-relaxed">Check Point said it identified a more sophisticated version of the Golang malware in mid-2025, packing in a heavily obfuscated IRC bot that's rewritten in the cross-platform programming language, improved persistence mechanisms, process-masking techniques, and dynamic credential lists.</p>
+
+  <p class="text-lg mb-6 leading-relaxed">Check Point Research (CPR) observed a GoBruteforcer campaign targeting databases of crypto and blockchain projects. On one compromised host, we recovered Go-based tools, a TRON balance scanner and TRON and BSC “token-sweep” utilities, together with a file containing ~23,000 TRON addresses. On-chain transaction analysis involving the botnet operators’ recipient wallets shows that at least some of these financially motivated attacks were successful.</p>
+
+  <p class="text-lg mb-6 leading-relaxed">The list of credentials includes a combination of common usernames and passwords (e.g., myuser:Abcd@123 or appeaser:admin123456) that can accept remote logins. The choice of these names is not happenstance, as they have been used in database tutorials and vendor documentation, all of which have been used to train Large language models (LLMs), causing them to produce code snippets with the same default usernames.</p>
+            
             <img src="https://10-12-white.github.io/cybersec/img/Fig3.png" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">
             
             <h2 class="text-2xl font-bold text-deep-accent">Tactical Overview</h2>
@@ -71,7 +77,6 @@
                 <li><span class="mitre-id">September 2025 (Black Lotus Labs/Lumen):</span> Research confirmed that GoBruteforcer and SystemBC share significant infrastructure. Lumen discovered that roughly 80% of compromised nodes were VPS systems, often acting as proxy relays for more sensitive nation-state or high-level criminal traffic.</li>
                 <li><span class="mitre-id">January 2026 (Check Point report):</span> Identification of the latest "AI-Aware" variant, which has scaled to over 50,000 active vulnerable targets</li>
             </ul>
-            
  
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">General Recommendations</h3>
             <p class="text-lg mb-6 leading-relaxed">The following is advice coming from several threat intelligence reporting companies, such as Check Point, Trend Micro, Unit 42 and Recorded Future.  Overall, they recommend that: </p>
