@@ -63,7 +63,7 @@ Then, we can see the next steps.
 
 $$ f(0) = \frac{0}{1} = 0 $$
 And also, 
-f(1) = \frac{1}{1} = 1 $$
+$$ f(1) = \frac{1}{1} = 1 $$
 
-So then, this is a quick way for us to check that $ f(a) = \frac{a_i}{i} $ is NOT the funciton
+So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$ is NOT the funciton
 
