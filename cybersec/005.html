@@ -54,11 +54,16 @@
 
   <p class="text-lg mb-6 leading-relaxed">The list of credentials includes a combination of common usernames and passwords (e.g., myuser:Abcd@123 or appeaser:admin123456) that can accept remote logins. The choice of these names is not happenstance, as they have been used in database tutorials and vendor documentation, all of which have been used to train Large language models (LLMs), causing them to produce code snippets with the same default usernames.</p>
             
-            <img src="https://10-12-white.github.io/cybersec/img/Fig3.png" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">
+            <img src="https://10-12-white.github.io/cybersec/img/palo_cidr.webp" alt="Attack Methods" class="rounded-lg border border-moss-green w-full my-8">
             
-            <h2 class="text-2xl font-bold text-deep-accent">Tactical Overview</h2>
-            <p class="text-lg mb-6 leading-relaxed"></p>
+            <h2 class="text-2xl font-bold text-deep-accent">Recent History</h2>
+            <p class="text-lg mb-6 leading-relaxed"> We compared the credential list used in GoBruteforcer campaigns against a database of approximately 10 million leaked passwords and found an overlap of roughly 2.44%. This gives us a baseline for a rough upper limit on the number of hosts that might accept one of the passwords that GoBruteforcer has at its disposal: approximately 54.6 thousand MySQL instances and 13.7 thousand PostgreSQL instances (note that this estimate does not account for correct usernames, host-based access restrictions, or other policy controls). Even with a low success rate, the large number of exposed services makes this type of attack an economically-attractive option. Our assumptions are supported by Google’s 2024 Cloud Threat Horizons report, which found that weak or missing credentials accounted for 47.2% of initial access vectors in compromised cloud surfaces. In practice, attackers do not need expensive techniques or zero-day exploits to gain access. They can simply try common usernames and passwords such as admin, 123456 or password1 until they obtain access (the bruteforce model). The evidence shows that this approach still succeeds far too often.</p>
 
+In the activity observed by Check Point, an internet-exposed FTP service on servers running XAMPP is used as an initial access vector to upload a PHP web shell, which is then used to download and execute an updated version of the IRC bot using a shell script based on the system architecture. Once a host is successfully infected, it can serve three different uses -
+* Run the brute-force component to attempt password logins for FTP, MySQL, Postgres, and phpMyAdmin across the internet
+* Host and serve payloads to other compromised systems, or
+* Host IRC-style control endpoints or act as a backup command-and-control (C2) for resilience
+            
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Victimology and Patterns</h3>
             
             <p class="text-lg mb-6 leading-relaxed">GoFroce tends to target Linux-based systems that have poor hygeien or password hardening.  They tend to target systems that have been poorly set up or do not have strong authetation methods.  For example, their recent victims continue in this trend:</p>
