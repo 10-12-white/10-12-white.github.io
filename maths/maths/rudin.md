@@ -32,7 +32,7 @@ This is clearly a rational number.  But, we know that x is NOT rational, so ther
 
 "This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
 
-In other words, you would check a period, say, [a,b]
+In other words, you would check a period, say, $[a,b]$
 
 If f(a) = f(b), then this first part of the theorem has been satisfied
 If f'(c)  exists, then we knowm, as some stage, it will be equal to 0, because of Rolles Theorem.
@@ -43,10 +43,10 @@ For example, two beautiful proofs for some interesting problems are below:
 
 Assume that you have a sequence.  This sequence $$\sum_{i=1}^{n} a_i$$ is generated from some $a_i$s in such a way that:
 
-\[ a_1 + \frac{a_2}{2} + ... + \frac{a_n}{n} = 0 ]\
+$$ a_1 + \frac{a_2}{2} + ... + \frac{a_n}{n} = 0 $$
 
 And, also:
 
-\[ a_1 + {a_2}*c + a_3*c^2 + a_4*c^3 ... + {a_n}*c^{n-1} = 0 ]\
+$$ a_1 + {a_2}*c + a_3*c^2 + a_4*c^3 ... + {a_n}*c^{n-1} = 0 $$
 
 So this is an interesting question? The first thought, then, is what is the function, and what is the boundary?
