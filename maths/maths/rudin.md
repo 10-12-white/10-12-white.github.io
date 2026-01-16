@@ -80,3 +80,6 @@ Now, prove, that there exists $c_1, c_2 \in (0,1)$ such that $f'(c_1)$ and $f'(c
 
 Step 1 - first, I wanted to draw a graph because otherwise it was going to be too hard for me to understand.
 
+Then, it was easy to see how the area under the graph couldn't be equal to zero, if both sides were positive.  Therefore, one component had to be positive, and the other had to be negative.
+
+So, it could be something like a sine curve, something to equal both components out.
