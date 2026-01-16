@@ -83,3 +83,9 @@ Step 1 - first, I wanted to draw a graph because otherwise it was going to be to
 Then, it was easy to see how the area under the graph couldn't be equal to zero, if both sides were positive.  Therefore, one component had to be positive, and the other had to be negative.
 
 So, it could be something like a sine curve, something to equal both components out.
+
+Because we now have a concept of area being equivalent in magnitude but opposite, this is useful for us.  We can use this to break the areas under the curves for a few sections.
+
+Because it is differentiable over the whole area, there is two points where the function must cross over the x-axis (first, to make the positive area) and then second, to make the negative area.
+
+Once this happens, 
