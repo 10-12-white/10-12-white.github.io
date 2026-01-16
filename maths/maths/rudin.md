@@ -98,7 +98,12 @@ We do not know the value of x is to make this happen.
 
 But, we can say that at this stage, we can see that there are two periods for which there is differentiability, continuity, and we can verify that the function will equal 0 in 3 places.
 
-Since $f(0) = 0$, which is verified, and $f(1) = 0$, and these are known.  We also know $f(c_a) = 0$ also, since function must cross over the x-axis (first, to make the positive area) and then second, to make the negative area.  
-
 ### Step 4, Rolle Theorem
 
+Rolle Theorem says that in the area (0,c_a), f'(0) = 0, and f'(c_a) = 0 also.  Since the two extremum values in the set equal the same thing, then there is a c_1 such that f'(c_1) = 0.
+
+Since $f(0) = 0$, which is verified, and $f(1) = 0$, and these are known.  We also know $f(c_a) = 0$ also, since function must cross over the x-axis (first, to make the positive area) and then second, to make the negative area.
+
+Rolle Theorem says that in the area (c_a,1), f'(c_a) = 0, and f'(1) = 0 also.  Since the two extremum values in the set equal the same thing, then there is a c_2 such that f'(c_2) = 0.
+
+Therefore, there are 
