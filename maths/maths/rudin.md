@@ -45,7 +45,7 @@ Assume that you have a sequence.  This sequence $$\sum_{i=1}^{n} a_i$$ is genera
 
 $$ a_1 + \frac{a_2}{2} + ... + \frac{a_n}{n} = 0 $$
 
-And, also:
+Now, we need to prove that the following is true:
 
 $$ {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
 
@@ -53,7 +53,7 @@ So this is an interesting question? The first thought, then, is what is the func
 
 The function must hvae the same value in both cases of the extremum.  So, the sum is not the extremum.  It is a result of adding the different components of the functions.  So I think the best approach is to say something like:
 
-Test f(0) and f(1) for the function, and if they are the saem value, then f'() can exist, we can calculate it.
+Test f(0) and f(1) for the function, and if they are the saem value, then f'(c) can exist, we can calculate it.
 
 So, this is to be done for the function below:
 
@@ -66,4 +66,17 @@ And also,
 $$ f(1) = \frac{1}{1} = 1 $$
 
 So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$ is NOT the funciton
+
+Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
+
+So, then, we do not know what the function is, but we know that this will equate to :
+
+
+## Let $f : [0,1] \in \Real$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
+
+We also know that the deriviate of the integral from the area of 0 to 1 is also 0.
+
+Now, prove, that there exists $c_1, c_2 \in (0,1)$ such that $f'(c_1)$ and $f'(c_2) = 0$
+
+Step 1 - first, I wanted to draw a graph because otherwise it was going to be too hard for me to understand.
 
