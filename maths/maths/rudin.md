@@ -72,7 +72,7 @@ Rolles Theorem, says, find two values for the function.  So, this would be f(0) 
 So, then, we do not know what the function is, but we know that this will equate to :
 
 
-## Let $f : [0,1] \in \real$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
+## Let $f : [0,1] \in \mathbb{R}$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
 
 We also know that the deriviate of the integral from the area of 0 to 1 is also 0.
 
@@ -106,4 +106,4 @@ Since $f(0) = 0$, which is verified, and $f(1) = 0$, and these are known.  We al
 
 Rolle Theorem says that in the area (c_a,1), f'(c_a) = 0, and f'(1) = 0 also.  Since the two extremum values in the set equal the same thing, then there is a c_2 such that f'(c_2) = 0.
 
-Therefore, there are two values c_1, and c_2, such that f'(x) = 0 for the interval (0,1) given that $f : [0,1] \in \Real$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
+Therefore, there are two values c_1, and c_2, such that f'(x) = 0 for the interval (0,1) given that $f : [0,1] \in \mathbb{R}$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
