@@ -14,11 +14,11 @@ Once we are able to say this, it is clear this this is a rational number.
 
 But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x + r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
-For the case of x*r, take the example again and state that if x and r are both rationals, and we assume that x is a rational, and we know r is a rational, then we have:
+For the case of $x*r$, take the example again and state that if $x$ and $r$ are both rationals, and we assume that x is a rational, and we know r is a rational, then we have:
 
-x = (m/n) for some m and n not equal to each other, both even, or 0, and then we have that
+$x = \frac{m}{n}$ for some m and n not equal to each other, both even, or 0, and then we have that
 
-x * r = (m/n) * (a/b) = (am/bn) 
+$$x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb}$$ 
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
@@ -72,7 +72,7 @@ Rolles Theorem, says, find two values for the function.  So, this would be f(0) 
 So, then, we do not know what the function is, but we know that this will equate to :
 
 
-## Let $f : [0,1] \in \Real$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
+## Let $f : [0,1] \in \real$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
 
 We also know that the deriviate of the integral from the area of 0 to 1 is also 0.
 
