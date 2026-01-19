@@ -28,6 +28,8 @@ This is clearly a rational number.  But, we know that x is NOT rational, so ther
 
 ## Prove that these values are 0
 
+Why isn't this fucking SAVING
+
 ## Rolles Theorem 
 
 "This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
