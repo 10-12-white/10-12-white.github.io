@@ -8,7 +8,7 @@
 
 To do this, proof by contraditions is best approach.  We know that r is rational, therefore, we have that r = a/b, where a and b have the smallest redcued form possible.  This means that a and b are both not even, and do not equal each other, and crucially, b ≠ 0.  When this is the case, it is possible to write and let x also be a rational number.
 
-If so, then x + r = (m/n) + (a/b) = (am + bn)\(bn)
+If so, then $$ x + r = \frac{m}{n} + \frac{a}{b} = \frac{am + bn}{bn} $$
 
 Once we are able to say this, it is clear this this is a rational number.
 
@@ -59,13 +59,7 @@ So, this is to be done for the function below:
 
 $$ f(a) = \frac{a_i}{i} $$
 
-Then, we can see the next steps.
-
-$$ f(0) = \frac{0}{1} = 0 $$
-And also, 
-$$ f(1) = \frac{1}{1} = 1 $$
-
-So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$ is NOT the funciton
+By checking the values of f(0) and f(1) for this particular function, we can tell that these values are not the same as eachother, therefore, So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$ is NOT the funciton
 
 Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
 
