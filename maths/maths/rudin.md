@@ -61,6 +61,20 @@ $$ f(a) = \frac{a_i}{i} $$
 
 By checking the values of f(0) and f(1) for this particular function, we can tell that these values are not the same as eachother, therefore, So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$ is NOT the funciton
 
+Ok, so, lets try something different.  Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
+
+$f'(c)$ is equal to 0, then we would have to have:
+
+$$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
+
+Then $$ f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$$
+
+Now we can test $f(0)$ and $f(1)$ which we look at by putting the values of $c$ into the function:
+
+Since f(0) = f(1) then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
+
+$$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
+
 Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
 
 $f'(c)$ is equal to 0, then we would have to have:
@@ -78,6 +92,7 @@ $$ f(c=1) gives f(a_1} + {a_2}*1 = 0 $$
 Since f(0) = f(1) then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
 
 $$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
+
 
 ## Let $f : [0,1] \in \mathbb{R}$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
 
