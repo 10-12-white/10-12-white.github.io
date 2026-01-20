@@ -8,7 +8,7 @@
 
 To do this, proof by contraditions is best approach.  We know that r is rational, therefore, we have that r = a/b, where a and b have the smallest redcued form possible.  This means that a and b are both not even, and do not equal each other, and crucially, b ≠ 0.  When this is the case, it is possible to write and let x also be a rational number.
 
-If so, then $$ x + r = \frac{m}{n} + \frac{a}{b} = \frac{am + bn}{bn} $$
+If so, then $ x + r = \frac{m}{n} + \frac{a}{b} = \frac{am + bn}{bn} $
 
 Once we are able to say this, it is clear this this is a rational number.
 
@@ -18,7 +18,7 @@ For the case of $x*r$, take the example again and state that if $x$ and $r$ are 
 
 $ x = \frac{m}{n} $ for some m and n not equal to each other, both even, or 0, and then we have that
 
-$$ x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb} $$ 
+$ x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb} $ 
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
@@ -41,13 +41,13 @@ This is useful to use, because we can use it for powerdful rules, see below
 
 For example, two beautiful proofs for some interesting problems are below:
 
-Assume that you have a sequence.  This sequence $$\sum_{i=1}^{n} a_i$$ is generated from some $a_i$s in such a way that:
+Assume that you have a sequence.  This sequence $\sum_{i=1}^{n} a_i$ is generated from some $a_i$s in such a way that:
 
-$$ a_1 + \frac{a_2}{2} + ... + \frac{a_n}{n} = 0 $$
+$ a_1 + \frac{a_2}{2} + ... + \frac{a_n}{n} = 0 $
 
 Now, we need to prove that the following is true:
 
-$$ {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
+$ {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $
 
 So this is an interesting question? The first thought, then, is what is the function, and what is the boundary?
 
@@ -57,7 +57,7 @@ Test f(0) and f(1) for the function, and if they are the saem value, then f'(c) 
 
 So, this is to be done for the function below:
 
-$$ f(a) = \frac{a_i}{i} $$
+$ f(a) = \frac{a_i}{i} $
 
 By checking the values of f(0) and f(1) for this particular function, we can tell that these values are not the same as eachother, therefore, So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$ is NOT the funciton
 
@@ -65,33 +65,33 @@ Ok, so, lets try something different.  Rolles Theorem, says, find two values for
 
 $f'(c)$ is equal to 0, then we would have to have:
 
-$$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
+$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $
 
-Then $$ f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$$
+Then $ f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$
 
 Now we can test $f(0)$ and $f(1)$ which we look at by putting the values of $c$ into the function:
 
 Since f(0) = f(1) then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
 
-$$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
+$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $
 
 Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
 
 $f'(c)$ is equal to 0, then we would have to have:
 
-$$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
+$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $
 
-Then $$ f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$$
+Then $ f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$
 
 Now we can test $f(0)$ and $f(1)$ to see if they generate the solutions we are looking for, by putting the values of $c=a,b$ into the function:
 
-$$ f(c=0) gives f(a_1}*c = 0 $$
+$ f(c=0) gives f(a_1}*c = 0 $
 And also
-$$ f(c=1) gives f(a_1} + {a_2}*1 = 0 $$
+$ f(c=1) gives f(a_1} + {a_2}*1 = 0 $
 
 Since f(0) = f(1) then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
 
-$$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $$
+$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0  $
 
 ## Let $f : [0,1] \in \mathbb{R}$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
 
@@ -133,6 +133,6 @@ Therefore, there are two values $c_1$, and $c_2$, such that $f'(x) = 0$ for the 
 
 For some function, we have that over the curve of an area, we have that 
 
-$$ f'(c) = \frac{f(a) -f(b)}{ a - b} $$
+$ f'(c) = \frac{f(a) -f(b)}{ a - b} $
 
 This is useful because we will then relate it to the function's gradiant at any point in this range, $f'(x)$.
