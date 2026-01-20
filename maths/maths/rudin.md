@@ -16,9 +16,9 @@ But, we know that x is NOT rational, so therefore cannot be stated as a fration,
 
 For the case of $x*r$, take the example again and state that if $x$ and $r$ are both rationals, and we assume that x is a rational, and we know r is a rational, then we have:
 
-$x = \frac{m}{n}$ for some m and n not equal to each other, both even, or 0, and then we have that
+$ x = \frac{m}{n} $ for some m and n not equal to each other, both even, or 0, and then we have that
 
-$$x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb}$$ 
+$$ x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb} $$ 
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
@@ -129,6 +129,10 @@ Rolle Theorem says that in the area $(c_a,1)$, $f'(c_a) = 0$, and $f'(1) = 0$ al
 
 Therefore, there are two values $c_1$, and $c_2$, such that $f'(x) = 0$ for the interval (0,1) given that $f : [0,1] \in \mathbb{R}$ such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
 
-
 ### Working on Legrange Theorem, genenrate the rules for the change and give reasons using the Rolle Theorem why the rules exists
 
+For some function, we have that over the curve of an area, we have that 
+
+$$ f'(c) = \frac{f(a) -f(b)}{ a - b} $$
+
+This is useful because we will then relate it to the function's gradiant at any point in this range, $f'(x)$.
