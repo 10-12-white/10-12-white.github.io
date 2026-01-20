@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullet Proof Hosting, a modern hosting crisis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1E392A',
+                        'dark-brown': '#3A2A1A',
+                        'cream': '#FAF0DC',
+                        'moss-green': '#52703e',
+                        'deep-accent': '#C5AE87',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
 
+<body class="bg-dark-green text-cream font-sans min-h-screen">
+
+    <header class="bg-dark-brown p-4 border-b border-deep-accent/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-8">
+            <a href="index.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
+                <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
+            </a>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 003</span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-8 pt-16">
+        
+        <header class="mb-12">
+            <div class="flex items-center text-deep-accent mb-4">
+                <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                <span class="text-sm font-mono uppercase tracking-tighter">Published: Dec 09, 2025</span>
+            </div>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">AusQRC (December 8th, 2025)</h1>
+        </header>
+
+        <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
+            <h2 class="text-4xl font-extrabold mb-6 text-cream">Introduction to BPH</h2>
+          
+
+
+The 2025 Australian Quantum-Resistant Cybersecurity (AusQRC) Day was a day conference that highlighted the critical challenges and strategic direction for migrating to Post-Quantum Cryptography (PQC). The Australian government, through the Australian Signals Directorate (ASD), has signalled alignment with NIST PQC standards as the most suitable cryptographic security framework for national requirements. 
+
+Specifically, the ASD endorses the lattice-based ML-KEM (Module-Lattice-Based Key-Encapsulation Mechanism), noting that the imperative of quantum-safety warrants the overhead. The government is prioritising future-proofing long-lived data systems against the "harvest now, decrypt later" threat, despite the associated operational costs and performance impact. The ASD generally encourages a pure-PQC transition by its 2030 goal, favouring the higher security level ML-KEM-1024 for long-term use, while accepting ML-KEM-768 until 2030.
+
+Global Standards and Trust Landscape
+
+The global landscape of cryptographic standards is divided between adherence to NIST-selected algorithms and independent national security mandates. While many countries align with NIST PQC standards, key nations maintain unique, stringent standards for their classified systems.
+* United States: Driven by NIST for public standards and the NSA (via CNSA 2.0) for classified systems, the US sets a pure PQC requirement for National Security Systems (NSS) by 2035, viewing hybrid schemes strictly as an interim measure. 
+* European Union/Germany/France: Bodies like the German BSI and French ANSSI recommend NIST algorithms but also endorse alternatives (e.g., FrodoKEM, Classic McEliece) for diversification and actively recommend hybrid schemes during the transition. 
+* China and South Korea: Both nations have pursued developing and standardising their own national PQC algorithms separate from the NIST process (e.g., South Korea's HAETAE and China's domestic candidates), reflecting a priority for digital sovereignty. 
+
+Major Challenges and Transition Impact
+
+The overall transition to PQC presents significant operational and financial challenges:
+* Resource and Cost Overheads: The shift, particularly to lattice-based cryptography, demands an estimated 30x increase in memory for some applications. 
+* Data Footprint: PQC schemes generally involve significantly longer cryptographic keys and signatures, impacting data storage and transmission protocols. 
+* Implementation and Interoperability: Hurdles include updating codebases, ensuring backwards compatibility, and navigating the issue of multiple global standards to enforce a consistent security baseline. The risk of backwards-forcing attacks against PQC schemes is a strong motivator for a coordinated, enforced standard. 
+Strategic Solutions and Timelines
+The conference emphasised practical solutions and set expectations for the migration:
+* Hybrid Schemes: The use of hybrid cryptographic schemes (combining classical and PQC algorithms) is considered a sound and necessary transitional strategy to manage risk and security during the changeover period. 
+* Authentication Advancement: The increasing use of Merkle tree authentication was noted as a valuable technique to provide an extra layer of integrity and authenticity to digital signatures. 
+* The 2030 Goal: The consensus is that 2030 represents an ambitious, deadline for a complete transition across all industries, depending on the current state of industry
+* A phased, measured approach that prioritises critical and long-lived data systems is required.
+
+
+           <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
+                
+            </blockquote>
+        </article>
+
+        <section class="mt-20 pt-8 border-t border-deep-accent/30">
+            <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
+            <div class="space-y-4 font-mono text-sm opacity-80">
+                <p>[1]</p>
+                <p>[2]</p>
+                <p>[3]</p>
+            </div>
+        </section>
+
+        <div class="mt-16 text-center">
+            <a href="10-12-white.github.io/cybersec/archive" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Intelligence Hub</a>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center opacity-40 text-xs">
+        &copy; 2026 JACIB | Secure Transmission
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
+          
