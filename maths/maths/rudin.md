@@ -18,7 +18,7 @@ For the case of $x*r$, take the example again and state that if $x$and $r$are bo
 
 $x = \frac{m}{n} $for some m and n not equal to each other, both even, or 0, and then we have that
 
-$x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb} $
+$ x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb} $
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
