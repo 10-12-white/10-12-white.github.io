@@ -83,19 +83,21 @@
             
             <p class="text-lg mb-6 leading-relaxed"><strong>Special reserved ranges:</strong> The malware avoids addresses reserved for documentation and testing. For example, it excludes 198.18.0.0/15 (set aside for RFC2544 benchmarking tests). It also broadly filters out multicast ranges by rejecting any address with a first octet ≥ 224 that are not used for regular unicast hosts.</p>
                 
-                <p class="text-lg mb-6 leading-relaxed"><strong>Major cloud provider space:</strong> The IP filter also blocks several /8 ranges that are heavily used by Amazon Web Services: 3.0.0.0/8, 15.0.0.0/8, 16.0.0.0/8, 56.0.0.0/8. Cloud environments often have active honeypots and aggressive abuse response; the botnet authors appear to deem these targets as either low-priority or high-risk.</p>
+            <p class="text-lg mb-6 leading-relaxed"><strong>Major cloud provider space:</strong> The IP filter also blocks several /8 ranges that are heavily used by Amazon Web Services: 3.0.0.0/8, 15.0.0.0/8, 16.0.0.0/8, 56.0.0.0/8. Cloud environments often have active honeypots and aggressive abuse response; the botnet authors appear to deem these targets as either low-priority or high-risk.</p>
             
             <p class="text-lg mb-6 leading-relaxed"><strong>“Sensitive” US government networks</strong>: A notable feature is a built-in blacklist of 13 specific /8 blocks historically associated with the U.S. Department of Defense (DoD) and related agencies. These include IP addresses starting with 6, 7, 11, 21, 22, 26, 28, 29, 30, 33, 55, 214, or 215. Such networks (e.g. 6.0.0.0/8 or 30.0.0.0/8) are largely U.S. military addresses. By skipping them, the bot avoids drawing unnecessary attention and likely sidesteps government-run honeypots and sensors, reducing the chances of the botnet being monitored or disrupted.</p>
             
             <h3 class="text-2xl font-semibold mb-8 text-deep-accent">Attack Patterns and history</h3>
             
-            <p class="text-lg mb-6 leading-relaxed">At the same time, the small set of credentials used by the FTP bruteforcer strongly indicates that XAMPP installations are among GoBruteforcer’s intended targets. When attackers obtain access to XAMPP FTP using a standard account (commonly daemon or nobody) and a weak default password, the typical next step is to upload a web shell into the webroot.</p>
+            <p class="text-lg mb-6 leading-relaxed">At the same time, the small set of credentials used by the FTP BruteForcer strongly indicates that XAMPP installations are among GoBruteforcer’s intended targets. When attackers obtain access to XAMPP FTP using a standard account (commonly daemon or nobody) and a weak default password, the typical next step is to upload a web shell into the webroot.</p>
 
             <p class="text-lg mb-6 leading-relaxed">To upload a web shell, attackers may also use other vectors, for example, misconfigured MySQL servers or phpMyAdmin panels. Published case studies and write-ups demonstrate practical techniques for achieving code execution or uploading shells through phpMyAdmin when the application or host is misconfigured.</p>
 
             <p class="text-lg mb-6 leading-relaxed">The attackers still use the same PHP web shell that we observed two years earlier (SHA256: de7994277a81cf48f575f7245ec782c82452bb928a55c7fae11c2702cc308b8b). In addition, the samples we observed use the same hashed password for user authentication.</p>
 
             <p class="text-lg mb-6 leading-relaxed">We also suspect the presence of other distribution chains, as we found hosts belonging to the botnet that did not have a web shell installed.</p>
+
+            <p class="text-lg mb-6 leading-relaxed">Once GoBruteforcer attackers successfully compromise initial credentials and gain authenticated access to vulnerable services, they rapidly move to establish persistent control by uploading a PHP-based web shell into the compromised server’s web-accessible document root directory. This GoBruteforcer web shell component functions as a remote command execution console, providing operators with the ability to execute arbitrary system commands on the compromised Linux server and prepare the environment for deployment of additional malware stages. The web shell serves as the critical bridgehead that enables GoBruteforcer’s transition from simple authenticated access to full command execution and persistent compromise.</p>
 
             <ul>
                 <li><span class="mitre-id">March 2023 (Unit 42): </span> First documented as a Go-based scanner targeting x86 and ARM.</li>
