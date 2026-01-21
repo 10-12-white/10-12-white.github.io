@@ -147,5 +147,9 @@ Then we have that:
 
 Then, consider how to make it for a particular area.  At any point in the function, you would have an f'(x).  And the gradient between two points would be $ f'(x) = \frac{{f(h) - f(x)}}{(h - x)} $
 
+The steps are exactly the same.
+
+1) Cofirm the eligibility of the problem to meet the criteria
+
 
 
