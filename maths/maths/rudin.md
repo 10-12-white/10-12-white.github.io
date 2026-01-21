@@ -22,13 +22,9 @@ $ x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb} $
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
-## New problem
-
-### Consider a series of a sum, where the values converge to 0
-
 ## Prove that these values are 0
 
-## Rolles Theorem 
+# Rolles Theorem 
 
 "This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
 
@@ -136,3 +132,5 @@ For some function, we have that over the curve of an area, we have that
 $f'(c) = \frac{f(a) -f(b)}{ a - b}$
 
 This is useful because we will then relate it to the function's gradiant at any point in this range, $f'(x)$.
+
+
