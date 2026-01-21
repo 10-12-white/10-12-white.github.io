@@ -137,6 +137,11 @@ This is useful because we will then relate it to the function's gradiant at any 
 
 Let f be conitnuous and [a,b] and differentiable in (a,b).  Prove that there is such a c that exists in (a,b) where the f'(c) = \frac{f(a) - f(b)}{a - b}.
 
+If we have this, then we have that: f'(c) = \frac{f(a) - f(b)}{a - b}.
+
+Assume that f'(c) = \frac{f(a) - f(b)}{a - b}
+
+f(c) = \integral \frac{f(a) - f(b)}{a - b}. dc 
 
 
 
