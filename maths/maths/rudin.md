@@ -149,7 +149,18 @@ Then, consider how to make it for a particular area.  At any point in the functi
 
 The steps are exactly the same.
 
-1) Cofirm the eligibility of the problem to meet the criteria
+1) Cofirm the eligibility of the problem to meet the criteria where g(a) = g(b) in the function
+2) This then allows to say that the functions derivative, and there is such a g'(x) == 0, for Rolle Theorem
+3) Once constructing, g'(x), we ca find g(x)
+4) And then we can find g(x) = f(x) - \frac{f(a) - f(b)}{a - b}
+
+$ g'(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
+$ g'(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
+
+Which means that there is a case where $ f(x) = \frac{f(a) - f(b)}{a - b} $
+
+Now, we say, let g(a) = g(b) 
+   
 
 
 
