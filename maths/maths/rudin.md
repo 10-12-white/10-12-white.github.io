@@ -145,7 +145,7 @@ $ f(c) = \integral \frac{f(a) - f(b)}{a - b}. dc $
 
 Then we have that:
 
-Then, consider how to make it for a particular area.  At any point in the function, you would have an f'(x).  And the gradient between two points would be $ f'(x) = \frac{f(h) - f(x)}{(h - x)} $
+Then, consider how to make it for a particular area.  At any point in the function, you would have an f'(x).  And the gradient between two points would be $ f'(x) = \frac{{f(h) - f(x)}}{(h - x)} $
 
 
 
