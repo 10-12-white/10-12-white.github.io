@@ -59,21 +59,21 @@ By checking the values of f(0) and f(1) for this particular function, we can tel
 
 Ok, so, lets try something different.  Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
 
-$f'(c)$is equal to 0, then we would have to have:
+$ f'(c)$ is equal to 0, then we would have to have:
 
-$f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0 $
+$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0 $
 
 Then $f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$
 
 Now we can test $f(0)$and $f(1)$which we look at by putting the values of $c$ into the function:
 
-Since f(0) = f(1) then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
+Since $(0) = f(1)$ then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
 
 $f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0$
 
 Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
 
-$f'(c)$is equal to 0, then we would have to have:
+$f'(c)$ is equal to 0, then we would have to have:
 
 $f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0 $
 
@@ -119,7 +119,7 @@ But, we can say that at this stage, we can see that there are two periods for wh
 
 Rolle Theorem says that in the area (0,c_a), f'(0) = 0, and f'(c_a) = 0 also.  Since the two extremum values in the set equal the same thing, then there is a c_1 such that f'(c_1) = 0.
 
-Since $f(0) = 0$, which is verified, and $f(1) = 0$, and these are known.  We also know $f(c_a) = 0$also, since function must cross over the x-axis (first, to make the positive area) and then second, to make the negative area.
+Since $f(0) = 0$, which is verified, and $f(1) = 0$, and these are known.  We also know $f(c_a) = 0$ also, since function must cross over the x-axis (first, to make the positive area) and then second, to make the negative area.
 
 Rolle Theorem says that in the area $(c_a,1)$, $f'(c_a) = 0$, and $f'(1) = 0$ also.  Since the two extremum values in the set equal the same thing, then there is a c_2 such that f'(c_2) = 0.
 
@@ -149,10 +149,10 @@ Then, consider how to make it for a particular area.  At any point in the functi
 
 The steps are exactly the same.
 
-1) Cofirm the eligibility of the problem to meet the criteria where g(a) = g(b) in the function
-2) This then allows to say that the functions derivative, and there is such a g'(x) == 0, for Rolle Theorem
-3) Once constructing, g'(x), we ca find g(x)
-4) And then we can find g(x) = f(x) - \frac{f(a) - f(b)}{a - b}
+1) Cofirm the eligibility of the problem to meet the criteria where $g(a) = g(b)$ in the function
+2) This then allows to say that the functions derivative, and there is such a $g'(x) == 0$, for Rolle Theorem
+3) Once constructing, $g'(x)$, we ca find $g(x)$
+4) And then we can find $g(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
 
 $ g'(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
 $ g'(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
@@ -179,7 +179,8 @@ Then we say that we need to equte so we take the largest term over the same side
 $ g'(x) = f'(x) - \frac{f(a) - f(b)}{a - b} $
 $ g(x) = \integral{ f'(x) - \frac{f(a) - f(b)}{a - b} } $
 $ g(x) = {f(x) - f(a) -f(b)}{a - b}*x + c $
-THen since g(a) = g(b)
+
+THen since $g(a) = g(b)$
 
 Then
 
