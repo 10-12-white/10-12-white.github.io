@@ -160,7 +160,18 @@ $ g'(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
 Which means that there is a case where $ f(x) = \frac{f(a) - f(b)}{a - b} $
 
 Now, we say, let g(a) = g(b) 
-   
+
+Now, what we do, is say that g(a) is g(b), and then let
+
+$ f'(x) - \frac{f(a) - f(b)}{a - b} $
+$ f(x) - \frac{f(a) - f(b)}{a - b} * x + c_1 $
+$ g(a) - \frac{g(a) - f(b)}{a - b} * x + c_1 $
+$ g(b) - \frac{g(b) - f(b)}{a - b} * x + c_1 $
+
+
+
+
+
 
 
 
