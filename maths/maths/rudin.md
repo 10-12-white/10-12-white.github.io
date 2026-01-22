@@ -165,8 +165,13 @@ Now, what we do, is say that g(a) is g(b), and then let
 
 $$ f'(x) - \frac{f(a) - f(b)}{a - b} $
 $$ f(x) - \frac{f(a) - f(b)}{a - b} * x + c_1 $$
-$$ g(a) - \frac{g(a) - f(b)}{a - b} * x + c_1 $$
-$$ g(b) - \frac{g(b) - f(b)}{a - b} * x + c_1 $$
+$$ g(a) = \frac{g(a) - f(b)}{a - b} * x + c_1 $$
+$$ 
+
+Then, we have that these are equivalent and so then we say that:
+
+$$ g(a) = \frac{g(a) - f(b)}{a - b} * x + c_1  = g(b) = \frac{g(b) - f(b)}{a - b} * x + c_1 $$
+
 
 
 
