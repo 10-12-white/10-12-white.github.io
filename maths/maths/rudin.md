@@ -176,4 +176,10 @@ $$ \frac{g(a) - f(b)}{a - b} * x + c_1  = \frac{g(b) - f(b)}{a - b} * x + c_1 $$
 
 Then we say that we need to equte so we take the largest term over the same side as eachother, and then evaluate from the otherside.
 
+g'(x) = f'(x) - \frac{f(a) - f(b)}{a - b}
+g(x) = \integral{ f'(x) - \frac{f(a) - f(b)}{a - b} }
+g(x) = {f(x) - f(a) -f(b)}{a - b}*x + c
+THen since g(a) = g(b)
+
+
 
