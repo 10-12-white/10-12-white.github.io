@@ -172,11 +172,8 @@ Then, we have that these are equivalent and so then we say that:
 
 $$ g(a) = \frac{g(a) - f(b)}{a - b} * x + c_1  = g(b) = \frac{g(b) - f(b)}{a - b} * x + c_1 $$
 
+$$ \frac{g(a) - f(b)}{a - b} * x + c_1  = \frac{g(b) - f(b)}{a - b} * x + c_1 $$
 
-
-
-
-
-
+Then we say that we need to equte so we take the largest term over the same side as eachother, and then evaluate from the otherside.
 
 
