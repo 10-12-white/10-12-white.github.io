@@ -82,6 +82,84 @@
                 <li>A phased, measured approach that prioritises critical and long-lived data systems is required.</li>
             </ul>
 
+            <h3 class="text-2xl font-bold mb-8 text-deep-accent">Key Speaker: Thomas Prest</h3>
+
+            <p class="text-lg mb-6 leading-relaxed">The global landscape of cryptographic standards is divided between adherence to NIST-selected algorithms and independent national security mandates. While there are many countries that align with NIST PQC standards, several are creating their own.</p>
+
+            <p class="text-lg mb-6 leading-relaxed">United States: Driven by NIST for public standards and the NSA (via CNSA 2.0) for classified systems, the US sets a pure PQC requirement for National Security Systems (NSS) by 2035, viewing hybrid schemes strictly as an interim measure.</p> 
+
+            <p class="text-lg mb-6 leading-relaxed">European Union/Germany/France: Bodies like the German BSI and French ANSSI recommend NIST algorithms but also endorse alternatives (e.g., FrodoKEM, Classic McEliece) for diversification and actively recommend hybrid schemes during the transition, reflecting a more flexible or open policy than the US long-term goal. This is partially due to the fact that their own governments have their own departments working on cryptography standards.</p> 
+
+            <p class="text-lg mb-6 leading-relaxed">China and South Korea: Both nations have pursued developing and standardising their own national PQC algorithms separate from the NIST process (e.g., South Korea's HAETAE and China's domestic candidates), reflecting a priority for digital sovereignty and national control over cryptographic assurance.  There is no further information provided on these schemes.</p>
+            
+            <h3 class="text-2xl font-bold mb-8 text-deep-accent">Key SPeaker: Prof Jonathan Katz</h3>
+
+            The overall transition to PQC presents significant operational and financial challenges:
+
+            <p class="text-lg mb-6 leading-relaxed">Resource and Cost Overheads: The shift, particularly to lattice-based cryptography, demands an estimated 30x increase in length for some applications.</p>
+            <p class="text-lg mb-6 leading-relaxed">Data Footprint: PQC schemes generally involve significantly longer cryptographic keys and signatures, impacting data storage and transmission protocols , see table below:</p>
+            <p class="text-lg mb-6 leading-relaxed">Hurdles include updating codebases, ensuring backwards compatibility, and navigating the issue of multiple global standards to enforce a consistent security baseline. The risk of backwards-forcing attacks against PQC schemes is a strong motivator for a coordinated, enforced standard.</p>
+            <p class="text-lg mb-6 leading-relaxed">Other problems are things like Certificate Authorities need to be able to understand both PQC and non-PQC certificates, so will need to be standardised earlier than the use of the certificates in question.  And then they will also need to be responsible for any secure down-grade which may be required by one of the communicating parties, if they are not advanced enough to accept PQC keys.</p>
+
+            <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0lax"> <br>Protocol Stack </th>
+    <th class="tg-0lax"> <br>Key Agreement (KA) (Bytes) </th>
+    <th class="tg-0lax"> <br>Authenticating the Server (AS) (Bytes) </th>
+    <th class="tg-0lax"> <br>Total Communication Cost (Bytes) </th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax"> <br>TLS </td>
+    <td class="tg-0lax"> <br>2272 </td>
+    <td class="tg-0lax"> <br>9884 </td>
+    <td class="tg-0lax"> <br>12156 </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"> <br>AuthKEM </td>
+    <td class="tg-0lax"> <br>2272 </td>
+    <td class="tg-0lax"> <br>8424 </td>
+    <td class="tg-0lax"> <br>10696 </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"> <br>TLS + CT </td>
+    <td class="tg-0lax"> <br>2272 </td>
+    <td class="tg-0lax"> <br>14724 </td>
+    <td class="tg-0lax"> <br>16996 </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"> <br>AuthKEM + CT </td>
+    <td class="tg-0lax"> <br>2272 </td>
+    <td class="tg-0lax"> <br>13264 </td>
+    <td class="tg-0lax"> <br>15536 </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"> <br>TLS + MTC </td>
+    <td class="tg-0lax"> <br>2272 </td>
+    <td class="tg-0lax"> <br>4468 </td>
+    <td class="tg-0lax"> <br>6740 </td>
+  </tr>
+  <tr>
+    <td class="tg-0lax"> <br>AuthKEM + MTC </td>
+    <td class="tg-0lax"> <br>2272 </td>
+    <td class="tg-0lax"> <br>3008 </td>
+    <td class="tg-0lax"> <br>5280 </td>
+  </tr>
+</tbody></table>
+            
+            <h3 class="text-2xl font-bold mb-8 text-deep-accent">Key Speaker: Dr Danesh Jogio</h3>
+
+
+
+            
             <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
                 
             </blockquote>
@@ -90,7 +168,7 @@
         <section class="mt-20 pt-8 border-t border-deep-accent/30">
             <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
             <div class="space-y-4 font-mono text-sm opacity-80">
-                <p>[1]</p>
+                <p>[1] Australian Quantum Crypotgraphy Conference</p>
                 <p>[2]</p>
                 <p>[3]</p>
             </div>
