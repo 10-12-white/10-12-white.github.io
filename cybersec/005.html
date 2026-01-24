@@ -123,6 +123,53 @@
 <p class="text-lg mb-6 leading-relaxed">Sinobi escalates privileges shortly after initial access by abusing built-in Windows administrative capabilities. Sinobi frequently creates new local administrator accounts or elevates existing accounts to ensure unrestricted control over compromised systems.</p>
             
 <p class="text-lg mb-6 leading-relaxed">SonicWall SSL VPN compromise through CVE-2024-53704 authentication bypass via improper session cookie handling (T1133). Managed service provider accounts with domain administrator rights. Public-facing application exploitation (T1190) targeting VPN and remote management platforms. AnyDesk deployment for persistent access.</p>
+
+<table style="width:100%; border-collapse: collapse; font-family: sans-serif; margin-bottom: 20px;">
+  <thead>
+    <tr style="background-color: #2c3e50; color: white; text-align: left;">
+      <th style="padding: 12px; border: 1px solid #ddd;">MITRE Tactic</th>
+      <th style="padding: 12px; border: 1px solid #ddd;">Technique ID</th>
+      <th style="padding: 12px; border: 1px solid #ddd;">Technique & Technical Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Initial Access</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">T1133 / T1190</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Exploitation of <strong>CVE-2024-53704</strong> (SonicWall SSL VPN) and targeting public-facing management platforms. Use of compromised MSP accounts.</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Persistence</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">T1219 / T1136</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Installation of <strong>AnyDesk</strong> for backdoor access and creation of new local administrator accounts.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Defense Evasion</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">T1562.001</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Disabling endpoint security tools (EDR) and adjusting firewall permissions; use of obfuscated binaries like <em>"bin.exe"</em>.</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Discovery</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">T1087 / T1135</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Deployment of lightweight reconnaissance scripts to enumerate domain info, file shares, and identify privileged accounts.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Lateral Movement</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">T1021.001</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Hands-on-keyboard movement using RDP and abused living-off-the-land (LotL) binaries.</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Exfiltration</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">T1567.002</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Staging and moving data to cloud storage using <strong>Rclone</strong> or <strong>WinSCP</strong> prior to encryption.</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Impact</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">T1486 / T1491</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">File encryption with <strong>.SINOBI</strong> extension, deletion of Recycle Bin, and desktop wallpaper defacement.</td>
+    </tr>
+  </tbody>
+</table>
             
 <h2 class="text-3xl font-extrabold mb-6 text-cream">Hashes and IOCs</h2>
             
