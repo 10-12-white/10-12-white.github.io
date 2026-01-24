@@ -46,10 +46,15 @@
 
         <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
             <p class="text-lg mb-6 leading-relaxed"></p>
+            
             <h2 class="text-3xl font-extrabold mb-6 text-cream">Introduction</h2>
 
             <p class="text-lg mb-6 leading-relaxed">Sinobi emerged in late June 2025. This ransomware group employs a combination of AES and RSA encryption algorithms to lock victims’ files, appending them with the .SINOBI extension. Upon infection, victims receive a ransom note titled README.txt, instructing them to contact the attackers via a Tor-based chat site to negotiate payment. The note emphasizes that the group is financially motivated, not politically, and offers proof of data decryption and a list of exfiltrated files. Victims are given seven days to initiate communication, with warnings against using third-party recovery tools or rebooting their systems</p>          
 
+            <h2 class="text-3xl font-extrabold mb-6 text-cream">Summary</h2>
+
+            <p class="text-lg mb-6 leading-relaxed">Sinobi initiates its attacks through various entry points, including initial access brokers, phishing kits, and exploiting vulnerabilities in remote access systems like Citrix or Fortinet. They may also utilize supply chain compromises to infiltrate target organizations through trusted third parties. The group’s operational patterns closely mirror established threats like RansomHub and ALPHV, drawing inspiration from leaked Conti ransomware methods. Once inside, operators conduct "hands-on-keyboard" intrusions using a mix of custom tools and living-off-the-land techniques. Attackers prioritize privilege escalation and security evasion by creating admin accounts and disabling endpoint protections. Persistence is typically established by configuring legitimate remote access tools to maintain a foothold. A lightweight reconnaissance script is then deployed to automate lateral movement and identify critical domain information and file shares. Before encryption begins, data is exfiltrated to offsite cloud storage using tools like Rclone or WinSCP. The ransomware binary, often disguised with a generic filename, deletes the Recycle Bin and encrypts files with a .SINOBI extension. Finally, ransom notes are dropped in every directory, and the desktop wallpaper is replaced with a demand for payment.</p>
+            
 <section class="mb-20">
        <div class="flex items-center mb-6">
            <div class="p-2 bg-deep-accent/10 rounded mr-4">
@@ -107,12 +112,18 @@
 
 <h2 class="text-3xl font-extrabold mb-6 text-cream">Background and History</h2>
 
-            <p class="text-lg mb-6 leading-relaxed">Sinobi traces technical lineage through INC Ransomware from August 2023, whose source code was sold for $300,000 on underground forums in spring 2024 and subsequently acquired by Lynx operators in July 2024. Binary analysis reveals 70% function similarity between Lynx and INC implementations. Code overlaps, leak site infrastructure parallels, and operational methodologies suggest rebrand or evolution of Lynx, though both groups currently operate in parallel. The operation likely follows standard affiliate revenue share model with selective vetting through Russian-language forums.</p>
+            <p class="text-lg mb-6 leading-relaxed">Sinobi can be traced back to several group0s in 2022, traces technical lineage link to INC Ransomware from August 2023, whose source code was sold for $300,000 on underground forums in spring 2024.  It was then acquired and bought by the Lynx operators in July 2024.  Binary analysis reveals 70% function similarity between Lynx and INC implementations, with code overlaps, and desgin choices.  Other infomration such as the design of their leak sites suggests that multuple rebrandings have taken place, though both groups currently operate in parallel.  The operation is therefore thought to follow standard affiliate revenue share models, with selective vetting through Russian-language forums.</p>
+            
+<p class="text-lg mb-6 leading-relaxed">INC activity diminished and a new group called Lynx emerged around the same time. There is no confirmation that Lynx operators purchased INC source code, but Lynx is clearly a successor to INC.  Lynx was an active and aggressive threat for about one year, and then scaled back its activities in mid-2025. The group remains a threat, but its activity declined around the time Sinobi emerged in June 2025.  Sinobi is widely believed to be a rebrand, successor, or offshoot of Lynx ransomware.</p>
+
+<h2 class="text-3xl font-extrabold mb-6 text-cream">TTPs and Attack Methodology</h2>
+
+<p class="text-lg mb-6 leading-relaxed">Sinobi gains initial access primarily by abusing valid credentials, most often VPN or RDP logins purchased from initial access brokers or harvested via prior compromise. Sinobi also conducts phishing campaigns to steal credentials or deploy malware and actively exploits vulnerabilities in internet-facing infrastructure, including SonicWall SSL-VPN appliances and other unpatched perimeter devices. In some cases, Sinobi leverages trusted third-party or MSP access to pivot into victim environments.</p>
+
+<p class="text-lg mb-6 leading-relaxed">Sinobi escalates privileges shortly after initial access by abusing built-in Windows administrative capabilities. Sinobi frequently creates new local administrator accounts or elevates existing accounts to ensure unrestricted control over compromised systems.</p>
             
 <p class="text-lg mb-6 leading-relaxed">SonicWall SSL VPN compromise through CVE-2024-53704 authentication bypass via improper session cookie handling (T1133). Managed service provider accounts with domain administrator rights. Public-facing application exploitation (T1190) targeting VPN and remote management platforms. AnyDesk deployment for persistent access.</p>
-
-<p class="text-lg mb-6 leading-relaxed">INC activity diminished and a new group called Lynx emerged around the same time. There is no confirmation that Lynx operators purchased INC source code, but Lynx is clearly a successor to INC.  Upon close examination - significant overlap in shared functions strongly suggests that the developers of Lynx ransomware have borrowed and repurposed a considerable portion of the INC codebase to create their own malicious software.  Lynx was an active and aggressive threat for about one year, and then scaled back its activities in mid-2025. The group remains a threat, but its activity declined around the time Sinobi emerged in June 2025.  Sinobi is widely believed to be a rebrand, successor, or offshoot of Lynx ransomware. The Lynx leak site design is just one piece of supporting evidence for this: </p>
-
+            
 <h2 class="text-3xl font-extrabold mb-6 text-cream">Hashes and IOCs</h2>
             
 <div class="mb-8 border-b border-deep-accent/5 pb-6">
@@ -126,9 +137,8 @@
 <p class="text-lg mb-6 leading-relaxed"></p>
 
             <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
-                
+            
             </blockquote>
-
         </article>
 
         <section class="mt-20 pt-7 border-t border-deep-accent/30">
