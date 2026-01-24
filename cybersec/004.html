@@ -30,7 +30,7 @@
             <a href="index.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
                 <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
             </a>
-            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 005</span>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 004</span>
         </div>
     </header>
 
@@ -46,6 +46,7 @@
 
         <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
             <h2 class="text-4xl font-extrabold mb-6 text-cream">Introduction</h2>
+            
             <p class="text-lg mb-6 leading-relaxed">GoBruteforcer is a modular, Golang-based malware platform designed to compromise Linux-based web servers. It operates primarily as a botnet that spreads via high-volume brute-force attacks against internet-facing services like FTP, MySQL, and phpMyAdmin. Recent variants have integrated "AI-aware" targeting strategies, specifically exploiting the insecure default configurations often found in AI-generated deployment scripts.</p>
 
   <p class="text-lg mb-6 leading-relaxed">Check Point said it identified a more sophisticated version of the Golang malware in mid-2025, packing in a heavily obfuscated IRC bot that's rewritten in the cross-platform programming language, improved persistence mechanisms, process-masking techniques, and dynamic credential lists.</p>
@@ -61,6 +62,7 @@
             <p class="text-lg mb-6 leading-relaxed">Check Point compared the credential list used in GoBruteforcer campaigns against a database of approximately 10 million leaked passwords and found an overlap of roughly 2.44%. This gives us a baseline for a rough upper limit on the number of hosts that might accept one of the passwords that GoBruteforcer has at its disposal: approximately 54.6 thousand MySQL instances and 13.7 thousand PostgreSQL instances (note that this estimate does not account for correct usernames, host-based access restrictions, or other policy controls). Even with a low success rate, the large number of exposed services makes this type of attack an economically-attractive option. Our assumptions are supported by Google’s 2024 Cloud Threat Horizons report, which found that weak or missing credentials accounted for 47.2% of initial access vectors in compromised cloud surfaces. In practice, attackers do not need expensive techniques or zero-day exploits to gain access. They can simply try common usernames and passwords such as admin, 123456 or password1 until they obtain access (the bruteforce model). The evidence shows that this approach still succeeds far too often.</p>
 
             <p class="text-lg mb-6 leading-relaxed">In the activity observed by Check Point, an internet-exposed FTP service on servers running XAMPP is used as an initial access vector to upload a PHP web shell, which is then used to download and execute an updated version of the IRC bot using a shell script based on the system architecture. Once a host is successfully infected, it can serve three different uses:</p>
+          
             <ul>
                 <li><span class="mitre-id">Run the brute-force</span> component to attempt password logins for FTP, MySQL, Postgres, and phpMyAdmin across the internet</li>
                 <li><span class="mitre-id">Host and serve</span>  payloads to other compromised systems, </li>
