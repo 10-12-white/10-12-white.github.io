@@ -55,39 +55,44 @@ So, this is to be done for the function below:
 
 $f(a) = \frac{a_i}{i}$
 
-By checking the values of f(0) and f(1) for this particular function, we can tell that these values are not the same as eachother, therefore, So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$is NOT the funciton
+By checking the values of f(0) and f(1) for this particular function, we can tell that these values are not the same as eachother, therefore, So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$ is NOT the funciton
 
 Ok, so, lets try something different.  Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
 
-$ f'(c)$ is equal to 0, then we would have to have:
+{% raw %}
+If $f'(c)$ is equal to $0$, then we would have to have:
 
-$ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0 $
+$$f'(c) = a_1 + a_2 c + a_3 c^2 + a_4 c^3 + \dots + a_n c^{n-1} = 0$$
 
-Then $f(c) = a_1 c + \frac{a_2 c^2}{2} + \frac{a_3 c^3}{3} + \frac{a_4 c^4}{4} \dots + \frac{a_n c^{n-1}}{n}$
+Then $f(c) = a_1 c + \frac{a_2 c^2}{2} + \frac{a_3 c^3}{3} + \frac{a_4 c^4}{4} + \dots + \frac{a_n c^n}{n}$
 
-Now we can test $f(0)$ and $f(1)$ which we look at by putting the values of $c$ into the function:
+Now we can test $f(0)$ and $f(1)$, which we evaluate by substituting values of $c$ into the function:
 
-Since $(0) = f(1)$ then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
+Since $f(0) = f(1)$, we have that these are equivalent. Therefore, there exists a $c \in (0, 1)$ such that $f'(c) = 0$ for the derivative of the function; that is, there is some $c$ for:
 
-$f'(c) = {a_1} + {a_2}*c + {a_3}*c^{2} + {a_4}*c^{3} ... + {a_n}*c^{n-1} = 0$
+$$f'(c) = a_1 + a_2 c + a_3 c^2 + a_4 c^3 + \dots + a_n c^{n-1} = 0$$
+{% endraw %}
 
 Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
 
-$f'(c)$ is equal to 0, then we would have to have:
+{% raw %}
+If $f'(c)$ is equal to $0$, then we have:
 
-$f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0 $
+$$f'(c) = a_1 + a_2 c + a_3 c^2 + a_4 c^3 + \dots + a_n c^{n-1} = 0$$
 
-Then $f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$
+Then, by integrating $f'(c)$, we get $f(c)$:
 
-Now we can test $f(0)$and $f(1)$to see if they generate the solutions we are looking for, by putting the values of $c=a,b$into the function:
+$$f(c) = a_1 c + \frac{a_2 c^2}{2} + \frac{a_3 c^3}{3} + \frac{a_4 c^4}{4} + \dots + \frac{a_n c^n}{n}$$
 
-$f(c=0) gives f{a_1}*c = 0 $
-And also
-$f(c=1) gives f{a_1} + {a_2}*1 = 0 $
+Now we can test $f(0)$ and $f(1)$ to see if they satisfy the conditions of Rolle's Theorem by substituting $c=0$ and $c=1$ into the function:
 
-Since f(0) = f(1) then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
+* For $c = 0$: $f(0) = 0$.
+* For $c = 1$: $f(1) = a_1 + \frac{a_2}{2} + \frac{a_3}{3} + \dots + \frac{a_n}{n}$.
 
-$f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0$
+If $f(0) = f(1)$, then the conditions for Rolle's Theorem are met. This implies there exists some $c \in (0, 1)$ such that the derivative vanishes:
+
+$$f'(c) = a_1 + a_2 c + a_3 c^2 + a_4 c^3 + \dots + a_n c^{n-1} = 0$$
+{% endraw %}
 
 ## Let $f : [0,1] \in \mathbb{R}$such that it is continuous, and then let $(0,1)$be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
 
@@ -147,45 +152,52 @@ Then we have that:
 
 Then, consider how to make it for a particular area.  At any point in the function, you would have an f'(x).  And the gradient between two points would be $ f'(x) = \frac{{f(h) - f(x)}}{(h - x)} $
 
-The steps are exactly the same.
+## Theorem (Mean Value Theorem)
 
-1) Cofirm the eligibility of the problem to meet the criteria where $g(a) = g(b)$ in the function
-2) This then allows to say that the functions derivative, and there is such a $g'(x) == 0$, for Rolle Theorem
-3) Once constructing, $g'(x)$, we ca find $g(x)$
-4) And then we can find $g(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
+Let $f$ be continuous on $[a, b]$ and differentiable on $(a, b)$. Prove that there exists a point $c \in (a, b)$ such that:
+$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
 
-$ g'(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
-$ g'(x) = f(x) - \frac{f(a) - f(b)}{a - b} $
+### Proof Strategy
 
-Which means that there is a case where $ f(x) = \frac{f(a) - f(b)}{a - b} $
+To prove this, we construct an auxiliary function $g(x)$ that satisfies the conditions of **Rolle's Theorem** (where $g(a) = g(b)$).
 
-Now, we say, let g(a) = g(b) 
+1. **Define the eligibility:** We need a function $g(x)$ such that $g(a) = g(b)$.
+2. **Apply Rolle's Theorem:** This ensures there exists a $c$ where $g'(c) = 0$.
+3. **Construct $g'(x)$:** We define the derivative based on the difference between the function's slope and the secant slope:
+   $$g'(x) = f'(x) - \frac{f(b) - f(a)}{b - a}$$
+4. **Find $g(x)$:** By integrating $g'(x)$, we get:
+   $$g(x) = f(x) - \left( \frac{f(b) - f(a)}{b - a} \right)x + C$$
 
-Now, what we do, is say that g(a) is g(b), and then let
+### Verification
 
-$$ f'(x) - \frac{f(a) - f(b)}{a - b} $
-$$ f(x) - \frac{f(a) - f(b)}{a - b} * x + c_1 $$
-$$ g(a) = \frac{g(a) - f(b)}{a - b} * x + c_1 $$
-$$ 
+To confirm $g(a) = g(b)$, we substitute the endpoints:
+$$g(a) = f(a) - \left( \frac{f(b) - f(a)}{b - a} \right)a + C$$
+$$g(b) = f(b) - \left( \frac{f(b) - f(a)}{b - a} \right)b + C$$
 
-Then, we have that these are equivalent and so then we say that:
+By setting $g(a) = g(b)$ and simplifying, we confirm that the constant $C$ cancels out, and the relationship holds, proving that such a $c$ must exist where $g'(c) = 0$, which implies:
+$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
+{% endraw %}
 
-$$ g(a) = \frac{g(a) - f(b)}{a - b} * x + c_1  = g(b) = \frac{g(b) - f(b)}{a - b} * x + c_1 $$
+To satisfy Rolle's Theorem, we equate the endpoints $g(a) = g(b)$ by defining $g(x)$ as the difference between the function and the secant line:
 
-$$ \frac{g(a) - f(b)}{a - b} * x + c_1  = \frac{g(b) - f(b)}{a - b} * x + c_1 $$
+$$g(x) = f(x) - \left[ f(a) + \frac{f(b) - f(a)}{b - a}(x - a) \right]$$
 
-Then we say that we need to equte so we take the largest term over the same side as eachother, and then evaluate from the otherside.
+Taking the derivative, we find:
 
-$ g'(x) = f'(x) - \frac{f(a) - f(b)}{a - b} $
-$ g(x) = \integral{ f'(x) - \frac{f(a) - f(b)}{a - b} } $
-$ g(x) = {f(x) - f(a) -f(b)}{a - b}*x + c $
+$$g'(x) = f'(x) - \frac{f(b) - f(a)}{b - a}$$
 
-THen since $g(a) = g(b)$
+If we work backwards from the derivative to find $g(x)$ via integration:
 
-Then
+$$g(x) = \int \left( f'(x) - \frac{f(b) - f(a)}{b - a} \right) dx$$
+$$g(x) = f(x) - \frac{f(b) - f(a)}{b - a} \cdot x + C$$
 
-$$ f(a) - \frac{f(a) - f(b)} {a - b} *a + c_1 = f(b) - \frac{f(a) - f(b)}{a - b}*b + c_2 $$
+### Evaluating at the Endpoints
 
-TESTING
+Since we require $g(a) = g(b)$, we substitute the values:
 
+$$f(a) - \frac{f(b) - f(a)}{b - a} \cdot a + C = f(b) - \frac{f(b) - f(a)}{b - a} \cdot b + C$$
+
+By subtracting $C$ from both sides and gathering the slope terms, we prove that the construction is valid, ensuring there exists a $c \in (a,b)$ where $g'(c) = 0$, thus proving:
+
+$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
 
