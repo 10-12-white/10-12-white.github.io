@@ -63,7 +63,7 @@ $ f'(c)$ is equal to 0, then we would have to have:
 
 $ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0 $
 
-Then $f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{{a_3}*c^{3}}{3} + \frac{{a_4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$
+Then $f(c) = a_1 c + \frac{a_2 c^2}{2} + \frac{a_3 c^3}{3} + \frac{a_4 c^4}{4} \dots + \frac{a_n c^{n-1}}{n}$
 
 Now we can test $f(0)$ and $f(1)$ which we look at by putting the values of $c$ into the function:
 
