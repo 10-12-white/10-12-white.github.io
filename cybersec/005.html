@@ -102,7 +102,6 @@
                        </li>
                        <li class="flex items-center text-sm">
                            <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3">Education</i>
-                           
                        </li>
                    </ul>
                </div>
@@ -118,11 +117,14 @@
 
 <h2 class="text-3xl font-extrabold mb-6 text-cream">TTPs and Attack Methodology</h2>
 
-<p class="text-lg mb-6 leading-relaxed">Sinobi gains initial access primarily by abusing valid credentials, most often VPN or RDP logins purchased from initial access brokers or harvested via prior compromise. Sinobi also conducts phishing campaigns to steal credentials or deploy malware and actively exploits vulnerabilities in internet-facing infrastructure, including SonicWall SSL-VPN appliances and other unpatched perimeter devices. In some cases, Sinobi leverages trusted third-party or MSP access to pivot into victim environments.</p>
+            <ul>
+                <li>Public-facing application exploitation (T1190)</li>
+                <li>Managed service provider accounts with domain administrator rights.</li>
+                <li>onicWall SSL VPN compromise through CVE-2024-53704 authentication bypass via improper session cookie handling (T1133).</li>
+            </ul>
+<p class="text-lg mb-6 leading-relaxed">Sinobi gains initial access primarily by abusing valid credentials, usually VPN or RDP logins purchased from initial access brokers or harvested via prior compromise. Sinobi also conducts phishing campaigns to steal credentials or deploy malware and actively exploits vulnerabilities in internet-facing infrastructure, including SonicWall SSL-VPN appliances and other unpatched perimeter devices. In some cases, Sinobi leverages trusted third-party or MSP access to pivot into victim environments.</p>
 
 <p class="text-lg mb-6 leading-relaxed">Sinobi escalates privileges shortly after initial access by abusing built-in Windows administrative capabilities. Sinobi frequently creates new local administrator accounts or elevates existing accounts to ensure unrestricted control over compromised systems.</p>
-            
-<p class="text-lg mb-6 leading-relaxed">SonicWall SSL VPN compromise through CVE-2024-53704 authentication bypass via improper session cookie handling (T1133). Managed service provider accounts with domain administrator rights. Public-facing application exploitation (T1190) targeting VPN and remote management platforms. AnyDesk deployment for persistent access.</p>
 
 <table style="width:100%; border-collapse: collapse; font-family: sans-serif; margin-bottom: 20px;">
   <thead>
