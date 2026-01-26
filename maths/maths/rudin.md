@@ -63,13 +63,13 @@ $ f'(c)$ is equal to 0, then we would have to have:
 
 $ f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0 $
 
-Then $f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$
+Then $f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{{a_3}*c^{3}}{3} + \frac{{a_4}*c^{4}}{4} ... + \frac{{a_n}*c^{n-1}}{n}$
 
-Now we can test $f(0)$and $f(1)$which we look at by putting the values of $c$ into the function:
+Now we can test $f(0)$ and $f(1)$ which we look at by putting the values of $c$ into the function:
 
 Since $(0) = f(1)$ then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
 
-$f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0$
+$f'(c) = {a_1} + {a_2}*c + {a_3}*c^{2} + {a_4}*c^{3} ... + {a_n}*c^{n-1} = 0$
 
 Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
 
@@ -81,9 +81,9 @@ Then $f(c) = {a_1}*c + \frac{{a_2}*c^2}{2} + \frac{a_{3}*c^{3}}{3} + \frac{a_{4}
 
 Now we can test $f(0)$and $f(1)$to see if they generate the solutions we are looking for, by putting the values of $c=a,b$into the function:
 
-$f(c=0) gives f(a_1}*c = 0 $
+$f(c=0) gives f{a_1}*c = 0 $
 And also
-$f(c=1) gives f(a_1} + {a_2}*1 = 0 $
+$f(c=1) gives f{a_1} + {a_2}*1 = 0 $
 
 Since f(0) = f(1) then we have that these are equivalent and therefore there is a f'(c) such that c will equal 0, for the f' of the function, that is, there is some c for 
 
@@ -93,7 +93,7 @@ $f'(c) = {a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0$
 
 We also know that the deriviate of the integral from the area of 0 to 1 is also 0.
 
-Now, prove, that there exists $c_1, c_2 \in (0,1)$such that $f'(c_1)$and $f'(c_2) = 0$
+Now, prove, that there exists $c_1, c_2 \in (0,1)$ such that $f'(c_1)$ and $f'(c_2) = 0$
 
 ### Step 1, Draw Graph
 
@@ -129,7 +129,7 @@ Therefore, there are two values $c_1$, and $c_2$, such that $f'(x) = 0$for the i
 
 For some function, we have that over the curve of an area, we have that 
 
-$f'(c) = \frac{f(a) -f(b)}{ a - b}$
+$f'(c) = \frac{f(a) - f(b)}{ a - b}$
 
 This is useful because we will then relate it to the function's gradiant at any point in this range, $f'(x)$.
 
