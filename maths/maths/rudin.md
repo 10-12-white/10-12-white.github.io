@@ -68,3 +68,13 @@ Then $f(c) = a_1 c + \frac{a_2 c^2}{2} + \frac{a_3 c^3}{3} + \frac{a_4 c^4}{4} +
 Now we can test $f(0)$ and $f(1)$, which we evaluate by substituting values of $c$ into the function:
 
 Since $f(0) = f(1)$, we have that these are equivalent. Therefore, there exists a $c \in (0, 1)$ such that $f'(c) = 0$ for the derivative of the function; that is, there is some $c$ for:
+
+$f'(c) = a_1 + a_2 c + a_3 c^2 + a_4 c^3 + \dots + a_n c^{n-1} = 0$
+
+Rolles Theorem, says, find two values for the function.  So, this would be f(0) and f(1) and we would want these to be 0.
+
+If $f'(c)$ is equal to $0$, then we have:
+
+$f'(c) = a_1 + a_2 c + a_3 c^2 + a_4 c^3 + \dots + a_n c^{n-1} = 0$
+
+Then, by integrating $f'(c)$, we get $f(c)$:
