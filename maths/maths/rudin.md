@@ -126,3 +126,13 @@ Rolle Theorem says that in the area $(c_a,1)$, $f'(c_a) = 0$, and $f'(1) = 0$ al
 
 Therefore, there are two values $c_1$, and $c_2$, such that $f'(x) = 0$ for the interval $(0,1)$ given that $f : [0,1] \in \mathbb{R}$ such that it is continuous, and then let $(0,1)$be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
 
+### Working on Legrange Theorem, genenrate the rules for the change and give reasons using the Rolle Theorem why the rules exists
+
+For some function, we have that over the curve of an area, we have that 
+
+$f'(c) = \frac{f(a) - f(b)}{ a - b}$
+
+This is useful because we will then relate it to the function's gradiant at any point in this range, $f'(x)$.
+
+## Theorem
+
