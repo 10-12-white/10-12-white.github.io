@@ -173,3 +173,22 @@ $$g(b) = f(b) - \left( \frac{f(b) - f(a)}{b - a} \right)b + C$$
 By setting $g(a) = g(b)$ and simplifying, we confirm that the constant $C$ cancels out, and the relationship holds, proving that such a $c$ must exist where $g'(c) = 0$, which implies:
 $$f'(c) = \frac{f(b) - f(a)}{b - a}$$
 
+Because, taking the derivative, we find:
+
+$g'(x) = f'(x) - \frac{f(b) - f(a)}{b - a}$
+
+If we work backwards from the derivative to find $g(x)$ via integration:
+
+$g(x) = \int \left( f'(x) - \frac{f(b) - f(a)}{b - a} \right) dx$
+$g(x) = f(x) - \frac{f(b) - f(a)}{b - a} \cdot x + C$
+
+### Evaluating at the Endpoints
+
+Since we require $g(a) = g(b)$, we substitute the values:
+
+$f(a) - \frac{f(b) - f(a)}{b - a} \cdot a + C = f(b) - \frac{f(b) - f(a)}{b - a} \cdot b + C$
+
+By subtracting $C$ from both sides and gathering the slope terms, we prove that the construction is valid, ensuring there exists a $c \in (a,b)$ where $g'(c) = 0$, thus proving:
+
+$f'(c) = \frac{f(b) - f(a)}{b - a}$
+
