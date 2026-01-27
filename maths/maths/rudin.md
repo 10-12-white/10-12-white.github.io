@@ -39,3 +39,11 @@ For example, two beautiful proofs for some interesting problems are below:
 
 Assume that you have a sequence.  This sequence $\sum_{i=1}^{n} a_i$ is generated from some $a_i$s in such a way that:
 
+$a_1 + \frac{a_2}{2} + ... + \frac{a_n}{n} = 0$
+
+Now, we need to prove that the following is true:
+
+${a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0$
+
+So this is an interesting question? The first thought, then, is what is the function, and what is the boundary?
+
