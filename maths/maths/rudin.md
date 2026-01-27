@@ -155,4 +155,21 @@ $$f'(c) = \frac{f(b) - f(a)}{b - a}$$
 
 ### Proof Strategy
 
+To prove this, we construct an auxiliary function $g(x)$ that satisfies the conditions of **Rolle's Theorem** (where $g(a) = g(b)$).
+
+1. **Define the eligibility:** We need a function $g(x)$ such that $g(a) = g(b)$.
+2. **Apply Rolle's Theorem:** This ensures there exists a $c$ where $g'(c) = 0$.
+3. **Construct $g'(x)$:** We define the derivative based on the difference between the function's slope and agreeing function slope:
+   $$g'(x) = f'(x) - \frac{f(b) - f(a)}{b - a}$$
+4. **Find $g(x)$:** By integrating $g'(x)$, we get:
+   $$g(x) = f(x) - \left( \frac{f(b) - f(a)}{b - a} \right)x + C$$
+
+### Verification
+
+To confirm $g(a) = g(b)$, we substitute the endpoints:
+$$g(a) = f(a) - \left( \frac{f(b) - f(a)}{b - a} \right)a + C$$
+$$g(b) = f(b) - \left( \frac{f(b) - f(a)}{b - a} \right)b + C$$
+
+By setting $g(a) = g(b)$ and simplifying, we confirm that the constant $C$ cancels out, and the relationship holds, proving that such a $c$ must exist where $g'(c) = 0$, which implies:
+$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
 
