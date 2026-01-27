@@ -90,3 +90,31 @@ If $f(0) = f(1)$, then the conditions for Rolle's Theorem are met. This implies 
 
 $f'(c) = a_1 + a_2 c + a_3 c^2 + a_4 c^3 + \dots + a_n c^{n-1} = 0$
 
+## Let $f : [0,1] \in \mathbb{R}$such that it is continuous, and then let $(0,1)$ be an area in which it is differentiable.  We know that the area is $f(0) = f(1) == 0$.
+
+We also know that the deriviate of the integral from the area of 0 to 1 is also 0.
+
+Now, prove, that there exists $c_1, c_2 \in (0,1)$ such that $f'(c_1)$ and $f'(c_2) = 0$
+
+### Step 1, Draw Graph
+
+Step 1 - first, I wanted to draw a graph because otherwise it was going to be too hard for me to understand.
+
+Then, it was easy to see how the area under the graph couldn't be equal to zero, if both sides were positive.  Therefore, one component had to be positive, and the other had to be negative.
+
+### Step 2, Positive and Negative
+
+So, it could be something like a sine curve, something to equal both components out.
+
+Because we now have a concept of area being equivalent in magnitude but opposite, this is useful for us.  We can use this to break the areas under the curves for a few sections.
+
+### Step 3, Differentiable over two areas
+
+Because it is differentiable over the whole area, there is two points where the function must cross over the x-axis (first, to make the positive area) and then second, to make the negative area.
+
+We do not know the value of x is to make this happen.
+
+But, we can say that at this stage, we can see that there are two periods for which there is differentiability, continuity, and we can verify that the function will equal 0 in 3 places.
+
+### Step 4, Rolle Theorem
+
