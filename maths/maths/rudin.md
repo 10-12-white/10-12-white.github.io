@@ -145,3 +145,14 @@ Assume that $f'(c) = \frac{f(a) - f(b)}{a - b}$
 $ f(c) = \integral \frac{f(a) - f(b)}{a - b}. dc $
 
 Then we have that:
+
+Then, consider how to make it for a particular area.  At any point in the function, you would have an f'(x).  And the gradient between two points would be $ f'(x) = \frac{(f(h) - f(x))}{h - x} $
+
+## Theorem (Mean Value Theorem)
+
+Let $f$ be continuous on $[a, b]$ and differentiable on $(a, b)$. Prove that there exists a point $c \in (a, b)$ such that:
+$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
+
+### Proof Strategy
+
+
