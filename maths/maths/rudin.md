@@ -47,3 +47,12 @@ ${a_1} + {a_2}*c + a_{3}*c^{2} + a_{4}*c^{3} ... + {a_n}*c^{n-1} = 0$
 
 So this is an interesting question? The first thought, then, is what is the function, and what is the boundary?
 
+The function must have the same value in both cases of the extremum.  So, the sum is not the extremum.  It is a result of adding the different components of the functions.  So I think the best approach is to say something like:
+
+Test f(0) and f(1) for the function, and if they are the saem value, then f'(c) can exist, we can calculate it.
+
+So, this is to be done for the function below:
+
+$f(a) = \frac{a_i}{i}$
+
+By checking the values of f(0) and f(1) for this particular function, we can tell that these values are not the same as eachother, therefore, So then, this is a quick way for us to check that $f(a) = \frac{a_i}{i}$ is NOT the function
