@@ -78,15 +78,6 @@
         </div>
     </section>
 
-    <section>
-        <h3>Affine Set</h3>
-        <div class="definition-box">
-            <p><strong>Intuition:</strong> A set that contains the entire infinite line passing through any two of its points (not just the segment).  An affine set can be thought of as the largest extension of a linear relationship.</p>
-            <p><strong>Formal Definition:</strong> A set $C$ is affine if for every $x, y \in C$ and $\theta \in \mathbb{R}$:</p>
-            <center>$\theta x + (1 - \theta)y \in C$</center>
-            <p class="note">Note: Every affine set is also a convex set, but not every convex set is affine.</p>
-        </div>
-    </section>
 
         <div class="definition-box" style="border-left-color: #0f9d58;">
             <p><strong>Closure ($\mathbf{cl } S$):</strong> The union of the set and its boundary.</p>
@@ -101,23 +92,6 @@
             <p class="note"><strong>Key Concept:</strong> If a convex optimization problem has an unbounded feasible set, the optimal value might be $-\infty$.</p>
         </div>
 
-
-<div class="definition-box">
-        <h3>Interior Sets</h3>
-        <p><strong>The interior of a set</strong> is the "inner region" of a set.  Put more clearly, a point is in the interior if you can move a tiny bit in any direction and still stay inside the set.  You consider that this point can be enclosed in a "ball" that will fit perfectly inside this set.</p>
-        <p>Formal Definition: $x \in int(S)$ if there exists an $\epsilon > 0$ such that a ball of radius $\epsilon$ around x is entirely contained in $S$.  You aren't "touching the fence"; you have a buffer zone.</p>
-        </div>
-
-    <section>
-        <h3>Hyperplane</h3>
-        <div class="definition-box">
-            <p><strong>Intuition:</strong> A flat surface that divides the space into two halves. In 3D it's a plane; in 2D it's a line.  It is used to describe the shape of a space.</p>
-            <p><strong>Formal Definition:</strong> A set of the form:</p>
-            <center>$\{x \mid a^T x = b\}$</center>
-            <p>Where $a$ is a non-zero vector (the normal vector) and $b$ is a constant.</p>
-            <p class="note"><strong>Supporting Hyperplane:</strong> A special case where the hyperplane touches the "boundary" of a convex set without cutting through its interior.</p>
-        </div>
-    </section>
             
     <section>
         <h3>Affine Hull</h3>
@@ -146,20 +120,7 @@
         <p>From earlier, we know that a <strong>set</strong> is a collection of points, which we can call $C$..</p>
         <p>The <strong>compliment</strong> is the set points not contained in $C$.  \{x \mid a^T x \le b\}$.</p>
         </div>
-            
-        <div class="definition-box" style="border-left-color: #0f9d58;">
-            <p><strong>The PSD Cone ($\mathbb{S}^n_+$):</strong> The set of symmetric $n \times n$ matrices that are positive semidefinite.</p>
-            <p>A matrix $X$ is in the PSD cone if:</p>
-            <center>$z^T X z \ge 0 \quad \forall z \in \mathbb{R}^n$</center>
-            <p>Equivalently, all eigenvalues of $X$ are non-negative ($\lambda_i \ge 0$).</p>
-            <p class="note"><strong>Significance:</strong> This cone is the foundation of <strong>Semidefinite Programming (SDP)</strong>, one of the most powerful tools in modern optimization.</p>
-        </div>
-
-        <div class="definition-box" style="border-left-color: #0f9d58;">
-            <p><strong>Positive Definite ($\mathbb{S}^n_{++}$):</strong> The "Interior" of the PSD cone.</p>
-            <p>Matrices where $z^T X z > 0$ for all $z \neq 0$. All eigenvalues are strictly positive.</p>
-        </div>
-    </section>
+        
             
 <section id="inequals">
         <h3>Generalized Inequalities</h3>
@@ -184,24 +145,7 @@
         </div>
     </section>
 
-    <section id="operations">
-        <h3>Operations that Preserve Convexity</h3>
-        
-        <div class="definition-box" style="border-left-color: #0f9d58;">
-            <p><strong>1. Intersection:</strong> If $S_1, S_2, \dots$ are convex, then $\bigcap S_i$ is convex. 
-            <br><small>This holds even for an infinite number of sets!</small></p>
-        </div>
 
-        <div class="definition-box" style="border-left-color: #0f9d58;">
-            <p><strong>2. Affine Mapping:</strong> If $S$ is convex, then $f(S) = \{Ax+b \mid x \in S\}$ is convex.
-            <br>Conversely, the pre-image $f^{-1}(S)$ is also convex.</p>
-        </div>
-
-        <div class="definition-box" style="border-left-color: #0f9d58;">
-            <p><strong>3. Perspective & Linear-Fractional:</strong> These mappings preserve the "convex shape" even when stretching or projecting the set into different dimensions.</p>
-            <center>$f(x) = \frac{Ax + b}{c^T x + d}$</center>
-        </div>
-    </section>
 
 <section id="theorems">
         <h3>Fundamental Separation Theorems</h3>
@@ -217,19 +161,11 @@
             <p>For every boundary point $x_0$ of a convex set $C$, there exists a <strong>supporting hyperplane</strong> $\{x \mid a^T x = a^T x_0\}$ such that $a^T x \leq a^T x_0$ for all $x \in C$.</p>
             <p class="note">Every convex set has a "flat" tangent at every boundary point.</p>
         </div>
-    </section>
+    </section
 
-    <div class="definition-box" style="border-left-color: #0f9d58;">
-            <h3>Infimum and Minimum</h3>
-            <p>The minimum is the smallest number within a set, while the infimum (or greatest lower bound, GLB) is the largest number that is less than or equal to all numbers in the set; the infimum may or may not be in the set, but if a minimum exists, it is always the infimum, making the infimum a generalization of the minimum for sets that lack a smallest element, like open interval</p>
-        
-            <p class="note">Minimum has an issue because we cannot always find a minimum.  For example, if you consider the set (0,1) there will ALWAYS be a smaller number - for instance, 0.001, and, say 0.0001, etc.  THe benefit of the infimum, is it is greatest (largest) number that is less than or equal to every number in the set.  This is good because then you can always have an infimum.</p>
 
-            <p class="note">Because this is the case, we like to think of cases where the infimum can be defined first, and, then when we can create aspecific boundaries, we can then define a minimum.</p>
-        </div>
-    </section>
 
-<h2>Examples using these fefinitions</h2>
+<h2>Examples using these definitions</h2>
             
 <div class="definition-box" style="border-left-color: #0f9d58;">
             
@@ -265,29 +201,6 @@
             <p class="note">Note: $x \succeq 0$ adds $n$ more halfspaces (one for each axis), making the final set a <strong>simplex</strong>.</p>
         </div>
     </section> 
-
-        <div class="definition-box" style="border-left-color: #0f9d58;">
-            <h3>Euclidean Ball & Ellipsoid</h3>
-            <p><strong>Ball:</strong> $B(x_c, r) = \{x \mid \|x - x_c\|_2 \leq r\}$</p>
-            <p><strong>Ellipsoid:</strong> $\{x \mid (x-x_c)^T P^{-1} (x-x_c) \leq 1\}$ where $P \in \mathbb{S}^n_{++}$.</p>
-            <p class="note">An ellipsoid is just a stretched version of a ball (an affine transformation).</p>
-        </div>
-
-        <div class="definition-box" style="border-left-color: #0f9d58;">
-            <h3>The Norm Cone (Second-Order Cone)</h3>
-            <p>The set $C = \{(x, t) \mid \|x\|_2 \leq t\}$.</p>
-            <p>In 3D, if $x$ is 2D, this looks like an inverted ice cream cone starting at the origin and expanding upwards as $t$ increases.</p>
-        </div>
-
-        <div id="separation-example" class="definition-box" style="border-left-color: #0f9d58;">
-            <h2>Example</h2>
-            <p>Consider two sets in 1D:</p>
-            <ul>
-                <li>$C = \{x \mid x \leq 0\}$ (Closed)</li>
-                <li>$D = \{x \mid x > 2\}$ (Open, but separated by distance)</li>
-            </ul>
-            <p>A strictly separating hyperplane (a point in 1D) could be $x = 1$. Since $x < 1$ for all $C$ and $x > 1$ for all $D$, they are strictly separated.</p>
-        </div>
     </section>            
             
 <!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
@@ -298,7 +211,7 @@
         <section class="mt-20 pt-7 border-t border-deep-accent/30">
             <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
             <div class="space-y-4 font-mono text-sm opacity-80">
-                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed">MIT 18.200, Youtube, Series avilable: https://www.youtube.com/playlist?list=PLUl4u3cNGP61p2fXeXjNCrfNHFwyW-bl0</p>
                 <p class="text-sm mb-6 leading-relaxed"></p>
                 <p class="text-sm mb-6 leading-relaxed"></p>
                 <p class="text-sm mb-6 leading-relaxed"></p>
@@ -308,7 +221,7 @@
         </section>
 
         <div class="mt-16 text-center">
-            <a href="10-12-white.github.io/index.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Main Maths Page</a>
+            <a href="10-12-white.github.io/" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Main Hub Page</a>
         </div>
     </main>
 
