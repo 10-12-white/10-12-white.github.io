@@ -35,7 +35,6 @@
     </header>
 
     <main class="max-w-4xl mx-auto p-8 py-16">
-
         
         <div class="mb-12">
             <h2 class="text-4xl font-bold mb-4">Overview</h2>
@@ -44,14 +43,30 @@
 
     <div class="group flex items-baseline p-4 hover:bg-moss-green/20 rounded-lg transition border-b border-white/5">
                 <a  class="text-lg font-semibold group-hover:text-deep-accent transition">
-                    How to continue
+                    First of all, have a Splunk Enterprise Account.
                 </a>
             </div>
-        
-  
-            
     </div>
 
+Splunk ES uses special roles that are added, on top of the default Splunk platform roles. These ES-specific roles let administrators control what users can do within ES based on their job needs. This way, security analysts get the right tools to do their work without extra admin rights, while administrators keep full control over the system and security settings. This helps organizations keep access secure and organized according to each user’s role.
+
+By default, all Splunk users and power users have access to ES at a user level (ess_user), which enables them to run searches and view dashboards.  
+
+For users to own events and perform status changes, an analyst role (ess_analyst) must be assigned by a Splunk admin. 
+
+Splunk admins are assigned an ES admin role (ess_admin), for easier configuration access to use ES out of the box. 
+
+Mission Control: This is the central hub for security analysts. It's where you'll find the "Analyst Queue," which lists all triggered detections (now called "findings") and ongoing investigations. It allows for triaging, investigating, and responding to security incidents, often integrating with automation and response plans.
+
+Analytics: This menu provides various dashboards that give high-level overviews and deeper insights into different security aspects. You'll find dashboards like Security Posture (for overall security health), Security Intelligence (for threat context), and specific security domain dashboards (like Access, Endpoint, Network) here.
+
+Security Control: This menu is dedicated to managing and developing your security detections and responses. It includes content management (for rules, lookups, dashboards, and much more), the use case library (pre-built detections), response plans, and SOAR Playbooks for environments where Splunk ES is paired with Splunk SOAR
+
+Configure: This menu is for administrative tasks and customization. Here, you can adjust general settings, manage users, customize the navigation bar, and configure various aspects of your Splunk ES deployment.
+
+Searching: This menu provides access to the powerful Splunk Search & Reporting interface, but within the context of Splunk ES. It's used for ad-hoc investigations, allowing analysts to write custom searches to explore security data, investigate specific events, and refine their understanding of incidents. Detection engineers often use this area to develop, test, and fine-tune new correlation searches and security content before deployment.
+
+        
     </main>
 
     <script>lucide.createIcons();</script>
