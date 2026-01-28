@@ -23,6 +23,8 @@ $x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb}$
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
 ## Prove that these values are 0
+## Next Question:
+## Other Question:
 
 # Rolles Theorem 
 
@@ -199,7 +201,5 @@ $f(a) - f(b)   =  b \cdot \frac{f(b) - f(a)}{b - a} \cdot a -  a \cdot \frac{f(b
 We prove that the construction is valid, ensuring there exists a $c \in (a,b)$ where $g'(c) = 0$, thus proving:
 
 $f'(c) = \frac{f(b) - f(a)}{b - a}$
-
-# Next question:
 
 
