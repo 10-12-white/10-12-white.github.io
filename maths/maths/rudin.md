@@ -200,7 +200,6 @@ We prove that the construction is valid, ensuring there exists a $c \in (a,b)$ w
 
 $f'(c) = \frac{f(b) - f(a)}{b - a}$
 
-
-#  https://www.youtube.com/playlist?list=PLUl4u3cNGP61p2fXeXjNCrfNHFwyW-bl0
+# Next question:
 
 
