@@ -188,7 +188,19 @@ Since we require $g(a) = g(b)$, we substitute the values:
 
 $f(a) - \frac{f(b) - f(a)}{b - a} \cdot a + C = f(b) - \frac{f(b) - f(a)}{b - a} \cdot b + C$
 
-By subtracting $C$ from both sides and gathering the slope terms, we prove that the construction is valid, ensuring there exists a $c \in (a,b)$ where $g'(c) = 0$, thus proving:
+By subtracting $C$ from both sides and gathering the slope terms, we how that:
+
+$f(a) - \frac{f(b) - f(a)}{b - a} \cdot a   = f(b) - \frac{f(b) - f(a)}{b - a} \cdot b$
+$f(a)    = f(b) - \frac{f(b) - f(a)}{b - a} \cdot b + \frac{f(b) - f(a)}{b - a} \cdot a$
+$f(a) - f(b)   = - \frac{f(b) - f(a)}{b - a} \cdot b + \frac{f(b) - f(a)}{b - a} \cdot a$
+$f(a) - f(b)   =  \frac{f(b) - f(a)}{b - a} \cdot a - \frac{f(b) - f(a)}{b - a} \cdot b$
+$f(a) - f(b)   =  b \cdot \frac{f(b) - f(a)}{b - a} \cdot a -  a \cdot \frac{f(b) - f(a)}{b - a} \cdot b$
+
+We prove that the construction is valid, ensuring there exists a $c \in (a,b)$ where $g'(c) = 0$, thus proving:
 
 $f'(c) = \frac{f(b) - f(a)}{b - a}$
+
+
+#  https://www.youtube.com/playlist?list=PLUl4u3cNGP61p2fXeXjNCrfNHFwyW-bl0
+
 
