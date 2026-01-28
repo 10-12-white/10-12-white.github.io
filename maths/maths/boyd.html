@@ -188,7 +188,6 @@
         <h3>Operations that Preserve Convexity</h3>
         
         <div class="definition-box" style="border-left-color: #0f9d58;">
-            <span class="tag" style="background:#e1f5fe; color:#01579b;">Toolbox</span>
             <p><strong>1. Intersection:</strong> If $S_1, S_2, \dots$ are convex, then $\bigcap S_i$ is convex. 
             <br><small>This holds even for an infinite number of sets!</small></p>
         </div>
@@ -208,7 +207,6 @@
         <h3>Fundamental Separation Theorems</h3>
         
         <div class="definition-box" style="border-left-color: #0f9d58;">
-            <span class="tag" style="background:#fff7ed; color:#c2410e;">Theory</span>
             <h3>Separating Hyperplane Theorem</h3>
             <p>If $C$ and $D$ are disjoint convex sets, there exists $a \neq 0$ and $b$ such that:</p>
             <center>$a^T x \leq b \text{ for } x \in C \quad \text{and} \quad a^T x \geq b \text{ for } x \in D$</center>
@@ -239,9 +237,8 @@
             <p>A set of the form $\{x \mid \alpha \leq a^T x \leq \beta\}$.</p>
             <p><strong>Logic:</strong> It is the intersection of two halfspaces. Since halfspaces are convex and intersection preserves convexity, the slab is convex.</p>
         </div>
-            
+            <!--#0f9d58; color:#2d3436;" -->
        <div class="definition-box" style="border-left-color: #0f9d58;">
-            <span class="tag" style="background:#0f9d58; color:#2d3436;">Example 1</span>
             <h3>The Standard 2D Halfspace</h3>
             <p>Consider the set in $\mathbb{R}^2$ defined by: $x_1 + x_2 \le 1$</p>
             <ul>
@@ -262,13 +259,12 @@
         </div>
 
         <div class="definition-box" style="border-left-color: #0f9d58;">
-            <span class="tag" style="background:#dfe6e9; color:#2d3436;">Example 3</span>
             <h3>Budget Constraint (Economic Halfspace)</h3>
             <p>If you have $n$ items with prices $p_i$, and a total budget $B$, the set of affordable items is a halfspace:</p>
             <center>$p^T x \le B, \quad x \succeq 0$</center>
             <p class="note">Note: $x \succeq 0$ adds $n$ more halfspaces (one for each axis), making the final set a <strong>simplex</strong>.</p>
         </div>
-    </section>     
+    </section> 
 
         <div class="definition-box" style="border-left-color: #0f9d58;">
             <h3>Euclidean Ball & Ellipsoid</h3>
