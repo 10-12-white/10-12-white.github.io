@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes from Peter Shors' MIT18.200 Youtube and MIT Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1E392A',
+                        'dark-brown': '#3A2A1A',
+                        'cream': '#FAF0DC',
+                        'moss-green': '#52703e',
+                        'deep-accent': '#C5AE87',
+                    }
+                }
+            }
+        }
+    </script>
+    
+   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+   <script>
+     window.MathJax = {
+       tex: {
+         inlineMath: [['$', '$'], ['\\(', '\\)']]
+       }
+     };
+   </script>
+
+   <style>
+           .definition-box { background-color: #52703e; border-left: 5px solid #C5AE87; padding: 15px; margin-bottom: 25px; border-radius: 4px; }
+           .math { font-family: "Times New Roman", Times, serif; font-style: italic; background: #1E392A; padding: 2px 5px; border-radius: 3px; }
+           code { color: #FAF0DC; font-weight: bold; }
+           .note { font-size: 0.9em; color: #FAF0DC; font-style: italic; margin-top: 10px; }
+   </style>
+</head>
+
+
+<body class="bg-dark-green text-cream font-sans min-h-screen">
+
+    <header class="bg-dark-brown p-4 border-b border-deep-accent/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-8">
+            <a href="index.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
+                <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
+            </a>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">First Note File</span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-8 pt-16">
+        
+        <header class="mb-12">
+            <div class="flex items-center text-deep-accent mb-4">
+                <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 28, 2026</span>
+            </div>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">Summary Notes</h1>
+        </header>
+
+        <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
+            <p class="text-lg mb-6 leading-relaxed"></p>
+            <h2 class="text-3xl font-extrabold mb-6 text-cream">Lecture 1</h2>
+
+    <h2>Int</h2>
+
+    <section>
+        <h2>Convex Set</h2>
+        <div class="definition-box">
+            <p><strong>Intuition:</strong> Rules and notes.</p>
+            <p><strong>Formal Definition:</strong> A set $C$ is convex if for every $x, y \in C$ and $\theta$ such that $0 \leq \theta \leq 1$, we have:</p>
+            <center>$\theta x + (1 - \theta)y \in C$</center>
+            <p class="note">This creates a <strong>line segment</strong> between two points.</p>
+        </div>
+    </section>
+
+    <section>
+        <h3>Affine Set</h3>
+        <div class="definition-box">
+            <p><strong>Intuition:</strong> A set that contains the entire infinite line passing through any two of its points (not just the segment).  An affine set can be thought of as the largest extension of a linear relationship.</p>
+            <p><strong>Formal Definition:</strong> A set $C$ is affine if for every $x, y \in C$ and $\theta \in \mathbb{R}$:</p>
+            <center>$\theta x + (1 - \theta)y \in C$</center>
+            <p class="note">Note: Every affine set is also a convex set, but not every convex set is affine.</p>
+        </div>
+    </section>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <p><strong>Closure ($\mathbf{cl } S$):</strong> The union of the set and its boundary.</p>
+            <p>A set is <strong>closed</strong> if it contains all its limit points. In optimization, we usually deal with closed sets to ensure that we can actually "reach" the optimal point on the boundary.</p>
+            <center>$\mathbf{cl } S = \{x \mid \forall \epsilon > 0, \{y \mid \|y-x\| \leq \epsilon\} \cap S \neq \emptyset\}$</center>
+        </div>
+
+            <div class="definition-box" style="border-left: #0f9d58;">
+            <p><strong>Bounded vs. Unbounded Sets:</strong></p>
+            <p>A set is <strong>bounded</strong> if it can be contained within a ball of finite radius $R$.</p>
+            <p>A set is <strong>unbounded</strong> if it extends to infinity in some direction. For example, a <em>ray</em> or a <em>halfspace</em> is an unbounded convex set.</p>
+            <p class="note"><strong>Key Concept:</strong> If a convex optimization problem has an unbounded feasible set, the optimal value might be $-\infty$.</p>
+        </div>
+
+
+<div class="definition-box">
+        <h3>Interior Sets</h3>
+        <p><strong>The interior of a set</strong> is the "inner region" of a set.  Put more clearly, a point is in the interior if you can move a tiny bit in any direction and still stay inside the set.  You consider that this point can be enclosed in a "ball" that will fit perfectly inside this set.</p>
+        <p>Formal Definition: $x \in int(S)$ if there exists an $\epsilon > 0$ such that a ball of radius $\epsilon$ around x is entirely contained in $S$.  You aren't "touching the fence"; you have a buffer zone.</p>
+        </div>
+
+    <section>
+        <h3>Hyperplane</h3>
+        <div class="definition-box">
+            <p><strong>Intuition:</strong> A flat surface that divides the space into two halves. In 3D it's a plane; in 2D it's a line.  It is used to describe the shape of a space.</p>
+            <p><strong>Formal Definition:</strong> A set of the form:</p>
+            <center>$\{x \mid a^T x = b\}$</center>
+            <p>Where $a$ is a non-zero vector (the normal vector) and $b$ is a constant.</p>
+            <p class="note"><strong>Supporting Hyperplane:</strong> A special case where the hyperplane touches the "boundary" of a convex set without cutting through its interior.</p>
+        </div>
+    </section>
+            
+    <section>
+        <h3>Affine Hull</h3>
+        <div class="definition-box">
+            <p><strong>Intuition:</strong> The smallest flat "space" (line, plane, etc.) that can contain a given set of points.</p>
+            <p><strong>Formal Definition:</strong> The set of all <strong>affine combinations</strong> of points in $S$:</p>
+            <center>$\mathbf{aff } S = \{ \theta_1 x_1 + \dots + \theta_k x_k \mid x_i \in S, \sum \theta_i = 1 \}$</center>
+        </div>
+    </section>
+
+<div class="definition-box">
+        <h3>Convex Hull</h3>
+        <p>The <strong>convex hull</strong> of a set $S$, denoted $\text{conv } S$, is the set of all convex combinations of points in $S$.</p>
+        <p>$$\text{conv } S = \{ \sum \theta_i x_i \mid x_i \in S, \theta_i \ge 0, \sum \theta_i = 1 \}$$</p>
+    </div>
+
+    <div class="definition-box">
+        <h3>Halfspaces</h3>
+        <p>From earlier, we know that a <strong>hyperplane</strong> is the set $\{x \mid a^T x = b\}$.</p>
+        <p>A <strong>halfspace</strong> is the set $\{x \mid a^T x \le b\}$.</p>
+        <p class="note">Hyperplanes are the boundaries; halfspaces are the regions on one side of those boundaries.</p>
+    </div>
+
+        <div class="definition-box">
+        <h3>Sets and Compliments</h3>
+        <p>From earlier, we know that a <strong>set</strong> is a collection of points, which we can call $C$..</p>
+        <p>The <strong>compliment</strong> is the set points not contained in $C$.  \{x \mid a^T x \le b\}$.</p>
+        </div>
+            
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <p><strong>The PSD Cone ($\mathbb{S}^n_+$):</strong> The set of symmetric $n \times n$ matrices that are positive semidefinite.</p>
+            <p>A matrix $X$ is in the PSD cone if:</p>
+            <center>$z^T X z \ge 0 \quad \forall z \in \mathbb{R}^n$</center>
+            <p>Equivalently, all eigenvalues of $X$ are non-negative ($\lambda_i \ge 0$).</p>
+            <p class="note"><strong>Significance:</strong> This cone is the foundation of <strong>Semidefinite Programming (SDP)</strong>, one of the most powerful tools in modern optimization.</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <p><strong>Positive Definite ($\mathbb{S}^n_{++}$):</strong> The "Interior" of the PSD cone.</p>
+            <p>Matrices where $z^T X z > 0$ for all $z \neq 0$. All eigenvalues are strictly positive.</p>
+        </div>
+    </section>
+            
+<section id="inequals">
+        <h3>Generalized Inequalities</h3>
+        
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <p><strong>The Concept:</strong> We use a proper cone $K$ to define a partial ordering between vectors or matrices.</p>
+            
+            <p><strong>Generalized Inequality ($\preceq_K$):</strong></p>
+            <center>$x \preceq_K y \iff y - x \in K$</center>
+            
+            <p><strong>Strict Generalized Inequality ($\prec_K$):</strong></p>
+            <center>$x \prec_K y \iff y - x \in \mathbf{int } K$</center>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <p><strong>Common Examples:</strong></p>
+            <ul>
+                <li><strong>Vector Inequality:</strong> $x \preceq_{\mathbb{R}^n_+} y$ means $x_i \leq y_i$ for all $i$.</li>
+                <li><strong>Matrix Inequality (PSD):</strong> $X \preceq_{\mathbb{S}^n_+} Y$ means the matrix $Y - X$ is positive semidefinite.</li>
+            </ul>
+            <p class="note"><strong>Warning:</strong> Unlike real numbers, generalized inequalities are <em>partial</em>. Two vectors might be "incomparable" if their difference doesn't fall inside the cone $K$.</p>
+        </div>
+    </section>
+
+    <section id="operations">
+        <h3>Operations that Preserve Convexity</h3>
+        
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <p><strong>1. Intersection:</strong> If $S_1, S_2, \dots$ are convex, then $\bigcap S_i$ is convex. 
+            <br><small>This holds even for an infinite number of sets!</small></p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <p><strong>2. Affine Mapping:</strong> If $S$ is convex, then $f(S) = \{Ax+b \mid x \in S\}$ is convex.
+            <br>Conversely, the pre-image $f^{-1}(S)$ is also convex.</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <p><strong>3. Perspective & Linear-Fractional:</strong> These mappings preserve the "convex shape" even when stretching or projecting the set into different dimensions.</p>
+            <center>$f(x) = \frac{Ax + b}{c^T x + d}$</center>
+        </div>
+    </section>
+
+<section id="theorems">
+        <h3>Fundamental Separation Theorems</h3>
+        
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>Separating Hyperplane Theorem</h3>
+            <p>If $C$ and $D$ are disjoint convex sets, there exists $a \neq 0$ and $b$ such that:</p>
+            <center>$a^T x \leq b \text{ for } x \in C \quad \text{and} \quad a^T x \geq b \text{ for } x \in D$</center>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>Supporting Hyperplane Theorem</h3>
+            <p>For every boundary point $x_0$ of a convex set $C$, there exists a <strong>supporting hyperplane</strong> $\{x \mid a^T x = a^T x_0\}$ such that $a^T x \leq a^T x_0$ for all $x \in C$.</p>
+            <p class="note">Every convex set has a "flat" tangent at every boundary point.</p>
+        </div>
+    </section>
+
+    <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>Infimum and Minimum</h3>
+            <p>The minimum is the smallest number within a set, while the infimum (or greatest lower bound, GLB) is the largest number that is less than or equal to all numbers in the set; the infimum may or may not be in the set, but if a minimum exists, it is always the infimum, making the infimum a generalization of the minimum for sets that lack a smallest element, like open interval</p>
+        
+            <p class="note">Minimum has an issue because we cannot always find a minimum.  For example, if you consider the set (0,1) there will ALWAYS be a smaller number - for instance, 0.001, and, say 0.0001, etc.  THe benefit of the infimum, is it is greatest (largest) number that is less than or equal to every number in the set.  This is good because then you can always have an infimum.</p>
+
+            <p class="note">Because this is the case, we like to think of cases where the infimum can be defined first, and, then when we can create aspecific boundaries, we can then define a minimum.</p>
+        </div>
+    </section>
+
+<h2>Examples using these fefinitions</h2>
+            
+<div class="definition-box" style="border-left-color: #0f9d58;">
+            
+        <h3>The Slab</h3>
+            <p>A set of the form $\{x \mid \alpha \leq a^T x \leq \beta\}$.</p>
+            <p><strong>Logic:</strong> It is the intersection of two halfspaces. Since halfspaces are convex and intersection preserves convexity, the slab is convex.</p>
+        </div>
+            <!--#0f9d58; color:#2d3436;" -->
+       <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>The Standard 2D Halfspace</h3>
+            <p>Consider the set in $\mathbb{R}^2$ defined by: $x_1 + x_2 \le 1$</p>
+            <ul>
+                <li><strong>Normal Vector ($a$):</strong> $[1, 1]^T$</li>
+                <li><strong>Boundary:</strong> The line $x_2 = -x_1 + 1$</li>
+                <li><strong>Region:</strong> Everything below and to the left of that line, extending to infinity.</li>
+            </ul>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>The Vertical Slab</h3>
+            <p>Consider the set in $\mathbb{R}^2$ where: $-2 \le x_1 \le 5$</p>
+            <ul>
+                <li><strong>Logic:</strong> Here, $a = [1, 0]^T$. The value of $x_2$ can be anything.</li>
+                <li><strong>Geometry:</strong> This creates an infinite vertical "strip" between the lines $x_1 = -2$ and $x_1 = 5$.</li>
+            </ul>
+            <p class="note">In higher dimensions, this looks like the space between two parallel "walls."</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>Budget Constraint (Economic Halfspace)</h3>
+            <p>If you have $n$ items with prices $p_i$, and a total budget $B$, the set of affordable items is a halfspace:</p>
+            <center>$p^T x \le B, \quad x \succeq 0$</center>
+            <p class="note">Note: $x \succeq 0$ adds $n$ more halfspaces (one for each axis), making the final set a <strong>simplex</strong>.</p>
+        </div>
+    </section> 
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>Euclidean Ball & Ellipsoid</h3>
+            <p><strong>Ball:</strong> $B(x_c, r) = \{x \mid \|x - x_c\|_2 \leq r\}$</p>
+            <p><strong>Ellipsoid:</strong> $\{x \mid (x-x_c)^T P^{-1} (x-x_c) \leq 1\}$ where $P \in \mathbb{S}^n_{++}$.</p>
+            <p class="note">An ellipsoid is just a stretched version of a ball (an affine transformation).</p>
+        </div>
+
+        <div class="definition-box" style="border-left-color: #0f9d58;">
+            <h3>The Norm Cone (Second-Order Cone)</h3>
+            <p>The set $C = \{(x, t) \mid \|x\|_2 \leq t\}$.</p>
+            <p>In 3D, if $x$ is 2D, this looks like an inverted ice cream cone starting at the origin and expanding upwards as $t$ increases.</p>
+        </div>
+
+        <div id="separation-example" class="definition-box" style="border-left-color: #0f9d58;">
+            <h2>Example</h2>
+            <p>Consider two sets in 1D:</p>
+            <ul>
+                <li>$C = \{x \mid x \leq 0\}$ (Closed)</li>
+                <li>$D = \{x \mid x > 2\}$ (Open, but separated by distance)</li>
+            </ul>
+            <p>A strictly separating hyperplane (a point in 1D) could be $x = 1$. Since $x < 1$ for all $C$ and $x > 1$ for all $D$, they are strictly separated.</p>
+        </div>
+    </section>            
+            
+<!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
+<!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
+<!-- <p class="text-lg mb-6 leading-relaxed"></p> -->
+        </article>
+
+        <section class="mt-20 pt-7 border-t border-deep-accent/30">
+            <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
+            <div class="space-y-4 font-mono text-sm opacity-80">
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <div class="mt-16 text-center">
+            <a href="10-12-white.github.io/index.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Main Maths Page</a>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center opacity-40 text-xs">
+        &copy; 2026 twhite
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
