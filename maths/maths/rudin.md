@@ -1,8 +1,8 @@
 # Rudin
 
-## Chapter 1 notes
+## Chapter 1 Solved Problems
 
-### 2 questions on page 1-10
+### Easy
 
 #### How can you prove that x + r , and xr is an irrational, if x is irrational, and we know r is rational?
 
@@ -22,9 +22,34 @@ $x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb}$
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
-## Prove that these values are 0
-## Next Question:
-## Other Question:
+#### Medium (1, Prove that for any real numbers a < b, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the nterval, (a,b)).
+
+- First consider a < b ad construct q = m/n.
+- Now q sits in between a and and thus $a < q < b$.
+- Now construct \epsilon = 1/x, a verly large integer.
+- Then since $a < b, a < q - \epsilon < b$
+- Now construct G = all the sets of numbers between a and b that cannot be expressed as a rationals.
+- So we know that this includes for example $\gamma = \sqrt{3} * epsilon$.
+
+We can then generate:
+
+- $a < q - \gamma < q - \epilon < b$
+- Now consider if $\gamma$ is now a factor of any of the sets of elements in G, such that $\gamma = epilon * some irrational$
+
+I will prove that I can always take a smaller irrational $\gamma'$, simply, by reducing the size of the irrational by a factor of 2, and I can do the same with the epsilons, and say that $\epsilon' = \frac{\epsilon}{2}$
+
+$a < q - \gamma < q - \epilon < b$
+
+Which therefore means that there is 
+
+$a < q - \gamma' < q - \gamma < q - \epilon' < q - \epsilon  < b$
+
+Since I can continue in this fashion forever, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the nterval, (a,b).
+
+### Hard (For this next problem, prove that for any real numbers $a$ and $b$, we have that $S = {m+ n\sqrt{2} : m, n \in Z$} is dense in R).
+
+If we are dense in R, it means that
+
 
 # Rolles Theorem 
 
