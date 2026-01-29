@@ -33,16 +33,16 @@ This is clearly a rational number.  But, we know that x is NOT rational, so ther
 
 We can then generate:
 
-- $a < q - \gamma < q - \epilon < b$
+- $a < q - \gamma < q - \epsilon < b$
 - Now consider if $\gamma$ is now a factor of any of the sets of elements in G, such that $\gamma = epilon * some irrational$
 
 I will prove that I can always take a smaller irrational $\gamma'$, simply, by reducing the size of the irrational by a factor of 2, and I can do the same with the epsilons, and say that $\epsilon' = \frac{\epsilon}{2}$
 
-$a < q - \gamma < q - \epilon < b$
+$a < q - \gamma < q - \epsilon < b$
 
 Which therefore means that there is 
 
-$a < q - \gamma' < q - \gamma < q - \epilon' < q - \epsilon  < b$
+$a < q - \gamma' < q - \gamma < q - \epsilon' < q - \epsilon  < b$
 
 Since I can continue in this fashion forever, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the nterval, (a,b).
 
