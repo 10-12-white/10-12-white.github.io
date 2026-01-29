@@ -2,9 +2,9 @@
 
 ## Chapter 1 Solved Problem
 
-### Easy
 
-#### How can you prove that x + r , and xr is an irrational, if x is irrational, and we know r is rational?
+
+### Exercise 1 (How can you prove that x + r , and xr is an irrational, if x is irrational, and we know r is rational?)
 
 To do this, proof by contraditions is best approach.  We know that r is rational, therefore, we have that r = a/b, where a and b have the smallest redcued form possible.  This means that a and b are both not even, and do not equal each other, and crucially, b ≠ 0.  When this is the case, it is possible to write and let x also be a rational number.
 
@@ -22,7 +22,10 @@ $x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb}$
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
-#### Medium (1, Prove that for any real numbers $a < b$, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the nterval, $(a,b)$).
+### Exercise 10 (Ordered field and completeness)  Consider the ordered field Q.  Construct an explicit subset of Q that is bounded above in Q but does not have an upper bound in Q.  Explain carefully why no rational numer can serve as its supremum.
+
+
+#### Exercise 14 (1, Prove that for any real numbers $a < b$, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the interval, $(a,b)$).
 
 First consider $a < b$ and construct q = m/n.
 Now q sits in between a and and thus $a < q < b$.
