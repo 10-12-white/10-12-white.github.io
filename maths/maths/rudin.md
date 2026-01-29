@@ -6,7 +6,7 @@
 
 ### Exercise 1 (How can you prove that x + r , and xr is an irrational, if x is irrational, and we know r is rational?)
 
-To do this, proof by contraditions is best approach.  We know that r is rational, therefore, we have that r = a/b, where a and b have the smallest redcued form possible.  This means that a and b are both not even, and do not equal each other, and crucially, b ≠ 0.  When this is the case, it is possible to write and let x also be a rational number.
+To do this, proof by contraditions is best approach.  We know that r is rational, therefore, we have that r = a/b, where a and b have the smallest redcued form possible.  This means that a and b are both not even, and do not equal each other, and crucially, b $≠$ 0.  When this is the case, it is possible to write and let x also be a rational number.
 
 If so, then $x + r = \frac{m}{n} + \frac{a}{b} = \frac{am + bn}{bn} $
 
@@ -24,11 +24,12 @@ This is clearly a rational number.  But, we know that x is NOT rational, so ther
 
 ### Exercise 10 (Ordered field and completeness)  Consider the ordered field Q.  Construct an explicit subset of Q that is bounded above in Q but does not have an upper bound in Q.  Explain carefully why no rational numer can serve as its supremum.
 
-Being bounded above in the rational numbers $(\(\mathbb{Q}\))$ means a subset $\(A\subset \mathbb{Q}\)$ has an upper bound $\(U\in \mathbb{Q}\)$ so that each of the elements in $\(a\)$ in $\(A\) satisfies \(a\le U\). 
+Let us call is this subset $U$.  Being bounded above in the rational numbers $(\(\mathbb{Q}\))$ means a subset $\(A\subset \mathbb{Q}\)$ has an upper bound $\(U\in \mathbb{Q}\)$ so that each of the elements in $a$ in $A$ satisfies $a \le U$. 
 
 If this subset exists of Q, then all of the elements in U must have that they are fully contained in U.  
 
-We are told that there is a supremum for this set in U.  We know that the supremum is the greatest least upper bound, that is, all the points in the set of U should be greater or equal to this supremum.  
+We are told that there is a supremum for this set in U.  We know that the supremum is the greatest least upper bound, that is, all the points in the set of U should be smaller than or equal to this supremum.
+
 
 If the supremum that is bounded above in Q but does not have an upper bound in Q, this means that this subset, whateevr it contains, must have no value in Q.
 
