@@ -2,8 +2,6 @@
 
 ## Chapter 1 Solved Problem
 
-
-
 ### Exercise 1 (How can you prove that x + r , and xr is an irrational, if x is irrational, and we know r is rational?)
 
 To do this, proof by contraditions is best approach.  We know that r is rational, therefore, we have that r = a/b, where a and b have the smallest redcued form possible.  This means that a and b are both not even, and do not equal each other, and crucially, b $≠$ 0.  When this is the case, it is possible to write and let x also be a rational number.
@@ -30,16 +28,16 @@ If this subset exists of Q, then all of the elements in U must have that they ar
 
 We are told that there is a supremum for this set in U.  We know that the supremum is the greatest least upper bound, that is, all the points in the set of U should be smaller than or equal to this supremum.
 
-
 If the supremum that is bounded above in Q but does not have an upper bound in Q, this means that this subset, whateevr it contains, must have no value in Q.
 
+### Exercise 11 (Define F = (a + b \sqrt{2} : a, b \in Q).  Now, with the ordered inherited from R, show that F is an ordered field, but that it doesnt satisfy the least upper bound property.  Construct a bounded subset of F whose supremum does not belong in F.
 
-#### Exercise 14 (1, Prove that for any real numbers $a < b$, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the interval, $(a,b)$).
+### Exercise 14 (1, Prove that for any real numbers $a < b$, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the interval, $(a,b)$).
 
 First consider $a < b$ and construct q = m/n.
 Now q sits in between a and and thus $a < q < b$.
 
-Now construct \epsilon = 1/x, a verly large integer.
+Now construct $\epsilon$ = 1/x, a verly large integer.
 
 Then since $a < b, a < q - \epsilon < b$
 
@@ -50,7 +48,7 @@ So we know that this includes for example $\gamma = \sqrt{3} * epsilon$.
 We can then generate:
 
 - $a < q - \gamma < q - \epsilon < b$
-- Now consider if $\gamma$ is now a factor of any of the sets of elements in G, such that $\gamma = epilon * some irrational$
+- Now consider if $\gamma$ is now a factor of any of the sets of elements in G, such that $\gamma = epsilon$ * some irrational
 
 I will prove that I can always take a smaller irrational $\gamma'$, simply, by reducing the size of the irrational by a factor of 2, and I can do the same with the epsilons, and say that $\epsilon' = \frac{\epsilon}{2}$
 
@@ -80,7 +78,7 @@ This is useful to use, because we can use it for powerful rules, see below
 
 For example, two beautiful proofs for some interesting problems are below:
 
-Assume that you have a sequence.  This sequence $\sum_{i=1}^{n} a_i$ is generated from some $a_i$s in such a way that:
+Assume that you have a sequence.  This sequence $\sum_{i=1}^{n} a_i$ is generated from some $a_i$ s in such a way that:
 
 $a_1 + \frac{a_2}{2} + ... + \frac{a_n}{n} = 0$
 
