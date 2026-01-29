@@ -30,7 +30,15 @@ We are told that there is a supremum for this set in U.  We know that the suprem
 
 If the supremum that is bounded above in Q but does not have an upper bound in Q, this means that this subset, whateevr it contains, must have no value in Q.
 
-### Exercise 11 (Define F = (a + b \sqrt{2} : a, b \in Q).  Now, with the ordered inherited from R, show that F is an ordered field, but that it doesnt satisfy the least upper bound property.  Construct a bounded subset of F whose supremum does not belong in F.
+### Exercise 11 (Define $F = (a + b \sqrt{2} : a, b \in Q$).  Now, with the ordered inherited from R, show that F is an ordered field, but that it doesnt satisfy the least upper bound property.  Construct a bounded subset of F whose supremum does not belong in F.
+
+To do this, we need to show that there is an ordered inherited from R.  To begin, say the field F is ordered, whcih means that every element a and b in the field of F is also ordered. Or, more broadly, if a and b are not the same number, then $a < b$ or $a > b$, but not both conditions at the same time.
+
+An ordered set in set S is where the order is defined, so, for instance, Q is an ordered set if $r < s$ and $s - r$ is a positive rational.
+
+The greatest lower bound, or infimum, of a set E which is bounded above, has an $\alpha \in S$, with the following properties, $\alpha$ is an upper bound of E, and if $\gamma < \alpha$ then $\gamma$ is not an upper bound of E.
+
+So then $\alpha$ is called the least upper bound of E, then supremum of E, we will write $\alpha$ = sup $E$.
 
 ### Exercise 14 (1, Prove that for any real numbers $a < b$, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the interval, $(a,b)$).
 
