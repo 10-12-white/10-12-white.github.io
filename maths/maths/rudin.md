@@ -1,6 +1,6 @@
-# Rudin
+# Real Analysis by Rudin 
 
-## Chapter 1 Solved Problems
+## Chapter 1 Solved Problem
 
 ### Easy
 
@@ -22,14 +22,18 @@ $x * r = \frac{m}{n} * \frac{a}{b} = \frac{am}{nb}$
 
 This is clearly a rational number.  But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x * r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
-#### Medium (1, Prove that for any real numbers a < b, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the nterval, (a,b)).
+#### Medium (1, Prove that for any real numbers $a < b$, there exists infinitely many rational nubmers and infinitialy many irrational numbers in the nterval, $(a,b)$).
 
-- First consider a < b ad construct q = m/n.
-- Now q sits in between a and and thus $a < q < b$.
-- Now construct \epsilon = 1/x, a verly large integer.
-- Then since $a < b, a < q - \epsilon < b$
-- Now construct G = all the sets of numbers between a and b that cannot be expressed as a rationals.
-- So we know that this includes for example $\gamma = \sqrt{3} * epsilon$.
+First consider $a < b$ and construct q = m/n.
+Now q sits in between a and and thus $a < q < b$.
+
+Now construct \epsilon = 1/x, a verly large integer.
+
+Then since $a < b, a < q - \epsilon < b$
+
+Now construct G = all the sets of numbers between a and b that cannot be expressed as a rationals.
+
+So we know that this includes for example $\gamma = \sqrt{3} * epsilon$.
 
 We can then generate:
 
