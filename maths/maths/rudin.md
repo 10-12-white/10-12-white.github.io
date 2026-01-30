@@ -34,6 +34,8 @@ If the supremum that is bounded above in Q but does not have an upper bound in Q
 
 To do this, we need to show that there is an ordered inherited from R.  To begin, say the field F is ordered, whcih means that every element a and b in the field of F is also ordered. Or, more broadly, if a and b are not the same number, then $a < b$ or $a > b$, but not both conditions at the same time.
 
+Now consider the set of elements $a + mb$.  If an arbitrary $a < b$ then $b < b*m + a$ for some $m$, and we have a linear range (of affine space) for the values of b, and also for the value $b$.   Therefore all of these comibations can be ordered in relation to eachother and so they inherit the odering properites from their field.  
+
 An ordered set in set S is where the order is defined, so, for instance, Q is an ordered set if $r < s$ and $s - r$ is a positive rational.
 
 The greatest lower bound, or infimum, of a set E which is bounded above, has an $\alpha \in S$, with the following properties, $\alpha$ is an upper bound of E, and if $\gamma < \alpha$ then $\gamma$ is not an upper bound of E.
