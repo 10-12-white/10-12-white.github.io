@@ -8,7 +8,7 @@ To do this, proof by contraditions is best approach.  We know that r is rational
 
 If so, then $x + r = \frac{m}{n} + \frac{a}{b} = \frac{am + bn}{bn} $
 
-Once we are able to say this, it is clear this this is a rational number.
+Once we are able to say this, it is clear that this is a rational number.
 
 But, we know that x is NOT rational, so therefore cannot be stated as a fration, it is NOT possible for x + r to be a fraction, and therefore is not rational.  Proof by contradiction.
 
@@ -22,11 +22,15 @@ This is clearly a rational number.  But, we know that x is NOT rational, so ther
 
 ### Exercise 10 (Ordered field and completeness)  Consider the ordered field Q.  Construct an explicit subset of Q that is bounded above in Q but does not have an upper bound in Q.  Explain carefully why no rational numer can serve as its supremum.
 
-Let us call is this subset $U$.  Being bounded above in the rational numbers $(\(\mathbb{Q}\))$ means a subset $\(A\subset \mathbb{Q}\)$ has an upper bound $\(U\in \mathbb{Q}\)$ so that each of the elements in $a$ in $A$ satisfies $a \le U$. 
+Let us call is this subset $U$.  Being bounded above in the rational numbers $(\(\mathbb{Q}\))$ means a subset $\(A\subset \mathbb{Q}\)$ has an upper bound $\(U\in \mathbb{Q}\)$ so that each of the elements in $a$ in $A$ satisfies $a \le U$ and this is in Q. 
 
 If this subset exists of Q, then all of the elements in U must have that they are fully contained in U.  
 
-We are told that there is a supremum for this set in U.  We know that the supremum is the greatest least upper bound, that is, all the points in the set of U should be smaller than or equal to this supremum.
+We are told that there is a supremum for this set in U.  We know that the supremum is the greatest least upper bound, that is, all the points in the set of U should be smaller than or equal to this supremum.  To be bounded above in Q, means, essentially, that for U, $\(U\in \mathbb{Q}\)$ so that each of the elements in $a$ in $A$ satisfies $a \le U$, would have these points in Q.
+
+So the minimum point that is supremum to all of these, therefore, CANNOT be in Q because then all the points in U would be equal to or smaller than this point, as U is in Q.
+
+I think.
 
 If the supremum that is bounded above in Q but does not have an upper bound in Q, this means that this subset, whateevr it contains, must have no value in Q.
 
