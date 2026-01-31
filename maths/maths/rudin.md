@@ -92,7 +92,9 @@ Then, think about the number 1/2. How can we approximate this? Well, we can even
 
 Number 1 is also easy, because we can do this using a number m = 1, and n = 0.  Then, this is quite fine.
 
-But what about other scenraios?
+But what about other scenraios? This is less clear.  Because, anything times \sqrt{2} is going to be close to a real number, but not actually a real number.  But, can we get very very close to a real number? And what about the reals?
+
+Ok, consider 2.5.  We can approximate this by saying 1 + 1\sqrt{2} gives us 1.44 something.  And, if we chose a real sufficiently close to \sqrt{2}*x = 1.5, we can get very close to this 2.5 value.
 
 # Rolles Theorem 
 
