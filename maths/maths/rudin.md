@@ -76,7 +76,7 @@ Since I can continue in this fashion forever, there exists infinitely many ratio
 
 ### Hard (For this next problem, prove that for any real numbers $a$ and $b$, we have that $S = {m+ n\sqrt{2} : m, n \in Z$} is dense in R).
 
-If we are dense in R, it means that
+If we are dense in R, it means that it is not able to move within a certain amount.
 
 
 # Rolles Theorem 
