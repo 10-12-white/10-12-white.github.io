@@ -108,8 +108,7 @@ Give a careful argument using the definitions of sups and infs.
 
 A supremum is the least upper bound of a set of numbers. It is the smallest value that is greater than or equal to every element in that set. 
 
-
-
+An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set. Unlike a minimum, the infimum does not have to be a member of the set itself, often serving as the limiting boundary of open sets e.g., the infimum of  (0,1) is 0.
 
 
 # Rolles Theorem 
