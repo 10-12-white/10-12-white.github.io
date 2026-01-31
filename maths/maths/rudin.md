@@ -78,8 +78,11 @@ Since I can continue in this fashion forever, there exists infinitely many ratio
 
 If we are dense in R, it means that it is not able to move within a certain amount.
 
-In real analysis, a subset $\(A\)$ is said to be dense in $\(\mathbb{R}\)$ (the set of real numbers) if any point in $\(\mathbb{R}\)$ can be arbitrarily well-approximated by elements of $\(A\)$. Intuitively, this means that the elements of $\(A\)$ are scattered so densely throughout the number line that you cannot find any open interval, no matter how small, that does not contain at least one element of $\(A\)$. 
+In real analysis, a subset $A$ is said to be dense in $\(\mathbb{R}\)$ (the set of real numbers) if any point in $\(\mathbb{R}\)$ can be arbitrarily well-approximated by elements of $A$. Intuitively, this means that the elements of $A$ are scattered so densely throughout the number line that you cannot find any open interval, no matter how small, that does not contain at least one element of $A$. 
 
+This means, that, for the purpose of being a dense subset in R, that every point in the function of m + \sqrt{n} would have to reasonably well approximate all the points in R.  So what is a way that we can think about doing this?
+
+This might be using Rolle theorem? Lets see.
 
 # Rolles Theorem 
 
