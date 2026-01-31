@@ -101,6 +101,12 @@ This idea can be applied from [0,1] now to other numbers in the whole range of r
 This isn't quite a strong enough proof, so, would like feedback on how to make this more rigious!
 
 ### Exercise 16 Prove for the below, what is ...
+Let A and B be nonempty nounded subsets of R, and define:
+S = {x - y: x \in A, y \in B}
+
+Prove that sup A = sup A - inf B
+
+Give a careful argument using the defintins fo sups and infs.
 
 
 # Rolles Theorem 
