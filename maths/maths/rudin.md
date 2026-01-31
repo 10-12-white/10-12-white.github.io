@@ -100,13 +100,16 @@ This idea can be applied from [0,1] now to other numbers in the whole range of r
 
 This isn't quite a strong enough proof, so, would like feedback on how to make this more rigious!
 
-### Exercise 16 Prove for the below, what is ...
-Let A and B be nonempty nounded subsets of R, and define:
-S = {x - y: x \in A, y \in B}
+### Exercise 16 Prove for the below, what is ... Let A and B be nonempty nounded subsets of R, and define: $S = {x - y: x \in A, y \in B}$
 
-Prove that sup A = sup A - inf B
+Prove that $sup A = sup A - inf B$
 
-Give a careful argument using the defintins fo sups and infs.
+Give a careful argument using the definitions of sups and infs.
+
+A supremum is the least upper bound of a set of numbers. It is the smallest value that is greater than or equal to every element in that set. 
+
+
+
 
 
 # Rolles Theorem 
