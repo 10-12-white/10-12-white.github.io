@@ -88,6 +88,12 @@ Lets start by approximating all the points between 0,1.
 
 Well, for starters, let all the numbers between 0 and 1, let us think on them.  If we have 0, then it must be because m = 0 and n = 0.  If these are both real numbers, then this is must be how it is.
 
+Then, think about the number 1/2. How can we approximate this? Well, we can even make it nearly exact using the values of m = 0 and n = some number times \sqrt{2}.
+
+Number 1 is also easy, because we can do this using a number m = 1, and n = 0.  Then, this is quite fine.
+
+But what about other scenraios?
+
 # Rolles Theorem 
 
 "This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
