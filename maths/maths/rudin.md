@@ -96,6 +96,10 @@ But what about other scenraios? This is less clear.  Because, anything times \sq
 
 Ok, consider 2.5.  We can approximate this by saying 1 + 1\sqrt{2} gives us 1.44 something.  And, if we chose a real sufficiently close to \sqrt{2}*x = 1.5, we can get very close to this 2.5 value.
 
+This idea can be applied from [0,1] now to other numbers in the whole range of reals.
+
+This isn't quite a strong enough proof, so, would like feedback on how to make this more rigious!
+
 # Rolles Theorem 
 
 "This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
