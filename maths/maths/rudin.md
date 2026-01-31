@@ -84,6 +84,10 @@ This means, that, for the purpose of being a dense subset in R, that every point
 
 This might be using Rolle theorem? Lets see.
 
+Lets start by approximating all the points between 0,1.
+
+Well, for starters, let all the numbers between 0 and 1, let us think on them.  If we have 0, then it must be because m = 0 and n = 0.  If these are both real numbers, then this is must be how it is.
+
 # Rolles Theorem 
 
 "This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
