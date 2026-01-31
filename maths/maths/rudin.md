@@ -100,6 +100,9 @@ This idea can be applied from [0,1] now to other numbers in the whole range of r
 
 This isn't quite a strong enough proof, so, would like feedback on how to make this more rigious!
 
+### Exercise 16 Prove for the below, what is ...
+
+
 # Rolles Theorem 
 
 "This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
