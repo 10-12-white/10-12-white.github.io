@@ -116,15 +116,22 @@ B is defined by y, and all the elements of y are in B.
 
 The set difference of A - B negates all the values of y from the values in the set of x.
 
-This set difference can be expressed as ( x - y).
+This set difference can be expressed as $( x - y)$.
 
 The supremum of A contains the set of x s.t  U s.t U \leq A which is all of x.
 
-We know that the set difference of (x - y) contains items that are only as large as x at the largest, but are all smalets in the cse thst y \neq zero.  Which means, that each elemtn of A is at least as larger or larger than all the items in the set of (x - y).
+We know that the set difference of $(x - y)$ contains items that are only as large as x at the largest, but are all smalets in the cse thst y \neq zero.  Which means, that each element of A is at least as larger or larger than all the items in the set of $(x - y)$.
 
 Which means that supremum of A = (x - y).
 
-Recall the 
+Recall the value of infimum.  An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set.
+
+Now recall that there is the (x - y) which, at the least, will have elements less than the value of all of the elments in A.
+
+But what about B?
+B = y.  But there is no difference that we know of between x and y since we were nevr defining this.
+
+
 
 
 # Rolles Theorem 
