@@ -128,8 +128,14 @@ Recall the value of infimum.  An infimum is the greatest lower bound of a set of
 
 Now recall that there is the (x - y) which, at the least, will have elements less than the value of all of the elments in A.
 
-But what about B?
-B = y.  But there is no difference that we know of between x and y since we were nevr defining this.
+But what about $B$?
+
+$B = y$.  But there is no difference that we know of between x and y since we were never defining this.
+
+Given that we do not know what the values of x and y are, they could overlap.
+
+When we subtract $y$ from $x$, this could be the same as subtracting x from y.
+
 
 
 
