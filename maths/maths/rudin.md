@@ -114,19 +114,19 @@ A is defined by x, and all the elements of x are in A.  Therefore, the supremum 
 
 Therefore, the supremum of A = x.
 
-B is defined by y, and all the elements of y are in B.
-
-
+$B$ is defined by y, and all the elements of y are in B.
 
 An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set.  And this smallest value, is y, since it is less than or equal to elements in the set of B.
 
-Now recall that there is the (x - y) which, at the least, will have elements less than the value of all of the elments in A.
+Now recall that there is the $(x - y)$ which, at the least, will have elements less than the value of all of the elments in A.
 
 We know that the set difference of $(x - y)$ contains items that are only as large as x at the largest, but are all smallest in the cse that $y \neq$ zero.  Which means, that each element of A is at least as larger or larger than all the items in the set of $(x - y)$.
 
 Which means that the values of the supremum are in the range of = $(A - B)$.
 
 So then, the supremum of A = sup A - inf B.
+
+
 
 
 
