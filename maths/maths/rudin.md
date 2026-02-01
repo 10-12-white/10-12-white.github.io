@@ -116,6 +116,17 @@ B is defined by y, and all the elements of y are in B.
 
 The set difference of A - B negates all the values of y from the values in the set of x.
 
+This set difference can be expressed as ( x - y).
+
+The supremum of A contains the set of x s.t  U s.t U \leq A which is all of x.
+
+We know that the set difference of (x - y) contains items that are only as large as x at the largest, but are all smalets in the cse thst y \neq zero.  Which means, that each elemtn of A is at least as larger or larger than all the items in the set of (x - y).
+
+Which means that supremum of A = (x - y).
+
+Recall the 
+
+
 # Rolles Theorem 
 
 "This means, that if a function have the same value in the extreme of an interval, then there exist a point in which the derivative is zero in this interval, in other words, there exist point which are maximum or minimum at least local, in the interval."
