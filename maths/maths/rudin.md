@@ -110,33 +110,21 @@ A supremum is the least upper bound of a set of numbers. It is the smallest valu
 
 An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set. Unlike a minimum, the infimum does not have to be a member of the set itself, often serving as the limiting boundary of open sets e.g., the infimum of  (0,1) is 0.
 
-A is defined by x, and all the elements of x are in A.
+A is defined by x, and all the elements of x are in A.  Therefore, the supremum of A will the numbers in the set that contain at least this x. And x is larger or equal to every value in this set.
+
+Therefore, the supremum of A = x.
 
 B is defined by y, and all the elements of y are in B.
 
-The set difference of A - B negates all the values of y from the values in the set of x.
+The supremum of A contains the set of $x s.t$  U s.t $U \leq A$ which is all of x.
 
-This set difference can be expressed as $( x - y)$.
-
-The supremum of A contains the set of x s.t  U s.t U \leq A which is all of x.
-
-We know that the set difference of $(x - y)$ contains items that are only as large as x at the largest, but are all smalets in the cse thst y \neq zero.  Which means, that each element of A is at least as larger or larger than all the items in the set of $(x - y)$.
-
-Which means that supremum of A = (x - y).
-
-Recall the value of infimum.  An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set.
+Now recall the value of the infimum.  An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set.  And this smallest value, is y, since it is less than or equal to elements in the set of B.
 
 Now recall that there is the (x - y) which, at the least, will have elements less than the value of all of the elments in A.
 
-But what about $B$?
+We know that the set difference of $(x - y)$ contains items that are only as large as x at the largest, but are all smallest in the cse that $y \neq$ zero.  Which means, that each element of A is at least as larger or larger than all the items in the set of $(x - y)$.
 
-$B = y$.  But there is no difference that we know of between x and y since we were never defining this.
-
-Given that we do not know what the values of x and y are, they could overlap.
-
-When we subtract $y$ from $x$, this could be the same as subtracting x from y.
-
-
+Which means that the values of the supremum are in the range of = $(x - y)$.
 
 
 
