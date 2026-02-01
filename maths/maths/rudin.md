@@ -106,7 +106,7 @@ Prove that $sup A = sup A - inf B$
 
 Give a careful argument using the definitions of sups and infs.
 
-A supremum is the least upper bound of a set of numbers. It is the smallest value that is greater than or equal to every element in that set. 
+A supremum is the least upper bound of a set of numbers. It is the smallest value that is greater than or equal to every element in that set.   The supremum of A contains the set of $x s.t$  U s.t $U \leq A$ which is all of x.
 
 An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set. Unlike a minimum, the infimum does not have to be a member of the set itself, often serving as the limiting boundary of open sets e.g., the infimum of  (0,1) is 0.
 
@@ -116,15 +116,17 @@ Therefore, the supremum of A = x.
 
 B is defined by y, and all the elements of y are in B.
 
-The supremum of A contains the set of $x s.t$  U s.t $U \leq A$ which is all of x.
 
-Now recall the value of the infimum.  An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set.  And this smallest value, is y, since it is less than or equal to elements in the set of B.
+
+An infimum is the greatest lower bound of a set of numbers. It is the largest real number that is less than or equal to every element in that set.  And this smallest value, is y, since it is less than or equal to elements in the set of B.
 
 Now recall that there is the (x - y) which, at the least, will have elements less than the value of all of the elments in A.
 
 We know that the set difference of $(x - y)$ contains items that are only as large as x at the largest, but are all smallest in the cse that $y \neq$ zero.  Which means, that each element of A is at least as larger or larger than all the items in the set of $(x - y)$.
 
-Which means that the values of the supremum are in the range of = $(x - y)$.
+Which means that the values of the supremum are in the range of = $(A - B)$.
+
+So then, the supremum of A = sup A - inf B.
 
 
 
