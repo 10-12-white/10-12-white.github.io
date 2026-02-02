@@ -236,9 +236,7 @@ $f'(c) = \frac{f(a) - f(b)}{ a - b}$
 
 This is useful because we will then relate it to the function's gradiant at any point in this range, $f'(x)$.
 
-## Theorem
-
-Let f be continuous and $[a,b]$ and differentiable in $(a,b)$.  Prove that there is such a c that exists in (a,b) where the $f'(c) = \frac{f(a) - f(b)}{a - b}$.
+### Let f be continuous and $[a,b]$ and differentiable in $(a,b)$.  Prove that there is such a c that exists in (a,b) where the $f'(c) = \frac{f(a) - f(b)}{a - b}$.
 
 If we have this, then we have that: $ f'(c) = \frac{f(a) - f(b)}{a - b} $.
 
@@ -250,12 +248,8 @@ Then we have that:
 
 Then, consider how to make it for a particular area.  At any point in the function, you would have an f'(x).  And the gradient between two points would be $ f'(x) = \frac{(f(h) - f(x))}{h - x} $
 
-## Theorem (Mean Value Theorem)
+### Theorem (Mean Value Theorem).  Let $f$ be continuous on $[a, b]$ and differentiable on $(a, b)$. Prove that there exists a point $c \in (a, b)$ such that: $$f'(c) = \frac{f(b) - f(a)}{b - a}$$
 
-Let $f$ be continuous on $[a, b]$ and differentiable on $(a, b)$. Prove that there exists a point $c \in (a, b)$ such that:
-$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
-
-### Proof Strategy
 
 To prove this, we construct an auxiliary function $g(x)$ that satisfies the conditions of **Rolle's Theorem** (where $g(a) = g(b)$).
 
