@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLUGGYAPE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#1E392A',
+                        'dark-brown': '#3A2A1A',
+                        'cream': '#FAF0DC',
+                        'moss-green': '#52703e',
+                        'deep-accent': '#C5AE87',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark-green text-cream font-sans min-h-screen">
+
+    <header class="bg-dark-brown p-4 border-b border-deep-accent/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-8">
+            <a href="blog.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
+                <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
+            </a>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 006</span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-8 pt-16">
+        
+        <header class="mb-12">
+            <div class="flex items-center text-deep-accent mb-4">
+                <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 30, 2026</span>
+            </div>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">PLUGGYAPE</h1>
+        </header>
+
+        <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
+            <p class="text-lg mb-6 leading-relaxed"></p>
+            
+            <h2 class="text-3xl font-extrabold mb-6 text-cream">Introduction</h2>
+
+            <p class="text-lg mb-6 leading-relaxed"></p>          
+
+            <h2 class="text-3xl font-extrabold mb-6 text-cream">Summary</h2>
+
+            <p class="text-lg mb-6 leading-relaxed">PLUGGYAPE is a type of malware group that has been on the rise recently, with activity including targeting Ukrainian defence forces between October and December, with continued activity ongoing from January of 2026. It has been attributed (with medium confidence) to a Russian hacking group tracked as Void Blizzard (otherwise known as the group Laundry Bear or UAC-0190). The threat actor is believed to be active since at least April 2024.</p>
+
+            <p class="text-lg mb-6 leading-relaxed">Ukrainian Cyber Defence taskforce and govenrment agency, "The Computer Emergency Response Team of Ukraine (CERT-UA)" says that the malware PLUGGYAPE establishes communication with a remote server over WebSocket or Message Queuing Telemetry Transport (MQTT), allowing the operators to execute arbitrary code on compromised hosts. The group has actively increased their reach and show understanding of several protocols, such as MQTT, supoprt for which was only added in December 2025.</p>
+
+            <p class="text-lg mb-6 leading-relaxed"></p>In addition CERT UA also reported that the command-and-control (C2) addresses are retrieved from external paste services such as rentry[.]co and pastebin[.]com, where they are stored in base64-encoded form, as opposed to directly hard-coding the domain in the malware itself. This use of obfuscation as well as form-filling allows the attackers to securely update the C2 servers in real-time in scenarios where the original infrastructure is detected and taken down.</p>
+
+            <p class="text-lg mb-6 leading-relaxed"></p>"Initial interaction with the target of a cyber attack is increasingly carried out using legitimate accounts and phone numbers of Ukrainian mobile operators, with the use of the Ukrainian language, audio and video communication, and the attacker may demonstrate detailed and relevant knowledge about the individual, organization, and its operations," CERT-UA said.</p>
+            
+        <h2 class="text-3xl font-extrabold mb-6 text-cream">Background and History</h2>
+
+            <p class="text-lg mb-6 leading-relaxed">PLUGGYAPE is supposedly the same malware group as Laundry Bear and UAC-0190, Void Blizzard.  This is due to research done by HackerNews, CERT-UA.  They both allege that the PLUGGYAPE malware has been created by this threat group particualr for the purpose of distributing malware.</p>          
+            
+            <p class="text-lg mb-6 leading-relaxed"></p>          
+      
+        <h2 class="text-3xl font-extrabold mb-6 text-cream">TTPs and Attack Methodology</h2>
+
+            <p class="text-lg mb-6 leading-relaxed">Attack chains include using Signal and WhatsApp as vectors, with the threat actors masquerading as charity organizations to convince targets into clicking on a seemingly-harmless link ("harthulp-ua[.]com" or "solidarity-help[.]org") impersonating the foundation and download a password-protected archive.</p>
+
+            <p class="text-lg mb-6 leading-relaxed">The archives contain an executable created with PyInstaller that ultimately led to the deployment of PLUGGYAPE. CERT-UA said successive iterations of the backdoor have added obfuscation and anti-analysis checks to prevent the artifacts from being executed in a virtual environment, which makes dynamic analysis harder.</p>          
+      
+
+        <h2 class="text-3xl font-extrabold mb-6 text-cream">Hashes and IOCs</h2>
+    
+            <p class="text-lg mb-6 leading-relaxed">No current know hashes but several files are used, such as:</p>       
+
+            <div class="mb-8 border-b border-deep-accent/5 pb-6">
+               <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">Orca C2 Command and Control Framework</p>a
+               <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">UKR[.]net links to VDI files</p>
+               <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">rentry[.]co links</p>
+               <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">pastebin[.]co links</p>
+               <p class="text-xs font-mono text-deep-accent uppercase tracking-widest mb-3">SMS links from harthulp-ua[.]com or solidarity-help[.]org</p>
+           </div>
+            
+        <p class="text-lg mb-6 leading-relaxed">Other information will be updated to the site as it is forthcoming.</p>
+
+            <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
+            PLUGGYAPE is a sophisticated Python-based backdoor malware used in cyberespionage campaigns primarily targeting Ukrainian defense forces, with significant activity reported between October 2025 and January 2026.  The malware is linked with medium confidence to the Russian-linked threat group Void Blizzard (also known as Laundry Bear or UAC-0190). It operates as a RAT (Remote Access Trojan), enabling attackers to profile infected systems, steal sensitive data, and execute arbitrary code.  It was developed in Python and frequently deployed as a PyInstaller executable. It uses WebSockets or the MQTT protocol to connect to command-and-control (C2) servers, which are obfuscated using encoding base64 as well as masking technique similar to fast-fluxing.
+            </blockquote>
+        </article>
+
+        <section class="mt-20 pt-7 border-t border-deep-accent/30">
+            <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
+            <div class="space-y-4 font-mono text-sm opacity-80">
+                <p class="text-sm mb-6 leading-relaxed">HackerNews, "PLUGGYAPE", Online, [Available], https://thehackernews.com/2026/01/pluggyape-malware-uses-signal-and.html</p>
+                <p class="text-sm mb-6 leading-relaxed">Malware News, Online, [Available]: https://dailysecurityreview.com/cyber-security/pluggyape-malware-targets-ukraines-defense-amid-rising-cyber-threats/</p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+                <p class="text-sm mb-6 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <div class="mt-16 text-center">
+            <a href="./blog.html" class="inline-block py-3 px-10 bg-deep-accent text-dark-green font-bold rounded hover:bg-cream transition">Return to Intelligence Hub</a>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center opacity-40 text-xs">
+        &copy; 2026 Professional Cyber Compendium | Secure Transmission
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
+
+{
+  "subject": "Project Sync Meeting",
+  "isOnlineMeeting": true,
+  "onlineMeetingProvider": "teamsForBusiness",
+  "start": {
+    "dateTime": "2026-03-01T10:00:00",
+    "timeZone": "Pacific Standard Time"
+  },
+  "end": {
+    "dateTime": "2026-03-01T11:00:00",
+    "timeZone": "Pacific Standard Time"
+  },
+  "attendees": [
+    {
+      "emailAddress": {
+        "address": "jane.doe@example.com",
+        "name": "Jane Doe"
+      },
+      "type": "required"
+    },
+    {
+      "emailAddress": {
+        "address": "john.smith@example.com",
+        "name": "John Smith"
+      },
+      "type": "optional"
+    }
+  ]
+}
