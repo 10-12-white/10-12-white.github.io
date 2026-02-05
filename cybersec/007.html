@@ -54,7 +54,6 @@
             <h2 class="text-3xl font-extrabold mb-6 text-cream">Summary</h2>
 
             <p class="text-lg mb-6 leading-relaxed">How can you code a mail attachment that is able to execute code?  Well, the answer is slightly more simple than you might imagine!</p>
-
             <p class="text-lg mb-6 leading-relaxed">Filetype .ics has more information than simply time and place, and can be engineered to create content.</p>
 
             <p class="text-lg mb-6 leading-relaxed">An ICS file (iCalendar) is a universal, plain-text format for sharing digital calendar data, allowing events, meetings, or tasks to be easily imported and exported between different calendar applications like Google Calendar, Outlook, and Apple Calendar, ensuring everyone sees the same details (time, location, description) regardless of their software. You typically get one as an email attachment or download, then open it with a double-click to add the event directly to your calendar</p>
@@ -71,7 +70,19 @@
                                                 DESCRIPTION:Event Description!
                                                 END:VEVENT
                                                 END:VCALENDAR</code></pre></p>
-            
+
+<p><ul>
+    <li>BEGIN:VCALENDAR and END:VCALENDAR: Encapsulate the entire calendar data.</li>
+    <li>VERSION:2.0: Specifies the iCalendar version.</li>
+    <li>PRODID: Identifies the creator of the file.</li>
+    <li>BEGIN:VEVENT and END:VEVENT: Define a single event.</li>
+    <li>UID: A unique identifier for the event (important for updates).</li>
+    <li>DTSTAMP: The date/time when the file was created (in UTC format, Z indicates UTC).</li>
+    <li>DTSTART and DTEND: The start and end date/time of the event (also in UTC format, or with a specified timezone).</li>
+    <li>SUMMARY: The title of the event.</li>
+    <li>DESCRIPTION: A description of the even</li>
+</ul></p>
+    
         <h2 class="text-3xl font-extrabold mb-6 text-cream">Prevention</h2>
 
             <p class="text-lg mb-6 leading-relaxed">An increase in the use of macros in Microsoft Office files being used as a malware delivery vector has been observed. These macros are written in the Visual Basic for Applications (VBA) programming language, a feature built into Microsoft Office applications. Macros are commonly used for task automation; however, malicious actors are also using macros to perform a variety of malicious activities including the download and execution of malware on the host computer.  It is a good idea to remove VBA scripts to run.</p>
@@ -145,6 +156,7 @@
     <script>lucide.createIcons();</script>
 </body>
 </html>
+
 
 
 
