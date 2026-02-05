@@ -59,7 +59,18 @@
 
             <p class="text-lg mb-6 leading-relaxed">An ICS file (iCalendar) is a universal, plain-text format for sharing digital calendar data, allowing events, meetings, or tasks to be easily imported and exported between different calendar applications like Google Calendar, Outlook, and Apple Calendar, ensuring everyone sees the same details (time, location, description) regardless of their software. You typically get one as an email attachment or download, then open it with a double-click to add the event directly to your calendar</p>
 
-            <p class="text-lg mb-6 leading-relaxed"></p>
+            <p class="text-lg mb-6 leading-relaxed"><pre><code>BEGIN:VCALENDAR
+                                                VERSION:2.0
+                                                PRODID:-//Your Company//NONSGML Event//EN
+                                                BEGIN:VEVENT
+                                                UID:uid1@example.com
+                                                DTSTAMP:20260205T210000Z
+                                                DTSTART:20260325T203000Z
+                                                DTEND:20260325T213000Z
+                                                SUMMARY:Event Title
+                                                DESCRIPTION:Event Description!
+                                                END:VEVENT
+                                                END:VCALENDAR</code></pre></p>
             
         <h2 class="text-3xl font-extrabold mb-6 text-cream">Prevention</h2>
 
@@ -134,6 +145,7 @@
     <script>lucide.createIcons();</script>
 </body>
 </html>
+
 
 
 
