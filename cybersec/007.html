@@ -30,7 +30,7 @@
             <a href="blog.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
                 <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
             </a>
-            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 006</span>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 007</span>
         </div>
     </header>
 
@@ -39,9 +39,9 @@
         <header class="mb-12">
             <div class="flex items-center text-deep-accent mb-4">
                 <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
-                <span class="text-sm font-mono uppercase tracking-tighter">Published: Jan 30, 2026</span>
+                <span class="text-sm font-mono uppercase tracking-tighter">Published: Feb 04, 2026</span>
             </div>
-            <h1 class="text-5xl font-extrabold mb-6 leading-tight">PLUGGYAPE</h1>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight"></h1>
         </header>
 
         <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
@@ -53,26 +53,25 @@
 
             <h2 class="text-3xl font-extrabold mb-6 text-cream">Summary</h2>
 
-            <p class="text-lg mb-6 leading-relaxed">PLUGGYAPE is a type of malware group that has been on the rise recently, with activity including targeting Ukrainian defence forces between October and December, with continued activity ongoing from January of 2026. It has been attributed (with medium confidence) to a Russian hacking group tracked as Void Blizzard (otherwise known as the group Laundry Bear or UAC-0190). The threat actor is believed to be active since at least April 2024.</p>
+            <p class="text-lg mb-6 leading-relaxed"></p>
 
-            <p class="text-lg mb-6 leading-relaxed">Ukrainian Cyber Defence taskforce and govenrment agency, "The Computer Emergency Response Team of Ukraine (CERT-UA)" says that the malware PLUGGYAPE establishes communication with a remote server over WebSocket or Message Queuing Telemetry Transport (MQTT), allowing the operators to execute arbitrary code on compromised hosts. The group has actively increased their reach and show understanding of several protocols, such as MQTT, supoprt for which was only added in December 2025.</p>
+            <p class="text-lg mb-6 leading-relaxed"></p>
 
-            <p class="text-lg mb-6 leading-relaxed"></p>In addition CERT UA also reported that the command-and-control (C2) addresses are retrieved from external paste services such as rentry[.]co and pastebin[.]com, where they are stored in base64-encoded form, as opposed to directly hard-coding the domain in the malware itself. This use of obfuscation as well as form-filling allows the attackers to securely update the C2 servers in real-time in scenarios where the original infrastructure is detected and taken down.</p>
+            <p class="text-lg mb-6 leading-relaxed"></p>
 
-            <p class="text-lg mb-6 leading-relaxed"></p>"Initial interaction with the target of a cyber attack is increasingly carried out using legitimate accounts and phone numbers of Ukrainian mobile operators, with the use of the Ukrainian language, audio and video communication, and the attacker may demonstrate detailed and relevant knowledge about the individual, organization, and its operations," CERT-UA said.</p>
+            <p class="text-lg mb-6 leading-relaxed"></p>
             
         <h2 class="text-3xl font-extrabold mb-6 text-cream">Background and History</h2>
 
-            <p class="text-lg mb-6 leading-relaxed">PLUGGYAPE is supposedly the same malware group as Laundry Bear and UAC-0190, Void Blizzard.  This is due to research done by HackerNews, CERT-UA.  They both allege that the PLUGGYAPE malware has been created by this threat group particualr for the purpose of distributing malware.</p>          
+            <p class="text-lg mb-6 leading-relaxed"></p>          
             
             <p class="text-lg mb-6 leading-relaxed"></p>          
       
         <h2 class="text-3xl font-extrabold mb-6 text-cream">TTPs and Attack Methodology</h2>
 
-            <p class="text-lg mb-6 leading-relaxed">Attack chains include using Signal and WhatsApp as vectors, with the threat actors masquerading as charity organizations to convince targets into clicking on a seemingly-harmless link ("harthulp-ua[.]com" or "solidarity-help[.]org") impersonating the foundation and download a password-protected archive.</p>
+            <p class="text-lg mb-6 leading-relaxed"></p>
 
-            <p class="text-lg mb-6 leading-relaxed">The archives contain an executable created with PyInstaller that ultimately led to the deployment of PLUGGYAPE. CERT-UA said successive iterations of the backdoor have added obfuscation and anti-analysis checks to prevent the artifacts from being executed in a virtual environment, which makes dynamic analysis harder.</p>          
-      
+            <p class="text-lg mb-6 leading-relaxed"></p>          
 
         <h2 class="text-3xl font-extrabold mb-6 text-cream">Hashes and IOCs</h2>
     
@@ -146,5 +145,6 @@
     <script>lucide.createIcons();</script>
 </body>
 </html>
+
 
 
