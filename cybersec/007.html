@@ -83,7 +83,24 @@
     <li>DESCRIPTION: A description of the even</li>
 </ul></p>
     
+
     <p class="text-lg mb-6 leading-relaxed">This file is therefore saved as a .ics, and can be used.  For example, any of the fields can be edited to contain further information on the type of attachments, such as PROID can be used to include the below:</p>
+
+    <p class="text-lg mb-6 leading-relaxed"><pre><code>BEGIN:VCALENDAR
+                                                VERSION:2.0
+                                                PRODID:-//Your Company//NONSGML Event//EN
+                                                BEGIN:VEVENT
+                                                UID:uid1@example.com
+                                                DTSTAMP:20260205T210000Z
+                                                DTSTART:20260325T203000Z
+                                                DTEND:20260325T213000Z
+                                                SUMMARY:Induction Phase
+                                                DESCRIPTION:Meeting for the induction phase of your project.  Please click the link below to join the meeting.  # hide the malicious <link rel="alternate" href="
+    https://malicious-link.com" type="application/atom+xml" title="Meeting link">
+                                                
+                                                END:VEVENT
+                                                END:VCALENDAR</code></pre></p>
+
 
         <h2 class="text-3xl font-extrabold mb-6 text-cream">Prevention</h2>
 
