@@ -71,36 +71,26 @@
                                                 END:VEVENT
                                                 END:VCALENDAR</code></pre></p>
 
-<p><ul>
-    <li>BEGIN:VCALENDAR and END:VCALENDAR: Encapsulate the entire calendar data.</li>
-    <li>VERSION:2.0: Specifies the iCalendar version.</li>
-    <li>PRODID: Identifies the creator of the file.</li>
-    <li>BEGIN:VEVENT and END:VEVENT: Define a single event.</li>
-    <li>UID: A unique identifier for the event (important for updates).</li>
-    <li>DTSTAMP: The date/time when the file was created (in UTC format, Z indicates UTC).</li>
-    <li>DTSTART and DTEND: The start and end date/time of the event (also in UTC format, or with a specified timezone).</li>
-    <li>SUMMARY: The title of the event.</li>
-    <li>DESCRIPTION: A description of the even</li>
-</ul></p>
+                                     <p><ul>
+                                         <li>BEGIN:VCALENDAR and END:VCALENDAR: Encapsulate the entire calendar data.</li>
+                                         <li>VERSION:2.0: Specifies the iCalendar version.</li>
+                                         <li>PRODID: Identifies the creator of the file.</li>
+                                         <li>BEGIN:VEVENT and END:VEVENT: Define a single event.</li>
+                                         <li>UID: A unique identifier for the event (important for updates).</li>
+                                         <li>DTSTAMP: The date/time when the file was created (in UTC format, Z indicates UTC).</li>
+                                         <li>DTSTART and DTEND: The start and end date/time of the event (also in UTC format, or with a specified timezone).</li>
+                                         <li>SUMMARY: The title of the event.</li>
+                                         <li>DESCRIPTION: A description of the even</li>
+                                     </ul></p>
     
 
     <p class="text-lg mb-6 leading-relaxed">This file is therefore saved as a .ics, and can be used.  For example, any of the fields can be edited to contain further information on the type of attachments, such as PROID can be used to include the below:</p>
 
-    <p class="text-lg mb-6 leading-relaxed"><pre><code>BEGIN:VCALENDAR
-                                                VERSION:2.0
-                                                PRODID:-//Your Company//NONSGML Event//EN
-                                                BEGIN:VEVENT
-                                                UID:uid1@example.com
-                                                DTSTAMP:20260205T210000Z
-                                                DTSTART:20260325T203000Z
-                                                DTEND:20260325T213000Z
-                                                SUMMARY:Induction Phase
+    <p class="text-lg mb-6 leading-relaxed"><pre><code> ... etc etc
                                                 DESCRIPTION:Meeting for the induction phase of your project.  Please click the link below to join the meeting.  # hide the malicious <link rel="alternate" href="
     https://malicious-link.com" type="application/atom+xml" title="Meeting link">
-                                                
                                                 END:VEVENT
                                                 END:VCALENDAR</code></pre></p>
-
 
         <h2 class="text-3xl font-extrabold mb-6 text-cream">Prevention</h2>
 
@@ -174,6 +164,7 @@
     <script>lucide.createIcons();</script>
 </body>
 </html>
+
 
 
 
