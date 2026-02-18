@@ -60,7 +60,7 @@
 
             <p class="text-lg mb-6 leading-relaxed">They usually look like this:</p>
                 
-            <p class="text-lg mb-6 leading-relaxed"><pre><code>BEGIN:VCALENDAR
+            <p class="text-sm mb-6 leading-relaxed"><pre><code>BEGIN:VCALENDAR
                                                 VERSION:2.0
                                                 PRODID:-//Your Company//NONSGML Event//EN
                                                 BEGIN:VEVENT
@@ -87,7 +87,7 @@
     
     <p class="text-lg mb-6 leading-relaxed">Its a textfile format, which when saved from .txt to .ics becomes a set of instructions for many calendar apps like Teams, Google, and Apple Mail.  And, any of the fields can be edited to contain further information on the type of attachments, such as PROID can be used to include the below:</p>
 
-    <p class="text-lg mb-6 leading-relaxed"><pre><code> ... etc etc
+    <p class="text-sm mb-6 leading-relaxed"><pre><code> ... etc etc
                                                 DESCRIPTION:Meeting for the induction phase of your project.  Please click the link below to join the meeting.  # hide the malicious <link rel="alternate" href="
     https://malicious-link.com" type="application/atom+xml" title="Meeting link">
                                                 END:VEVENT
@@ -95,7 +95,7 @@
 
         <h2 class="text-3xl font-extrabold mb-6 text-cream">Prevention</h2>
 
-            <p class="text-lg mb-6 leading-relaxed">An increase in the use of macros in Microsoft Office files being used as a malware delivery vector has been observed. These macros are written in the Visual Basic for Applications (VBA) programming language, a feature built into Microsoft Office applications. Macros are commonly used for task automation; however, malicious actors are also using macros to perform a variety of malicious activities including the download and execution of malware on the host computer.  It is a good idea to remove VBA scripts to run.</p>
+            <p class="text-lg mb-6 leading-relaxed">An increase in the use of macros in Microsoft Office files being used as a malware delivery vector has been observed. These macros are written in the Visual Basic for Applications (VBA) programming language, a feature built into Microsoft Office applications. Macros are commonly used for task automation; however, malicious actors are also using macros to perform a variety of malicious activities including the download and execution of malware on the host computer.  It is a good idea to remove VBA scripts from execution lists and permission groups.</p>
             
             <p class="text-lg mb-6 leading-relaxed">Basically, this file strcuture can be used to create a simple text file, and then converted to .ics file once it has been written. Once this has finished, you could edit it as these files can execute code.  At this stage, attackers would usually provide a link to a dropper.  This is useful after connection has been established, because more larges packages can create more initial traffic and could potentially generate an alert.</p>          
 
