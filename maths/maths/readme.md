@@ -16,3 +16,6 @@
 - Almost all of the above!
 - Need to improve work flow on the presentation
 - Update them on code changes more frequently
+- working on the next set of things to work
+- doing more coding
+- having a break!
