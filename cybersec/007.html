@@ -106,37 +106,39 @@
             <p class="text-lg mb-6 leading-relaxed">In an example below, it was seen that a multi-stage attack was successful due to their use of this attack.</p>
 
             <p class="text-sm mb-6 leading-relaxed"></p>       
-            <pre>
-                <code>{
-                  "subject": "Project Sync Meeting",
-                  "isOnlineMeeting": true,
-                    "onlineMeetingProvider": "teamsForBusiness",
-                    "start": {
-                      "dateTime": "2026-03-01T10:00:00",
-                      "timeZone": "Pacific Standard Time"
-                    },
-                    "end": {
-                      "dateTime": "2026-03-01T11:00:00",
-                  "timeZone": "Pacific Standard Time"
-                  },
-                  "attendees": [
-                    {
-                      "emailAddress": {
-                        "address": "jane.doe@example.com",
-                        "name": "Jane Doe"
-                      },
-                      "type": "required"
-                    },
-                    {
-                      "emailAddress": {
-                        "address": "john.smith@example.com",
-                        "name": "John Smith"
-                      },
-                      "type": "optional"
-                    }
-                  ]
-                }
-</code></pre>
+<pre class="bg-emerald-950 text-emerald-50 p-4 rounded-md overflow-x-auto shadow-inner">
+    <code class="font-mono text-xs">
+    {
+      "subject": "Project Sync Meeting",
+      "isOnlineMeeting": true,
+      "onlineMeetingProvider": "teamsForBusiness",
+      "start": {
+        "dateTime": "2026-03-01T10:00:00",
+        "timeZone": "Pacific Standard Time"
+      },
+      "end": {
+        "dateTime": "2026-03-01T11:00:00",
+        "timeZone": "Pacific Standard Time"
+      },
+      "attendees": [
+        {
+          "emailAddress": {
+            "address": "jane.doe@example.com",
+            "name": "Jane Doe"
+          },
+          "type": "required"
+        },
+        {
+          "emailAddress": {
+            "address": "john.smith@example.com",
+            "name": "John Smith"
+          },
+          "type": "optional"
+        }
+      ]
+    }
+    </code>
+</pre>
         
         <p class="text-lg mb-6 leading-relaxed">Microsoft provides editing informaiton readily regarding attachments and personalisation, but unfortunately that can be used in more than one way.</p>
 
@@ -171,6 +173,7 @@
     <script>lucide.createIcons();</script>
 </body>
 </html>
+
 
 
 
