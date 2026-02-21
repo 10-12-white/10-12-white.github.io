@@ -103,9 +103,8 @@
 
             <p class="text-lg mb-6 leading-relaxed">One of the ways this was noticed was during this cyber event recently (see links below).  By using a certificate that was trusted, the hackers were able to fake an invite using a compormised certificate which allowed them access to an application.  When the user tried to click on it and use it they were able to run it, because Microsoft still trusted the vendors' certificate and the signed application.</p>
 
-            <p class="text-lg mb-6 leading-relaxed">In doing so, attackers were able to steal a trusted certificate off an application and then bypass security by authenticating with the stolen token.  Because the stolen token is still trusted by Microsoft, any application that is signed with this seal is able to run and won't automatically be closed down.</p>   
+            <p class="text-lg mb-6 leading-relaxed">In doing so, attackers were able to steal a trusted certificate off an application and then bypass security by authenticating with the stolen token.  Because the stolen token is still trusted by Microsoft, any application that is signed with this seal is able to run and won't automatically be closed down. In an example below, it was seen that a multi-stage attack was successful due to their use of this attack.</p>   
             
-            <p class="text-lg mb-6 leading-relaxed">In an example below, it was seen that a multi-stage attack was successful due to their use of this attack.</p>
 
             <p class="text-sm mb-6 leading-relaxed"></p>       
 <pre class="bg-emerald-950 text-emerald-50 p-4 rounded-md overflow-x-auto shadow-inner">
@@ -177,6 +176,7 @@
     <script>lucide.createIcons();</script>
 </body>
 </html>
+
 
 
 
