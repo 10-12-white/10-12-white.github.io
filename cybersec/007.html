@@ -89,11 +89,17 @@
     
     <p class="text-lg mb-6 leading-relaxed">Its a textfile format, which when saved from .txt to .ics becomes a set of instructions for many calendar apps like Teams, Google, and Apple Mail.  And, any of the fields can be edited to contain further information on the type of attachments, such as PROID can be used to include the below:</p>
 
-    <p class="text-sm mb-6 leading-relaxed"><pre><code> ... etc etc
-                                                DESCRIPTION:Meeting for the induction phase of your project.  Please click the link below to join the meeting.  # hide the malicious <link rel="alternate" href="
-    https://malicious-link.com" type="application/atom+xml" title="Meeting link">
-                                                END:VEVENT
-                                                END:VCALENDAR</code></pre></p>
+    <div class="text-sm mb-6 leading-relaxed">
+    <pre class="whitespace-pre-wrap break-all bg-gray-100 p-4 rounded">
+        <code>
+        DESCRIPTION:Meeting for the induction phase of your project. 
+        Please click the link below to join the meeting.
+        # hide the malicious <link rel="alternate" href="https://malicious-link.com" ...>
+        END:VEVENT
+        END:VCALENDAR
+        </code>
+    </pre>
+    </div>
 
         <h2 class="text-3xl font-extrabold mb-6 text-cream">Prevention</h2>
 
@@ -166,6 +172,8 @@
                 <p class="text-sm mb-6 leading-relaxed">[2] Microsoft Safe Attachments, https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-about</p>
                 <p class="text-sm mb-6 leading-relaxed">[3] iCal, https://ical.marudot.com/</p>
                 <p class="text-sm mb-6 leading-relaxed">[4] https://learn.microsoft.com/en-us/microsoftteams/customize-meeting-invitations</p>
+                <p class="text-sm mb-6 leading-relaxed">[5] https://www.bleepingcomputer.com/news/security/malware-delivered-via-teams-meeting-invitations/</p>
+                <p class="text-sm mb-6 leading-relaxed">[6] Permiso Inc, Sliding into your DMS: https://permiso.io/blog/sliding-into-your-dms-abusing-microsoft-teams-for-malware-delivery</p>
             </div>
         </section>
 
