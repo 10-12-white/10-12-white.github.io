@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mail attachment Malware: Teams and Zoom</title>
+    <title>CyberCon 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -31,7 +31,7 @@
             <a href="blog.html" class="text-deep-accent font-bold flex items-center hover:text-cream transition">
                 <i data-lucide="chevron-left" class="w-5 h-5 mr-1"></i> Hub
             </a>
-            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 007</span>
+            <span class="text-xs font-mono uppercase tracking-widest opacity-60">Intel Log // 008</span>
         </div>
     </header>
 
@@ -40,135 +40,15 @@
         <header class="mb-12">
             <div class="flex items-center text-deep-accent mb-4">
                 <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
-                <span class="text-sm font-mono uppercase tracking-tighter">Published: Feb 04, 2026</span>
+                <span class="text-sm font-mono uppercase tracking-tighter">Published: Oct 19, 2026</span>
             </div>
-            <h1 class="text-5xl font-extrabold mb-6 leading-tight">Micosoft Mail attachments</h1>
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">CyberCon Presentation slides</h1>
         </header>
 
-        <article class="prose prose-invert max-w-none text-lg leading-relaxed space-y-8">
-            <p class="text-lg mb-6 leading-relaxed">Mail attachment malware is either malicious code hidden in files (PDFs, docs, ZIPs for example) that, when opened, infect systems with ransomware, spyware, or viruses.  Often disguised as invoices, shipping notices, or invoices, these attachments exploit software vulnerabilities to download payloads.   Usually, the malware that is first downloaded is a sort of dropper, used to infiltrated larger malicious files onto the device before further execution.</p>
-            
-            <h2 class="text-3xl font-extrabold mb-6 text-cream">Introduction</h2>
+        <iframe src="your-document.pdf" width="100%" height="600px">
+  <p>Your browser does not support PDFs. <a href="your-document.pdf">Download the PDF</a>.</p>   </iframe>
 
-            <p class="text-lg mb-6 leading-relaxed">You can use dynamic analysis, to edit things, which analysis uses behaviour-based detection capabilities instead of relying on the use of signatures.   Performing automated dynamic analysis of attachments run in a sandbox may detect suspicious behaviour including network traffic, new or modified files, or changes to the Windows registry.  This is useful, but takes time.  This analysis can usually be done in a sandbox, or deep packet inspection can take place also.</p>
-
-            <h2 class="text-3xl font-extrabold mb-6 text-cream">Summary</h2>
-
-            <p class="text-lg mb-6 leading-relaxed">How can you code a mail attachment that is able to execute code?  Well, the answer is slightly more simple than you might imagine!</p>
-            <p class="text-lg mb-6 leading-relaxed">Filetype .ics has more information than simply time and place, and can be engineered to create content.</p>
-
-            <p class="text-lg mb-6 leading-relaxed">An ICS file (iCalendar) is a universal, plain-text format for sharing digital calendar data, allowing events, meetings, or tasks to be easily imported and exported between different calendar applications like Google Calendar, Outlook, and Apple Calendar, ensuring everyone sees the same details (time, location, description) regardless of their software. You typically get one as an email attachment or download, then open it with a double-click to add the event directly to your calendar.  In this way, executable software can run.</p>
-
-            <p class="text-lg mb-6 leading-relaxed">They usually look like this:</p>
-                
-            <div class="text-sm mb-6 leading-relaxed">
-    <pre class="whitespace-pre-wrap break-all bg-gray-100 p-4 rounded">
-        <code>
-                BEGIN:VCALENDAR
-                VERSION:2.0
-                PRODID:-//Your Company//NONSGML Event//EN
-                BEGIN:VEVENT
-                UID:uid1@example.com
-                DTSTAMP:20260205T210000Z
-                DTSTART:20260325T203000Z
-                DTEND:20260325T213000Z
-                SUMMARY:Event Title
-                DESCRIPTION:Event Description!
-                END:VEVENT
-                END:VCALENDAR</code></pre></p>
-            
-            <p class="text-lg mb-6 leading-relaxed">This has the following structure:</p>
-            
-                                     <p><ul>
-                                         <li>BEGIN:VCALENDAR and END:VCALENDAR: Encapsulate the entire calendar data.</li>
-                                         <li>VERSION:2.0: Specifies the iCalendar version.</li>
-                                         <li>PRODID: Identifies the creator of the file.</li>
-                                         <li>BEGIN:VEVENT and END:VEVENT: Define a single event.</li>
-                                         <li>UID: A unique identifier for the event (important for updates).</li>
-                                         <li>DTSTAMP: The date/time when the file was created (in UTC format, Z indicates UTC).</li>
-                                         <li>DTSTART and DTEND: The start and end date/time of the event (also in UTC format, or with a specified timezone).</li>
-                                         <li>SUMMARY: The title of the event.</li>
-                                         <li>DESCRIPTION: A description of the even</li>
-                                     </ul></p>
-    
-    <p class="text-lg mb-6 leading-relaxed">Its a textfile format, which when saved from .txt to .ics becomes a set of instructions for many calendar apps like Teams, Google, and Apple Mail.  And, any of the fields can be edited to contain further information on the type of attachments, such as PROID can be used to include the below:</p>
-
-        <div class="text-sm mb-6 leading-relaxed">
-        <pre class="bg-emerald-950 text-emerald-50 p-4 rounded-md overflow-x-auto shadow-inner">
-        <code class="font-mono text-xs">
-        DESCRIPTION:Meeting for the induction phase of your project. 
-        Please click the link below to join the meeting.
-        # hide the malicious <link rel="alternate" href="https://malicious-link.com" ...>
-        END:VEVENT
-        END:VCALENDAR
-        </code>
-    </pre>
-    </div>
-
-        <h2 class="text-3xl font-extrabold mb-6 text-cream">Prevention</h2>
-
-            <p class="text-lg mb-6 leading-relaxed">An increase in the use of macros in Microsoft Office files being used as a malware delivery vector has been observed. These macros are written in the Visual Basic for Applications (VBA) programming language, a feature built into Microsoft Office applications. Macros are commonly used for task automation; however, malicious actors are also using macros to perform a variety of malicious activities including the download and execution of malware on the host computer.  It is a good idea to remove VBA scripts from execution lists and permission groups.</p>
-            
-            <p class="text-lg mb-6 leading-relaxed">Basically, this file strcuture can be used to create a simple text file, and then converted to .ics file once it has been written. Once this has finished, you could edit it as these files can execute code.  At this stage, attackers would usually provide a link to a dropper.  This is useful after connection has been established, because more larges packages can create more initial traffic and could potentially generate an alert.</p>          
-
-            <p class="text-lg mb-6 leading-relaxed">One of the ways this was noticed was during this cyber event recently (see links below).  By using a certificate that was trusted, the hackers were able to fake an invite using a compormised certificate which allowed them access to an application.  When the user tried to click on it and use it they were able to run it, because Microsoft still trusted the vendors' certificate and the signed application.</p>
-
-            <p class="text-lg mb-6 leading-relaxed">In doing so, attackers were able to steal a trusted certificate off an application and then bypass security by authenticating with the stolen token.  Because the stolen token is still trusted by Microsoft, any application that is signed with this seal is able to run and won't automatically be closed down. In an example below, it was seen that a multi-stage attack was successful due to their use of this attack.</p>   
-            
-
-            <p class="text-sm mb-6 leading-relaxed"></p>       
-<pre class="bg-emerald-950 text-emerald-50 p-4 rounded-md overflow-x-auto shadow-inner">
-    <code class="font-mono text-xs">
-    {
-      "subject": "Project Sync Meeting",
-      "isOnlineMeeting": true,
-      "onlineMeetingProvider": "teamsForBusiness",
-      "start": {
-        "dateTime": "2026-03-01T10:00:00",
-        "timeZone": "Pacific Standard Time"
-      },
-      "end": {
-        "dateTime": "2026-03-01T11:00:00",
-        "timeZone": "Pacific Standard Time"
-      },
-      "attendees": [
-        {
-          "emailAddress": {
-            "address": "jane.doe@example.com",
-            "name": "Jane Doe"
-          },
-          "type": "required"
-        },
-        {
-          "emailAddress": {
-            "address": "john.smith@example.com",
-            "name": "John Smith"
-          },
-          "type": "optionals"
-        }
-      ]
-    }
-    </code>
-</pre>
         
-        <p class="text-lg mb-6 leading-relaxed">Microsoft provides editing informaiton readily regarding attachments and personalisation, but unfortunately that can be used in more than one way:</p>
-        <p class="text-lg mb-6 leading-relaxed">Navigate to the Teams admin center</p>
-        <p class="text-lg mb-6 leading-relaxed">the left navigation, expand Meetings > Meeting settings.</p>
-        <p class="text-lg mb-6 leading-relaxed">Under Email invitation, do the following:</p>
-
-        <p class="text-lg mb-6 leading-relaxed">Best practise to avoid includes the following:</p>
-        
-        <ul>
-            <li>Use email filtering to block attachments from unknown senders.</li>
-            <li>Educate users about the dangers of opening attachments from unknown senders.</li>
-            <li>Use antivirus software to scan attachments before they are opened.</li>
-        </ul>
-            
-            <blockquote class="bg-moss-green/10 p-6 border-l-4 border-deep-accent rounded-r-lg italic">
-            Mail attachments can be edited to that an .ics file, which seems to have a list of peope who are attending, and a link to a meeting, can be used to execute code.  This is a very simple attack vector, and is often used in phishing campaigns, especialy to vulnerable people within the organisation such as someone who is just starting as an intern or hire.  It is important to be aware of this, and to take steps to prevent it from happening, especially since default settings in a lot of accounts allow this "adding invites" to calenders automatically.  This can include using email filtering, educating users about the dangers of opening attachments from unknown senders, and using antivirus software to scan attachments before they are opened.
-            </blockquote>
-        </article>
-
         <section class="mt-20 pt-7 border-t border-deep-accent/30">
             <h3 class="text-xl font-bold mb-6 text-deep-accent">References</h3>
             <div class="space-y-4 font-mono text-sm opacity-80">
