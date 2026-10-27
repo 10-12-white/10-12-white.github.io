@@ -56,59 +56,66 @@
             <p class="text-lg mb-6 leading-relaxed">Sinobi initiates its attacks through various entry points, including initial access brokers, phishing kits, and exploiting vulnerabilities in remote access systems like Citrix or Fortinet. They may also utilize supply chain compromises to infiltrate target organizations through trusted third parties. The group’s operational patterns closely mirror established threats like RansomHub and ALPHV, drawing inspiration from leaked Conti ransomware methods. Once inside, operators conduct "hands-on-keyboard" intrusions using a mix of custom tools and living-off-the-land techniques. Attackers prioritize privilege escalation and security evasion by creating admin accounts and disabling endpoint protections. Persistence is typically established by configuring legitimate remote access tools to maintain a foothold. A lightweight reconnaissance script is then deployed to automate lateral movement and identify critical domain information and file shares. Before encryption begins, data is exfiltrated to offsite cloud storage using tools like Rclone or WinSCP. The ransomware binary, often disguised with a generic filename, deletes the Recycle Bin and encrypts files with a .SINOBI extension. Finally, ransom notes are dropped in every directory, and the desktop wallpaper is replaced with a demand for payment.</p>
             
 <section class="mb-20">
-       <div class="flex items-center mb-6">
-           <div class="p-2 bg-deep-accent/10 rounded mr-4">
-               <i data-lucide="shield-check" class="w-6 h-6 text-deep-accent"></i>
-           </div>
-           <h3 class="text-3xl font-extrabold text-cream uppercase tracking-tight">Sinobi Group (Quick cover)</h3>
-       </div>
+  <div class="flex items-center mb-6">
+    <div class="p-2 bg-emerald-500/10 rounded mr-4">
+      <i data-lucide="shield-check" class="w-6 h-6 text-emerald-400"></i>
+    </div>
+    <h3 class="text-3xl font-extrabold text-slate-100 uppercase tracking-tight">Sinobi Group (Quick cover)</h3>
+  </div>
 
-       <div class="bg-dark-brown/40 border border-deep-accent/10 rounded-lg p-8 ml-4 md:ml-12 shadow-2xl relative overflow-hidden">
-           <div class="absolute top-0 right-0 w-32 h-32 bg-moss-green/5 -rotate-45 translate-x-16 -translate-y-16"></div>
-           <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-               <div class="space-y-4">
-                   <div class="flex items-center text-moss-green mb-1">
-                       <i data-lucide="target" class="w-4 h-4 mr-2"></i>
-                       <span class="text-xs font-mono uppercase tracking-wider">Common Use Cases</span>
-                   </div>
-                   <ul class="space-y-3 pl-2">
-                       <li class="flex items-center text-sm">
-                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]">Ransomeware as a service</span>       
-                       </li>
-                       <li class="flex items-center text-sm">
-                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]">Potential rebrand of Lynx malware group</span>
-                           
-                       </li>
-                       <li class="flex items-center text-sm">
-                           <span class="w-1.5 h-1.5 bg-deep-accent rounded-full mr-3 shadow-[0_0_5px_rgba(197,174,135,0.5)]">VPN or RDP protocols</span>
-                           
-                       </li>
-                   </ul>
-               </div>
+  <div class="bg-slate-900/60 border border-slate-700/60 rounded-lg p-8 ml-4 md:ml-12 shadow-2xl relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 -rotate-45 translate-x-16 -translate-y-16 pointer-events-none"></div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Left Column: Common Use Cases -->
+      <div class="space-y-4">
+        <div class="flex items-center text-emerald-400 mb-2">
+          <i data-lucide="target" class="w-4 h-4 mr-2"></i>
+          <span class="text-xs font-mono uppercase tracking-wider">Common Use Cases</span>
+        </div>
+        
+        <ul class="space-y-3 pl-2">
+          <li class="flex items-start text-sm text-slate-200">
+            <span class="w-2 h-2 mt-1.5 bg-emerald-400 rounded-full mr-3 shrink-0 shadow-[0_0_6px_rgba(52,211,153,0.6)]"></span>
+            <span>Ransomware as a Service (RaaS)</span>
+          </li>
+          <li class="flex items-start text-sm text-slate-200">
+            <span class="w-2 h-2 mt-1.5 bg-emerald-400 rounded-full mr-3 shrink-0 shadow-[0_0_6px_rgba(52,211,153,0.6)]"></span>
+            <span>Potential rebrand of Lynx malware group</span>
+          </li>
+          <li class="flex items-start text-sm text-slate-200">
+            <span class="w-2 h-2 mt-1.5 bg-emerald-400 rounded-full mr-3 shrink-0 shadow-[0_0_6px_rgba(52,211,153,0.6)]"></span>
+            <span>Exploitation via VPN or RDP protocols</span>
+          </li>
+        </ul>
+      </div>
 
-               <div class="space-y-4">
-                   <div class="flex items-center text-moss-green mb-1">
-                       <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
-                       <span class="text-xs font-mono uppercase tracking-wider">Recent Victims</span>
-                   </div>
-                   <ul class="space-y-3 pl-2">
-                       <li class="flex items-center text-sm">
-                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3">Manufactoring indistry</i>
-                           
-                       </li>
-                       <li class="flex items-center text-sm">
-                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3">Healthcare</i>
-                           
-                       </li>
-                       <li class="flex items-center text-sm">
-                           <i data-lucide="chevron-right" class="w-3 h-3 text-deep-accent mr-3">Education</i>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-       </div>
+      <!-- Right Column: Recent Victims -->
+      <div class="space-y-4">
+        <div class="flex items-center text-emerald-400 mb-2">
+          <i data-lucide="zap" class="w-4 h-4 mr-2"></i>
+          <span class="text-xs font-mono uppercase tracking-wider">Recent Victims</span>
+        </div>
+        
+        <ul class="space-y-3 pl-2">
+          <li class="flex items-center text-sm text-slate-200">
+            <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-400 mr-2 shrink-0"></i>
+            <span>Manufacturing industry</span>
+          </li>
+          <li class="flex items-center text-sm text-slate-200">
+            <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-400 mr-2 shrink-0"></i>
+            <span>Healthcare</span>
+          </li>
+          <li class="flex items-center text-sm text-slate-200">
+            <i data-lucide="chevron-right" class="w-4 h-4 text-emerald-400 mr-2 shrink-0"></i>
+            <span>Education</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
-
+            
 <h2 class="text-3xl font-extrabold mb-6 text-cream">Background and History</h2>
 
             <p class="text-lg mb-6 leading-relaxed">Sinobi can be traced back to several group0s in 2022, traces technical lineage link to INC Ransomware from August 2023, whose source code was sold for $300,000 on underground forums in spring 2024.  It was then acquired and bought by the Lynx operators in July 2024.  Binary analysis reveals 70% function similarity between Lynx and INC implementations, with code overlaps, and desgin choices.  Other infomration such as the design of their leak sites suggests that multuple rebrandings have taken place, though both groups currently operate in parallel.  The operation is therefore thought to follow standard affiliate revenue share models, with selective vetting through Russian-language forums.</p>
